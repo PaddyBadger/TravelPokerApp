@@ -3,7 +3,10 @@
 </div>
     <%= render partial: 'form', locals: { deck: @deck } %>
 <div class="topDeck">
+  <h3>Current Cards in Deck</h3>
+    <%= render @deck.cards %>
+</div>
+<div class="topDeck">
   <h3>Add Cards To Deck</h3>
     <%= render @cards %>
-    <%= will_paginate @cards %>
 </div>

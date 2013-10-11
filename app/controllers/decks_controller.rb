@@ -10,6 +10,7 @@ class DecksController < ApplicationController
 
   def new
     @deck = Deck.new
+    @cards = Card.all
   end
 
   def create
@@ -38,6 +39,9 @@ class DecksController < ApplicationController
 
   def edit
     @deck = Deck.find(params[:id])
+    @cards = Card.all.select do |card|
+      not @deck.cards.include?(card)
+    end
   end
 
   def destroy
