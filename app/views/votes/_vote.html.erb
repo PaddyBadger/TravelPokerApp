@@ -1,0 +1,18 @@
+<% if can? :create, Vote %>
+
+<div class="vote-arrows pull-left">
+  <div><%= link_to " ", 
+    card_comment_up_vote_path(comment), 
+    class: "icon-chevron-up #{(current_user.voted(comment) && current_user.voted(comment).up_vote?) ? 'voted' : '' }" %>
+  </div>
+  
+  <div>
+    <strong><%= comment.points %></strong>
+  </div>
+  <div>
+    <%= link_to " ", card_comment_down_vote_path(topic, post), 
+    class: "icon-chevron-down #{(current_user.voted(comment) && current_user.voted(comment).down_vote?) ? 'voted' : '' }" %>
+  </div>
+</div>
+
+<% end %>

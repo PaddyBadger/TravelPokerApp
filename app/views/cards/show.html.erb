@@ -1,0 +1,14 @@
+<div class="topDeck">
+  <h3><%= @card.title%>, <%= @card.location %></h3>
+</div>
+   <div class="tripBack">
+    <%= image_tag @card.image%>
+    <div class="tripInfoBack">
+      <h3><%= @card.title%></h3>
+      <h5><%= @card.location%></h5>
+      <p><%= @card.description%></p>
+      <p><%= @card.url%></p>
+      <!-- render partials for, categories, likes, keep and share...? -->
+    </div>
+  </div>
+</div>

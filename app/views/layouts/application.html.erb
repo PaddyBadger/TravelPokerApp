@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+    <link rel="shortcut icon" href="/assets/pokerlike.png"/>
+     <title>Travel Poker</title>
+    <%= stylesheet_link_tag"application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div id="toppanel">
+  <div id="panel">
+  <div class="centerDiv">
+    <div class="topCol">
+            <h3>Sign in</h3>
+            <input type="text" value="" placeholder="Email" class="inputAll">
+            <input type="password" value="" placeholder="Password" class="inputAll">
+            <a href="#" class="btn btnAll">Sign In</a>
+          <div class="signInMeta">
+            <a href="#"><img src="/assets/facebookLog.png"/></a>
+            <a href="#"><img src="/assets/gmailLog.png"/></a>
+          </div>
+    </div>
+    <div class="topCol">
+            <h3>Sign up</h3>
+            <input type="text" value="" placeholder="First name" class="inputAll">
+            <input type="text" value="" placeholder="Last name" class="inputAll">
+            <input type="text" value="" placeholder="Email" class="inputAll">
+            <input type="password" value="" placeholder="Password" class="inputAll">
+            <a href="#" class="btn btnAll">Submit</a>
+    </div>
+
+    </div>  
+  </div> <!-- /login -->  
+
+  <!-- The tab on top --> 
+  <div class="tab">
+    <ul class="login">
+      <li class="left">&nbsp;</li>
+      <li>Hello Username!</li>
+      <li class="sep">|</li>
+      <li id="toggle">
+        <a id="open" class="open" href="#">Log In | Register</a>
+        <a id="close" style="display: none;" class="close" href="#">Close Panel</a>     
+      </li>
+      <li class="right">&nbsp;</li>
+    </ul> 
+  </div> <!-- / top -->
+  
+</div> <!--panel -->
+  <div class="wrapper fade">
+    <header>
+      <div class="centerDiv">
+        <div class="logo">
+          <a href="#"><img src="/assets/logo.png" /></a>
+        </div>
+
+        <div class="topMenu fade">
+          <ul>
+            <li><a href="#" class="menuTop home"></a></li>
+            <li><a href="#" class="menuTop drink"></a></li>
+            <li><a href="#" class="menuTop camera"></a></li>
+            <li><a href="#" class="menuTop shopping"></a></li>
+            <li><a href="#" class="menuTop food"></a></li>
+            <li><a href="#" class="menuTop journey"></a></li>
+            <li><a href="#" class="menuTop theatre"></a></li>
+            <li><a href="#" class="menuTop sport"></a></li>
+            <li><a href="#" class="menuTop festival"></a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+<%= yield %>
+
+<div class="topFooter">
+      <div class="centerDiv">
+        <div class="footCol">
+          <h3>Top Destinations</h3>
+          <ul>
+            <li><a href="#">New York</a></li>
+            <li><a href="#">Paris</a></li>
+            <li><a href="#">Cairo</a></li>
+            <li><a href="#">Roma</a></li>
+          </ul>
+        </div>
+        <div class="footCol">
+          <h3>Travel Poker</h3>
+          <ul>
+            <li><a href="#">How it Works</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footCol">
+          <a href="#" class="btn btn-large btn-block creatDeck">Create a Deck</a>
+          <a href="#" class="btn btn-large btn-block creatDeck">Create a Card</a>
+        </div>
+        <div class="footCol">
+          <a href="#" class="footLogo"></a>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="centerDiv">
+      <ul class="footMenu">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Ts & Cs</a></li>
+      </ul>
+      <p class="copyrights"> &copy; Copyrights 2013 all copyrights reserved - Travel Poker </p>
+        <div class="footerSocial">
+          <a href="#"><img src="/assets/facebook.png"></a>
+          <a href="#"><img src="/assets/twitter.png"></a>
+          <a href="#"><img src="/assets/gplus.png"></a>
+          <a href="#"><img src="/assets/pinterest.png"></a>
+        </div>
+      </div>
+      <%= yield :scripts %>
+    </footer>
+
+</body>
+</html>

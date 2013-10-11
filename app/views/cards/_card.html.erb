@@ -1,0 +1,47 @@
+<div class="trip">
+  <div class="pokerHover">
+    <a href="#">1</a>
+  </div>
+  <div class="tripMeta">
+    <div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
+      <a class="dk_toggle">
+        <span class="dk_label">Keep</span>
+      </a>
+      <div class="dk_options">
+        <ul class="dk_options_inner">
+          <li class=""><a data-dk-dropdown-value="0">To: 48 Hours in NY</a></li>
+          <li class=""><a data-dk-dropdown-value="1">+ Creat New</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
+      <a class="dk_toggle">
+        <span class="dk_label">Share</span>
+      </a>
+      <div class="dk_options">
+        <ul class="dk_options_inner">
+          <li class="social">
+            <a href="#"><img src="assets/twitter.png"></a>
+            <a href="#"><img src="assets/facebook.png"></a>
+            <a href="#"><img src="assets/gplus.png"></a>
+            <a href="#"><img src="assets/pinterest.png"></a>
+            <a href="#"><img src="assets/rss.png"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- render partials for, categories, likes, keep and share...? -->
+  <%= image_tag (card.image) %>
+  <div class="tripInfo">
+    <h4><%= link_to card.title, card %></h4>
+    <p><%= markdown (card.location)%></p>
+  </div>
+</div>
+
+
+
+ 
+
+
+

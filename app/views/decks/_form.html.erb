@@ -1,0 +1,30 @@
+<%= form_for [deck], html: { class: 'form' } do |f| %>
+  <% if deck.errors.any? %>
+    <div class="alert alert-block">
+      <h4>There are <%= pluralize(deck.errors.count, "error") %>.</h4>
+      <ul>
+        <% deck.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="iinput">
+    <%= image_tag(deck.image.back.url) if deck.image? %>
+    <%= f.label :image, class: 'formlabel' %>
+    <div class="iinputtext"> 
+      <%= f.file_field :image %>
+    </div>
+  </div>
+  <%= f.label :title, class: 'formlabel' %>
+  <div class="tinput">
+    <%= f.text_field :title %>
+  </div>
+  <%= f.label :location, class: 'formlabel' %>
+  <div class="tinput">
+      <%= f.text_field :location %>
+  </div>
+  <div class="cbutton">
+    <%= f.submit "Save", class: 'btn btn-large' %>
+  </div>
+<% end %>
