@@ -10,7 +10,7 @@
       <div class="dk_options">
         <ul class="dk_options_inner">
           <li class=""><a data-dk-dropdown-value="0">To: 48 Hours in NY</a></li>
-          <li class=""><a data-dk-dropdown-value="1">+ Creat New</a></li>
+          <li class=""><a href="/decks/new/" data-dk-dropdown-value="1">+ Create New</a></li>
         </ul>
       </div>
     </div>
@@ -29,6 +29,7 @@
           </li>
         </ul>
       </div>
+      <span><%= link_to "Edit", edit_card_path(@card), id: "keep" %></span>
     </div>
   </div>
   <!-- render partials for, categories, likes, keep and share...? , edit_card_path(@card)-->

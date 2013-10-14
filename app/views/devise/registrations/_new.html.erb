@@ -1,23 +1,11 @@
 <h3>Sign up</h3>
-
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
-  <div class="inputAll">
-    <%= f.email_field :email, :autofocus => true %>
-  </div>
-  <div class="inputAll">
-    <%= f.name_field :name %>
-  </div>
-  <div class="inputAll">
-    <%= f.password_field :password %>
-  </div>
-  <div class="inputAll">
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="btn btnAll">
-    <%= f.submit "Sign up" %>
-  </div>
+    <%= f.email_field :email, class: "inputAll", placeholder: "Email" %>
+    <%= f.text_field :name, class: "inputAll", placeholder: "Username" %>
+    <%= f.password_field :password, class: "inputAll", placeholder: "Password" %>
+    <%= f.password_field :password_confirmation, class: "inputAll", placeholder: "Confirm Password" %>
+    <%= f.submit "Sign Up", class: "btn btnAll"  %>
 <% end %>
    
     
