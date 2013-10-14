@@ -12,28 +12,15 @@
   <div id="panel">
   <div class="centerDiv">
     <div class="topCol">
-            <h3>Sign in</h3>
-            <input type="text" value="" placeholder="Email" class="inputAll">
-            <input type="password" value="" placeholder="Password" class="inputAll">
-            <a href="#" class="btn btnAll">Sign In</a>
-          <div class="signInMeta">
-            <a href="#"><img src="/assets/facebookLog.png"/></a>
-            <a href="#"><img src="/assets/gmailLog.png"/></a>
-          </div>
+      <%= render partial: '/devise/sessions/new' %>
     </div>
     <div class="topCol">
-            <h3>Sign up</h3>
-            <input type="text" value="" placeholder="First name" class="inputAll">
-            <input type="text" value="" placeholder="Last name" class="inputAll">
-            <input type="text" value="" placeholder="Email" class="inputAll">
-            <input type="password" value="" placeholder="Password" class="inputAll">
-            <a href="#" class="btn btnAll">Submit</a>
-    </div>
-
-    </div>  
+      <%= render partial: '/devise/registrations/new' %>
+     </div>
+  </div>  
   </div> <!-- /login -->  
 
-  <!-- The tab on top --> 
+<!-- The tab on top --> 
   <div class="tab">
     <ul class="login">
       <li class="left">&nbsp;</li>
@@ -46,8 +33,11 @@
       <li class="right">&nbsp;</li>
     </ul> 
   </div> <!-- / top -->
-  
-</div> <!--panel -->
+</div> 
+
+
+
+     <!--panel -->
   <div class="wrapper fade">
     <header>
       <div class="centerDiv">

@@ -36,7 +36,7 @@ gem 'fog'
 gem 'figaro'
 
 gem 'gmaps4rails'
-gem 'newrelic_rpm'
+gem 'newrelic_rpm'  
 
 
 # To use ActiveModel has_secure_password

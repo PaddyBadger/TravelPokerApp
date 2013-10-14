@@ -1,0 +1,16 @@
+<h3>Sign in</h3>
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <div class="inputAll">
+    <%= f.email_field :email, :autofocus => true %>
+  </div>
+  <div class="inputAll">
+    <%= f.password_field :password %>
+  </div>
+  <div class="btn btnAll">
+    <%= f.submit "Sign In" %>
+  </div>
+  <div class="signInMeta">
+    <a href="#"><img src="/assets/facebookLog.png"/></a>
+    <a href="#"><img src="/assets/gmailLog.png"/></a>
+  </div>
+<% end %>

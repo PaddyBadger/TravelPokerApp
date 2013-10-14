@@ -455,12 +455,14 @@ input{
 
 #keep {
   padding: 4px 8px 4px 8px  !important;
-  width:45px !important;
+  width:40px !important;
   text-align:center !important;
   background: #242625 !important;
   border-radius: 3px !important;
   text-transform: uppercase; 
-  font-size: 13px;
+  font-size: 12px;
+  left:-5px;
+  bottom:-10px;
 }
 
 .dk_options{width:150px !important; }

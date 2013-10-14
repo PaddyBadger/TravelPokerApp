@@ -3,10 +3,10 @@ Travelpoker::Application.routes.draw do
   devise_for :users
 
   resources :decks do
-    resources :likes, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy, :edit]
   end
   resources :cards do 
-    resources :likes, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy, :edit]
     resources :comments do
       match '/up-vote', to: 'votes#up_vote', as: :up_vote
       match '/down-vote', to: 'votes#down_vote', as: :down_vote
