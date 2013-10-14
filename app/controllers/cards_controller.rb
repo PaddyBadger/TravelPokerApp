@@ -7,6 +7,7 @@ class CardsController < ApplicationController
   def show
      @card = Card.find(params[:id])
      @comments = @card.comments.includes(:user)
+     @json = @card.to_gmaps4rails
   end
 
   def new

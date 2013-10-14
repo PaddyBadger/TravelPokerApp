@@ -4,9 +4,9 @@
   </div>
   <div class="tripMeta">
     <div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
-      <a class="dk_toggle">
+      <div class="dk_toggle" id="keep">
         <span class="dk_label">Keep</span>
-      </a>
+      </div>
       <div class="dk_options">
         <ul class="dk_options_inner">
           <li class=""><a data-dk-dropdown-value="0">To: 48 Hours in NY</a></li>
@@ -15,23 +15,23 @@
       </div>
     </div>
     <div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
-      <a class="dk_toggle">
+      <div class="dk_toggle" id="keep">
         <span class="dk_label">Share</span>
-      </a>
+      </div>
       <div class="dk_options">
         <ul class="dk_options_inner">
           <li class="social">
-            <a href="#"><img src="assets/twitter.png"></a>
-            <a href="#"><img src="assets/facebook.png"></a>
-            <a href="#"><img src="assets/gplus.png"></a>
-            <a href="#"><img src="assets/pinterest.png"></a>
-            <a href="#"><img src="assets/rss.png"></a>
+            <a href="#"><img src="/assets/twitter.png"></a>
+            <a href="#"><img src="/assets/facebook.png"></a>
+            <a href="#"><img src="/assets/gplus.png"></a>
+            <a href="#"><img src="/assets/pinterest.png"></a>
+            <a href="#"><img src="/assets/rss.png"></a>
           </li>
         </ul>
       </div>
     </div>
   </div>
-  <!-- render partials for, categories, likes, keep and share...? -->
+  <!-- render partials for, categories, likes, keep and share...? , edit_card_path(@card)-->
   <%= image_tag (card.image) %>
   <div class="tripInfo">
     <h4><%= link_to card.title, card %></h4>

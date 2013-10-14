@@ -1,14 +1,62 @@
 <div class="topDeck">
-  <h3><%= @card.title%>, <%= @card.location %></h3>
+  <h3><%= @card.title%>: <%= @card.location %></h3>
 </div>
    <div class="tripBack">
-    <%= image_tag @card.image%>
+     <%= gmaps4rails(@json) %>
+     <%= image_tag @card.image%>
     <div class="tripInfoBack">
-      <h3><%= @card.title%></h3>
-      <h5><%= @card.location%></h5>
-      <p><%= @card.description%></p>
-      <p><%= @card.url%></p>
-      <!-- render partials for, categories, likes, keep and share...? -->
+      <h3><%= @card.title%>: <%= @card.location%></h3>
     </div>
+    <div class="ad">
+      <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-1244420710031131";
+        /* tp */
+        google_ad_slot = "5656091157";
+        google_ad_width = 300;
+        google_ad_height = 600;
+        //-->
+      </script>
+      <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+    </div>
+    <div class="pokerHover_1">
+      <a href="#">1</a>
+    </div>
+    <div class="backInfo">
+    <div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
+      <div class="dk_toggle">
+       <span class="dk_label" id="keep1">Keep</span>
+      </div>
+      <div class="dk_options">
+        <ul class="dk_options_inner">
+          <li class=""><a data-dk-dropdown-value="0">To: 48 Hours in NY</a></li>
+          <li class=""><a data-dk-dropdown-value="1">+ Creates New</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
+      <div class="dk_toggle">
+        <span class="dk_label" id="keep1">Share</span>
+      </div>
+      <div class="dk_options">
+        <ul class="dk_options_inner">
+          <li class="social_1">
+            <a href="#"><img src="/assets/twitter.png"></a>
+            <a href="#"><img src="/assets/facebook.png"></a>
+            <a href="#"><img src="/assets/gplus.png"></a>
+            <a href="#"><img src="/assets/pinterest.png"></a>
+            <a href="#"><img src="/assets/rss.png"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
+      <div class="dk_toggle">
+       <%= link_to "Edit", edit_card_path(@card), class: "dk_label", id: "keep1" %>
+      </div>
+    </div>
+      <p><%= @card.description%></p>
+      <p><%= link_to @card.url%></p>
+    </div>
+      <!-- render partials for, categories, likes, keep and share...? -->
   </div>
 </div>

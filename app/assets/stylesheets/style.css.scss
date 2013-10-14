@@ -310,17 +310,6 @@ input{
   positioning:absolute;
 }
 
-.tripBack {
-  width:610px;
-  margin: auto;
-}
-
-.tripBack img {
-  width:610px;
-  height:350px;
-}
-
-
 .btn-large {
   padding: 11px 19px;
   font-size: 17.5px;
@@ -453,7 +442,6 @@ input{
   height: 20px;
 }
 
-
 /* .deckRibbon{
   display:block;
   width:53px;
@@ -465,7 +453,7 @@ input{
   margin-top: -9px;
 } */
 
-.dk_toggle{
+#keep {
   padding: 4px 8px 4px 8px  !important;
   width:45px !important;
   text-align:center !important;

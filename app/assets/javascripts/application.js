@@ -1,20 +1,17 @@
-//= require jquery.min
-//= require jquery.dropkick-1.0.0
-//= require jquery.easing.1.3
-//= require bootstrap.min
-//= require camera.min
+//= require jquery
+//= require_tree .
 
 $=jQuery;
 
 $(document).ready(function(){
 jQuery(function(){
 
-$('.pokerHover,.trip,.deck').hover(function(){
-$(this).children('.tripMeta,.pokerHover').fadeIn(500);
-},
-function(){
-$('.dk_container.span3.dk_shown.dk_theme_default').removeClass('dk_open');
-$(this).children('.tripMeta,.pokerHover').fadeOut(500);
+  $('.pokerHover,.trip,.deck').hover(function(){
+    $(this).children('.tripMeta,.pokerHover').fadeIn(500);
+  },
+  function(){
+  $('.dk_container.span3.dk_shown.dk_theme_default').removeClass('dk_open');
+    $(this).children('.tripMeta,.pokerHover').fadeOut(500);
 });
 });
 });
