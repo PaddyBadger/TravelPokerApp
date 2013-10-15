@@ -10,11 +10,13 @@ class DecksController < ApplicationController
 
   def new
     @deck = Deck.new
+    authorize! :create, Deck, message: "Please Register with TravelPoker to create your own decks."
     @cards = Card.all
   end
 
   def create
     @deck = Deck.new(params[:deck])
+    authorize! :create, Card, message: "Please Register with TravelPoker to create your own cards."
     
     if @deck.save
       flash[:notice] = "Deck was saved."
@@ -39,6 +41,7 @@ class DecksController < ApplicationController
 
   def edit
     @deck = Deck.find(params[:id])
+    authorize! :edit, Deck, message: "You must own a card to edit it."
     @cards = Card.all.select do |card|
       not @deck.cards.include?(card)
     end
@@ -46,6 +49,7 @@ class DecksController < ApplicationController
 
   def destroy
     @deck = Deck.find(params[:id])
+    authorize! :destroy, Deck, message: "You must own a card to delete it."
     title = @deck.title
      
     if @deck.destroy

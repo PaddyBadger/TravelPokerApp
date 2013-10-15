@@ -7,11 +7,25 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :image, :email, :password, :password_confirmation, :remember_me
   has_many :cards
+
+  before_create :set_member
+  
   has_many :decks
   has_many :likes
   has_many :comments
   has_many :votes
   # attr_accessible :title, :body
+
+  ROLES = %w[member admin]
+  def role?(base_role)
+    role.nil? ? false : ROLES.index(base_role.to_s) <= ROLES.index(role)
+  end  
+
+  private
+
+  def set_member
+    self.role = 'member'
+  end
 
   def self.top_rated
     self.select('users.*'). # Select all attributes of the user

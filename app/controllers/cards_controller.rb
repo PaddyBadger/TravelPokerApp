@@ -12,10 +12,12 @@ class CardsController < ApplicationController
 
   def new
     @card = Card.new
+    authorize! :create, Card, message: "Please Register with TravelPoker to create your own cards."
   end
 
   def create
     @card = Card.new(params[:card])
+    authorize! :create, Card, message: "Please Register with TravelPoker to create your own cards."
     
     if @card.save
       flash[:notice] = "card was saved."
@@ -40,10 +42,12 @@ class CardsController < ApplicationController
 
   def edit
     @card = Card.find(params[:id])
+    authorize! :edit, Card, message: "You must own a card to edit it."
   end
 
   def destroy
     @card = Card.find(params[:id])
+    authorize! :destroy, Card, message: "You must own a card to delete it."
     title = @card.title
      
     if @card.destroy

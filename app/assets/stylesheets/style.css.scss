@@ -404,7 +404,7 @@ input{
 }
 
 .tripMeta{
-  width: 130px;
+  width: 240px;
   height: 25px;
   position: absolute;
   left: 6px;
@@ -461,8 +461,13 @@ input{
   border-radius: 3px !important;
   text-transform: uppercase; 
   font-size: 12px;
-  left:-5px;
+  left:-30px;
   bottom:-10px;
+  float:left;
+}
+
+.keep1a {
+  margin-left:4px;
 }
 
 .dk_options{width:150px !important; }

@@ -29,9 +29,10 @@
           </li>
         </ul>
       </div>
-      <span><%= link_to "Edit", edit_card_path(@card), id: "keep" %></span>
+      <span><%= link_to "Edit", edit_card_path(card), id: "keep", class: "keep1a" %></span>
     </div>
   </div>
+
   <!-- render partials for, categories, likes, keep and share...? , edit_card_path(@card)-->
   <%= image_tag (card.image) %>
   <div class="tripInfo">

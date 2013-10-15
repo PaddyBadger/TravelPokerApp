@@ -38,6 +38,10 @@ gem 'figaro'
 gem 'gmaps4rails'
 gem 'newrelic_rpm'  
 
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -5,4 +5,9 @@ class Deck < ActiveRecord::Base
   attr_accessible :image, :location, :title
 
   mount_uploader :image, ImageUploader
+
+  validates :title, length: { minimum: 5 }, presence: true
+  validates :description, length: { minimum: 20 }, presence: true
+  validates :image, presence: true
+  validates :user, presence: true 
 end
