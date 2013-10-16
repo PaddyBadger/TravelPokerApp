@@ -1,6 +1,7 @@
 .tripBack {
   width:1020px;
   margin: auto;
+
 }
 
 .tripBack img {
@@ -47,6 +48,7 @@
 .backInfo p {
   width:600px;
   white-space:pre-wrap;
+  min-height:50px;
 }
 
 #keep1 {
@@ -156,4 +158,8 @@
 .social_1 img{
   width: 20px;
   height: 20px;
+}
+
+.memberOnly {
+  height:50px;
 }

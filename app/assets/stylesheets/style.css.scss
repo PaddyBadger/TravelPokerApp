@@ -17,15 +17,7 @@ body:before
    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
    box-shadow: 0px 0px 10px rgba(0,0,0,.8);
    }
-   
-h1{ font-family:"Opal";
-  }
-
-h3{ font-family:"Opal";
-  }
-
-h4{ font-family:"Opal";
-  }
+  
 
 .wrapper{
   width:100%;
@@ -391,16 +383,10 @@ input{
   color: #2980b9 !important;
 }
 
-.pokerHover a{
-  font-weight: bold !important;
-  color:#8a8a8a;
-  font-family:Tahoma !important;
-  text-decoration:  none;
-  font-size: 12px;
-}
-
-.pokerHover a:hover{
-  color:#2980b9 !important;
+.pokerLiked {
+  background-image: url('pokerlike.png') ;
+  background-size: 30px 30px;
+  color: #2980b9 !important;
 }
 
 .tripMeta{

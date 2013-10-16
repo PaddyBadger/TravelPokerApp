@@ -9,9 +9,9 @@ class User < ActiveRecord::Base
   attr_accessible :name, :image, :email, :password, :password_confirmation, :remember_me, :provider, :uid
   has_many :cards
   has_many :decks
-  has_many :likes
-  has_many :comments
-  has_many :votes
+  has_many :likes, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :votes, dependent: :destroy
 
   before_create :set_member
   # attr_accessible :title, :body
@@ -36,6 +36,14 @@ class User < ActiveRecord::Base
       user.save
     end
     user
+  end
+
+  def liked(likeable)
+    self.likes.where(likeable_id: likeable.id, likeable_type: likeable.class.to_s.underscore).first
+  end
+
+  def voted(comment)
+    self.votes.where(comment_id: comment.id).first
   end
 
   private

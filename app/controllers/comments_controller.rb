@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
     @card = Card.find(params[:card_id])
     
     @comment = current_user.comments.build(params[:comment])
+    authorize! :create, Comment, message: "Please Register with TravelPoker to make comments."
     @comment.card = @card
 
       if @comment.save
@@ -17,6 +18,7 @@ class CommentsController < ApplicationController
     @card = Card.find(params[:card_id])
 
     @comment = @card.comments.find(params[:id])
+    authorize! :update, comment, message: "You must own a comment to edit or delete it."
     
       if @comment.update_attributes(params[:card_id])
         flash[:notice] = "comment was updated."

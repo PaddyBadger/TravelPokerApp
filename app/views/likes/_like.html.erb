@@ -1,0 +1,15 @@
+<%# if can? :create, Like %>
+<% if current_user %>
+  <div class="pokerHover">
+    <%= likeable.likes.count %>
+    <% if like = current_user.liked(likeable) %>
+      <%= link_to [likeable, like], class: "pokerLiked", method: :delete do %> 
+      <% end %>
+    <% else %>
+      <%= form_for [likeable, Like.new] do |f| %>
+        <%= button_tag type: 'submit', class: "pokerHover" do %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>

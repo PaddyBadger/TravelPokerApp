@@ -22,43 +22,45 @@
       <a href="#">1</a>
     </div>
     <div class="backInfo">
-    <div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
-      <div class="dk_toggle">
-       <span class="dk_label" id="keep1">Keep</span>
+      <div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
+        <div class="dk_toggle">
+         <span class="dk_label" id="keep1">Keep</span>
+        </div>
+        <div class="dk_options">
+          <ul class="dk_options_inner">
+            <li class=""><a data-dk-dropdown-value="0">To: 48 Hours in NY</a></li>
+            <li class=""><a href="/decks/new/" data-dk-dropdown-value="1">+ Create New</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="dk_options">
-        <ul class="dk_options_inner">
-          <li class=""><a data-dk-dropdown-value="0">To: 48 Hours in NY</a></li>
-          <li class=""><a href="/decks/new/" data-dk-dropdown-value="1">+ Create New</a></li>
-        </ul>
+      <div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
+        <div class="dk_toggle">
+          <span class="dk_label" id="keep1">Share</span>
+        </div>
+        <div class="dk_options">
+          <ul class="dk_options_inner">
+            <li class="social_1">
+              <a href="#"><img src="/assets/twitter.png"></a>
+              <a href="#"><img src="/assets/facebook.png"></a>
+              <a href="#"><img src="/assets/gplus.png"></a>
+              <a href="#"><img src="/assets/pinterest.png"></a>
+              <a href="#"><img src="/assets/rss.png"></a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
-      <div class="dk_toggle">
-        <span class="dk_label" id="keep1">Share</span>
-      </div>
-      <div class="dk_options">
-        <ul class="dk_options_inner">
-          <li class="social_1">
-            <a href="#"><img src="/assets/twitter.png"></a>
-            <a href="#"><img src="/assets/facebook.png"></a>
-            <a href="#"><img src="/assets/gplus.png"></a>
-            <a href="#"><img src="/assets/pinterest.png"></a>
-            <a href="#"><img src="/assets/rss.png"></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-      <p><%= @card.description%></p>
-      <p><%= link_to @card.url%></p>
-      
+        <h6><%= @card.title%></h6>
+        <p><%= @card.description%></p>
+        <p><%= link_to @card.url%></p>
+      <div class="memberOnly">
         <span><%= link_to "Edit", edit_card_path(@card), class: "keep11", id: "keep1" %></span>
         <span> <%= link_to "Delete", @card, method: :delete, class: 'keep11', id: "keep1", confirm: 'Are you sure you want to delete this card?' %></span>
+      </div>
+      <div class="comments">
+        <h2><%= @comments.count %> Comments</h2>
+         <%= render partial: "comments/comment", collection: @comments, locals: { card: @cards} %>
+        <h5>Create Comment</h5>
+          <%= render partial: "comments/form", locals:{ card: @card, comment: Comment.new } %>
+      </div>
     </div>
-    <div class="comments">
-      <h2><%= @comments.count %> Comments</h2>
-       <%= render partial: "comments/comment", collection: @comments,locals: { card: @cards} %>
-    <h5>Create Comment</h5>
-      <%= render partial: "comments/form", locals:{ card: @card, comment: @comment } %>
   </div>
-</div>

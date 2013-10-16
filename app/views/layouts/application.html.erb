@@ -11,12 +11,18 @@
 <div id="toppanel">
   <div id="panel">
   <div class="centerDiv">
-    <div class="topCol">
-      <%= render partial: '/devise/sessions/new' %>
-    </div>
-    <div class="topCol">
-      <%= render partial: '/devise/registrations/new' %>
-     </div>
+    <% if user_signed_in? %>
+      <div class="topCol">
+        <%= button_to('Logout', destroy_user_session_path, method: :delete) %>
+      </div>    
+    <% else %>
+      <div class="topCol">
+        <%= render partial: '/devise/sessions/new' %>
+      </div>
+      <div class="topCol">
+        <%= render partial: '/devise/registrations/new' %>
+       </div>
+    <% end %>
   </div>  
   </div> <!-- /login -->  
 
@@ -24,12 +30,16 @@
   <div class="tab">
     <ul class="login">
       <li class="left">&nbsp;</li>
-      <li>Hello </li> <% if current_user %>
-        <%= link_to (current_user.name || current_user.email), current_user %>!
-      <% end %>
+      <li>Hello <% if current_user %>
+        <%= link_to (current_user.name || current_user.email), current_user %>
+      <% end %></li>
       <li class="sep">|</li>
       <li id="toggle">
-        <a id="open" class="open" href="#">Log In | Register</a>
+        <% if user_signed_in? %> 
+          <a id="open" class="open" href="#">Log Out | My Panel</a> 
+        <% else %>
+          <a id="open" class="open" href="#">Log In | Register</a>
+        <% end %>
         <a id="close" style="display: none;" class="close" href="#">Close Panel</a>     
       </li>
       <li class="right">&nbsp;</li>

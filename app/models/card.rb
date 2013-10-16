@@ -3,9 +3,9 @@ class Card < ActiveRecord::Base
   belongs_to :season
   belongs_to :category
   has_many :comments, dependent: :destroy
-  has_many :likes, as: :likeable
+  has_many :likes, as: :likeable, dependent: :destroy
   has_and_belongs_to_many :decks
-  attr_accessible :description, :image, :location, :title, :url
+  attr_accessible :description, :image, :remote_image_url, :location, :title, :url
 
   mount_uploader :image, ImageUploader
 
@@ -18,6 +18,5 @@ class Card < ActiveRecord::Base
 
   validates :title, length: { minimum: 5 }, presence: true
   validates :description, length: { minimum: 20 }, presence: true
-  validates :image, presence: true
   validates :user, presence: true 
 end

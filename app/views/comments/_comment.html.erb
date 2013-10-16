@@ -1,9 +1,10 @@
- <div class="media-body">
-    <small>
-      <%= comment.user.name %> commented <%= time_ago_in_words(comment.created_at) %> ago
-      <% if can? :destroy, comment %>
-        | <%= link_to "Delete", comment_url_helper(comment), method: :delete, remote: true %>
-      <% end %>
-    </small>
-    <p><%= comment.body %></p>
+<%= comment.user.name %> commented <%= time_ago_in_words(comment.created_at) %> ago
+<% if can? :destroy, comment %>
+  | <%= link_to "Delete", card_comment_path(comment.card, comment), method: :delete, remote: true %>
+<% end %>
+  
+  <div class="comment">
+    <h6><%= comment.title %></h6>
+    <%= render partial: 'votes/vote', locals: { comment: comment } %>
+    <p><%= comment.description %></p>
   </div>

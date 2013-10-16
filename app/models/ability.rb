@@ -10,6 +10,7 @@ class Ability
       can :manage, Deck, :user_id => user.id
       can :manage, Card, :user_id => user.id
       can :manage, Comment, :user_id => user.id
+      can :create, Vote
     end
 
     if user.role? :admin

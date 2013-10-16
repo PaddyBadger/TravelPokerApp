@@ -17,6 +17,7 @@ class CardsController < ApplicationController
 
   def create
     @card = Card.new(params[:card])
+    @card.user = current_user
     authorize! :create, Card, message: "Please Register with TravelPoker to create your own cards."
     
     if @card.save

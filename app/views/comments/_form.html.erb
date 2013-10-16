@@ -1,11 +1,11 @@
 <%= form_for [card, comment], html: { class: '' }, remote: true do |f| %>    
-  <div class="input-large"> 
-    <%= f.text_area :body, rows: 4 %>
+  <div class="tinput"> 
+    <%= f.text_field :title, placeholder: "Title" %>
+  </div>
+  <div class="pinput"> 
+    <%= f.text_area :description, rows: 4 %>
+  </div>
+  <div class="commentButton">
+      <%= f.submit "Save", class: 'btn btn-large' %>
   </div>
 <% end %>
-    
-<div class="control-group">
-  <div class="controls">
-    <%= f.submit "Save", class: 'btn' %>
-  </div>
-</div>

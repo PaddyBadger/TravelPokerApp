@@ -1,7 +1,5 @@
 <div class="trip">
-  <div class="pokerHover">
-    <a href="#">1</a>
-  </div>
+  <%= render partial: 'likes/like', locals: { likeable: card } %>
   <div class="tripMeta">
     <div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
       <div class="dk_toggle" id="keep">
