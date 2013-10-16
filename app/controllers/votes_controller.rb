@@ -14,16 +14,16 @@ class VotesController < ApplicationController
   private
 
   def setup 
-    @comment = Comments.find(params[:card_id])
+    @comment = Comment.find(params[:card_id])
     @vote = @comment.votes.where(user_id: current_user.id).first
    
   end
 
-  def update_vote(new_value)
+  def update_vote(new_vote)
     if @vote # if it exists, update it
-      @vote.update_attribute(:value, new_value)
+      @vote.update_attribute(:vote, new_vote)
     else # create it
-      @vote = current_user.votes.create(value: new_value, comment: @comment)
+      @vote = current_user.votes.create(vote: new_vote, comment: @comment)
     end
   end
 

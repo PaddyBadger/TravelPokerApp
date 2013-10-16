@@ -19,15 +19,23 @@
 .vote {
   float:left;
   height:60px;
-  width:15px;
+  width:20px;
+  text-align:center;
+  margin-right:5px;
 }
 
 .upChevron {
-  height:25px;
-  width:25px;
+  margin-left:2px;
+  height:15px;
+  width:15px;
   background:url('upChevron.png')no-repeat;
+  display:block;
 }
 
 .downChevron {
+  margin-left:3px;
+  height:15px;
+  width:15px;
   background:url('downChevron.png');
+  display:block;
 }
