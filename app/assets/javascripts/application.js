@@ -33,6 +33,5 @@ $(document).ready(function() {
   // Switch buttons from "Log In | Register" to "Close Panel" on click
   $("#toggle a").click(function () {
     $("#toggle a").toggle();
-  });   
-    
+  });       
 });

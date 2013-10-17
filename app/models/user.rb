@@ -39,7 +39,7 @@ class User < ActiveRecord::Base
   end
 
   def liked(likeable)
-    self.likes.where(likeable_id: likeable.id, likeable_type: likeable.class.to_s.underscore).first
+    self.likes.where(likeable_id: likeable.id, likeable_type: likeable.class.to_s).first
   end
 
   def voted(comment)

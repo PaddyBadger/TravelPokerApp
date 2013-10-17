@@ -36,20 +36,12 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-  version :tiny do
-    process :resize_to_fill => [20, 20]
-  end
-
-  version :small do
-    process :resize_to_fill => [30, 30]
-  end
-
   version :back do 
     process :resize_to_fill => [610, 350]
   end
 
   version :front do
-    process :resize_to_fill => [245, 220]
+    process :resize_to_fill => [220, 245]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

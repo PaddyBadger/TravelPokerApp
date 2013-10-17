@@ -1,182 +1,27 @@
 .seasons {
-  padding-top:700px;
+ width:610px;
+ padding-left:170px;
 }
+
+.seasons button {
+  border:none;
+  background:#ffffff;
+  margin-bottom:10px;
+}
+
+.seasons img {
+  height:40px;
+  width:40px;
+}
+
 .seasons h1 {
  color: white;
  font-size: 30px;
  text-align:center;
- padding-top:15px;
+ padding-top:50px;
  }
 
- .jan {
-  height:100px;
-  width:100px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  background: #4E4C71;
-  margin: 20px;
-  border:2px solid #A873C1;
-  float:left;
+.all img {
+  width:90px;
+  display:inline-block;
 }
-
-.feb {
-  height:100px;
-  width:100px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  background: #9048A4;
-  margin: 20px;
-  border:2px solid #4E4C71;
-  float:left;
-}
-
-.mar {
-  height:100px;
-  width:100px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  background: #A873C1;
-  margin: 20px;
-  border:2px solid #9048A4;
-  float:left;
-}
-
-.apr {
-  height:100px;
-  width:100px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  background: #F1C40F;
-  margin: 20px;
-  border:2px solid #EC7A21;
-  float:left;
-}
-
-.may {
-  height:100px;
-  width:100px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  background: #F5C018;
-  margin: 20px;
-  border:2px solid #EC7A21;
-  float:left;
-}
-
-.jun {
-  height:100px;
-  width:100px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  background: #EC7A21;
-  margin: 20px;
-  border:2px solid #F5C018;
-  float:left;
-  
-}
-
-.jul {
-  height:100px;
-  width:100px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  background: #E34D3C;
-  margin: 20px;
-  border:2px solid #8E3433;
-  float:left;
-}
-
-.aug {
-  height:100px;
-  width:100px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  background: #D03835;
-  margin: 20px;
-  border:2px solid #8E3433;
-  float:left;
-}
-
-.sep {
-  height:100px;
-  width:100px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  background: #8E3433;
-  margin: 20px;
-  border:2px solid #E34D3C;
-  float:left;
-}
-
-.oct {
-  height:100px;
-  width:100px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  background: #1BBC9B;
-  margin: 20px;
-  border:2px solid #238076;
-  float:left;
-    
-}
-
-.nov {
-  height:100px;
-  width:100px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  background: #238076;
-  margin: 20px;
-  border:2px solid #1BBC9B;
-  float:left;
-}
-
-.dec {
-  height:100px;
-  width:100px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  background: #438EB8;
-  margin: 20px;
-  border:2px solid #1E3F50;
-  float:left;
-}
-
-<div class="seasons">
-    <div class="jan">
-      <h1>Jan</h1>
-    </div>
-    <div class="feb">
-      <h1>Feb</h1>
-    </div>
-    <div class="mar">
-      <h1>Mar</h1>
-    </div>
-    <div class="apr">
-      <h1>Apr</h1>
-    </div>
-    <div class="may">
-      <h1>May</h1>
-    </div>
-    <div class="jun">
-      <h1>Jun</h1>
-    </div>
-    <div class="jul">
-      <h1>Jul</h1>
-    </div>
-    <div class="aug">
-      <h1>Aug</h1>
-    </div>
-    <div class="sep">
-      <h1>Sep</h1>
-    </div>
-    <div class="oct">
-      <h1>Oct</h1>
-    </div>
-    <div class="nov">
-      <h1>Nov</h1>
-    </div>
-    <div class="dec">
-      <h1>Dec</h1>
-    </div>
-  </div>

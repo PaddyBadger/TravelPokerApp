@@ -302,6 +302,13 @@ input{
   positioning:absolute;
 }
 
+.tripMeta li {
+  font-family:"Opal";
+  font-size:12px;
+  text-align:left;
+  padding:-5px;
+}
+
 .btn-large {
   padding: 11px 19px;
   font-size: 17.5px;
@@ -508,7 +515,9 @@ input{
 .topFooter{
   background: #2f3130 url('footer_shadow.png') repeat-x;
   height: 100%;
+  width:100%;
   overflow: hidden;
+
 
 }
 

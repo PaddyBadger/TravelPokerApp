@@ -10,6 +10,7 @@
     </div>
   <% end %>
   <div class="iinput">
+    <%= render partial: '/categories/form' %>
     <%= image_tag(card.image.back.url) if card.image? %>
     <%= f.label :image, class: 'formlabel' %>
     <div class="iinputtext"> 
@@ -32,6 +33,7 @@
   <div class="pinput">
     <%= f.text_area :description, rows: 8 %>
   </div>
+  <%= render partial: '/seasons/form', locals: {f: f} %>
   <div class="cbutton">
     <%= f.submit "Save", class: 'btn btn-large' %>
   </div>

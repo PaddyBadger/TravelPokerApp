@@ -1,3 +1,11 @@
+%w[jan feb mar apr may jun jul aug sep oct nov dec q1 q2 q3 q4 h1 h2 all].each do |season|
+  Season.create(name: 'season', image: "/assets/#{season}.png")
+end
+
+puts "#{Season.count} Seasons"
+
+
+
 user = User.create(email: "patriciaestridgedubai@gmail.com", password: 'helloworld')
 
 europe = user.decks.create(title: 'Eating in Europe', location: 'Europe', remote_image_url: 'http://t0.gstatic.com/images?q=tbn:ANd9GcSNVsO5DNbbKJr4VWQIiQCCz40QhvjV4LBccVGo3gzSDdOLPfIOJQ')
@@ -50,3 +58,4 @@ europeandus.cards << nyc
 
 puts "#{user.cards.count} Cards"
 puts "#{user.decks.count} Decks"
+

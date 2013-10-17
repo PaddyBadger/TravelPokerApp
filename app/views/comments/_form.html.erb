@@ -1,11 +1,14 @@
-<%= form_for [card, comment], html: { class: '' }, remote: true do |f| %>    
-  <div class="tinput"> 
-    <%= f.text_field :title, placeholder: "Title" %>
-  </div>
-  <div class="pinput"> 
-    <%= f.text_area :description, rows: 4 %>
-  </div>
-  <div class="commentButton">
-      <%= f.submit "Save", class: 'btn btn-large' %>
-  </div>
+<% if can? :create, Comment %>
+  <h3>Have Your Say</h3>
+  <%= form_for [card, comment], html: { class: '' }, remote: true do |f| %>    
+    <div class="tinput"> 
+      <%= f.text_field :title, placeholder: "Title" %>
+    </div>
+    <div class="pinput"> 
+      <%= f.text_area :description, rows: 4 %>
+    </div>
+    <div class="commentButton">
+        <%= f.submit "Save", class: 'btn btn-large' %>
+    </div>
+  <% end %>
 <% end %>

@@ -52,15 +52,16 @@
         <h6><%= @card.title%></h6>
         <p><%= @card.description%></p>
         <p><%= link_to @card.url%></p>
+      <% if can? :manage, Card %>
       <div class="memberOnly">
         <span><%= link_to "Edit", edit_card_path(@card), class: "keep11", id: "keep1" %></span>
         <span> <%= link_to "Delete", @card, method: :delete, class: 'keep11', id: "keep1", confirm: 'Are you sure you want to delete this card?' %></span>
       </div>
+      <% end %>
       <div class="comments">
-        <h2><%= @comments.count %> Comments</h2>
-         <%= render partial: "comments/comment", collection: @comments, locals: { card: @cards} %>
-        <h5>Create Comment</h5>
-          <%= render partial: "comments/form", locals:{ card: @card, comment: Comment.new } %>
+        <h3><%= @comments.count %> Additional Thoughts</h3>
+        <%= render partial: "comments/comment", collection: @comments, locals: { card: @cards} %>
+        <%= render partial: "comments/form", locals:{ card: @card, comment: Comment.new } %>
       </div>
     </div>
   </div>

@@ -7,7 +7,13 @@
       </div>
       <div class="dk_options">
         <ul class="dk_options_inner">
-          <li class=""><a data-dk-dropdown-value="0">To: 48 Hours in NY</a></li>
+          <% if current_user %>
+            <% current_user.decks.each do |deck| %>
+              <li class="">
+                <%= link_to "To: #{deck.title}", ("#{cards_decks_path}?card_id=#{card.id}&deck_id=#{deck.id}"), method: :post, remote: true, data: { 'dk-dropdown-value' => 0 } %>
+              </li>
+            <% end %>
+          <% end %>
           <li class=""><a href="/decks/new/" data-dk-dropdown-value="1">+ Create New</a></li>
         </ul>
       </div>
@@ -27,7 +33,9 @@
           </li>
         </ul>
       </div>
-      <span><%= link_to "Edit", edit_card_path(card), id: "keep", class: "keep1a" %></span>
+      <% if can? :manage, Card %>
+        <span><%= link_to "Edit", edit_card_path(card), id: "keep", class: "keep1a" %></span>
+      <% end %>
     </div>
   </div>
 

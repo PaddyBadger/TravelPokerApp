@@ -12,8 +12,19 @@
   <div id="panel">
   <div class="centerDiv">
     <% if user_signed_in? %>
-      <div class="topCol">
-        <%= button_to('Logout', destroy_user_session_path, method: :delete) %>
+      <div class="topCol1">
+        <p>My Likes</p>
+      </div>
+      <div class="topCol1">
+        <p>My Decks</p>
+      </div>
+       <div class="topCol1">
+        <p>My Cards</p>
+      </div>
+      <div class="topCol1">
+        <%= button_to('Logout', destroy_user_session_path, class: 'btn topButton', method: :delete) %>
+        <a href="/decks/new" class="btn topButton">Create a Deck</a>
+        <a href="/cards/new" class="btn topButton">Create a Card</a>
       </div>    
     <% else %>
       <div class="topCol">
@@ -122,6 +133,5 @@
       </div>
       <%= yield :scripts %>
     </footer>
-
 </body>
 </html>

@@ -28,7 +28,7 @@ class LikesController < ApplicationController
   private
 
   def load_likeable
-    cls, id = request.path.split("/").first(2)
+    cls, id = request.path.split("/")[1..2]
     @likeable = cls.singularize.classify.constantize.find(id)
   end 
 end
