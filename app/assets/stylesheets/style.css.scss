@@ -123,16 +123,16 @@ input{
   background-size: 38px 38px;
 }
 
-.home{background-image:url('home.png');}
-.drink{background-image:url('drink.png');}
-.camera{background-image:url('camera.png');}
-.shopping{background-image:url('shopping.png');}
-.food{background-image:url('food.png');}
-.journey{background-image:url('journey.png');}
+.home{background-image:url('Sleeping.png');}
+.drink{background-image:url('Drinks_and_Night_Life.png');}
+.camera{background-image:url('Sightseeing.png');}
+.shopping{background-image:url('Shopping.png');}
+.food{background-image:url('Eating.png');}
+.journey{background-image:url('Epic_Journeys.png');}
 .poker{background-image:url('poker.png');}
-.theatre{background-image:url('theatre.png');}
-.sport{background-image:url('sport.png');}
-.festival{background-image:url('festival.png');}
+.theatre{background-image:url('Entertainment.png');}
+.sport{background-image:url('Sports.png');}
+.festival{background-image:url('Festivals_and_Events.png');}
 
 .topCol {
   padding: 10px;
@@ -229,6 +229,7 @@ input{
 .trip{
   margin-bottom: 35px;
   float: left;
+  height:300px;
   width: 245px;
   margin-right: 27px;
   margin-left: 27px;
@@ -240,6 +241,7 @@ input{
   margin-bottom: 25px;
   float: left;
   width: 245px;
+  height:350px;
   margin-right: 27px;
   margin-left: 27px;
   border-top: 1px solid #2980B9;
@@ -370,38 +372,13 @@ input{
   border-radius: 0px !important;
 }
 
-.pokerHover{
-  background: url('pokerBW.png');
-  background-size: 30px 30px;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  margin-left: -5px;
-  margin-top: -5px;
-  cursor: pointer;
-  display:none;
-}
-
-.pokerHover:hover{
-  background-image: url('pokerlike.png') ;
-  background-size: 30px 30px;
-  color: #2980b9 !important;
-}
-
-.pokerLiked {
-  background-image: url('pokerlike.png') ;
-  background-size: 30px 30px;
-  color: #2980b9 !important;
-}
 
 .tripMeta{
   width: 240px;
   height: 25px;
   position: absolute;
   left: 6px;
-  top: 188px;
+  top: 180px;
   display:none;
   text-align:center;
 }
@@ -431,8 +408,8 @@ input{
 }
 
 .social img{
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 /* .deckRibbon{
@@ -463,7 +440,7 @@ input{
   margin-left:4px;
 }
 
-.dk_options{width:150px !important; }
+.dk_options{width:200px !important; }
 
 .dk_options:before{left:15px !important;}
 

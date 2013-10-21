@@ -4,15 +4,18 @@ class Comment < ActiveRecord::Base
   has_many :votes, dependent: :destroy
   attr_accessible :description, :title
 
+  default_scope order('created_at DESC')
+  default_scope order('updated_at DESC')
+
   validates :description, length: { minimum: 5 }, presence: true
   validates :user, presence: true 
 
   def up_votes
-    self.votes.where(value: 1).count
+    self.votes.where(vote: 1).count
   end
 
   def down_votes
-    self.votes.where(value: -1).count
+    self.votes.where(vote: -1).count
   end  
 
   def points

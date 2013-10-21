@@ -15,7 +15,7 @@ class DecksController < ApplicationController
   end
 
   def create
-    @deck = Deck.new(params[:deck])
+    @deck = current_user.decks.new(params[:deck])
     authorize! :create, Card, message: "Please Register with TravelPoker to create your own cards."
     
     if @deck.save

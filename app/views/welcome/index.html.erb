@@ -8,13 +8,18 @@
   <img src="assets/homepage1.png" />
 </div>
 <div class="topDeck">
-    <img src="assets/pokerc.png">
+    <h3>Top Cards</h3>
+    <div class="apple_pagination">
+      <%= will_paginate @cards %>
+    </div>
     <%= render @cards %>
-    <%= will_paginate @cards %>
+    
 </div>
 <div class="topDeck">
-    <img src="assets/poker.png">
+    <h3>Top Decks</h3>
+     <div class="apple_pagination">
+      <%= will_paginate @decks %>
+    </div>
     <%= render @decks %>
-    <%= will_paginate @decks %>
 </div>
     

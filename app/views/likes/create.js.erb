@@ -1,0 +1,1 @@
+$('.<%=dom_id(@likeable)%>.like').html('<%=escape_javascript(render partial: 'likes/like', locals: { likeable: @likeable })%>')

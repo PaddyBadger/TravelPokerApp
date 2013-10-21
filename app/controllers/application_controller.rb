@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  respond_to :html, :js
+  
   protect_from_forgery
 
   rescue_from CanCan::AccessDenied do |exception|

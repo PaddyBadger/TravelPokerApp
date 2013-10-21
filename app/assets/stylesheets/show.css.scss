@@ -52,6 +52,8 @@
 }
 
 #keep1 {
+  display: inline-block;
+  float:left;
   background: #242625 !important;
   font-size: 18px;
   text-transform: uppercase;
@@ -83,73 +85,7 @@
   .keep11 {
     float:left;
     width:100px;
-
   }
-
-.dk_options{width:150px !important; }
-
-.dk_options:before{left:15px !important;}
-
-.dk_options {
-  padding-top: 14px; }
-  .dk_options:before {
-    content: "";
-    border-style: solid;
-    border-width: 0 9px 9px 9px;
-    border-color: transparent transparent #242625 transparent;
-    height: 0px;
-    position: absolute;
-    left: 15px;
-    top: 5px;
-    width: 0px;
-    -webkit-transform: rotate(360deg); }
-  .dk_options:before {
-    left: auto;
-    right: 12px; }
-  .dk_options li {
-    padding-bottom: 3px; }
-  .dk_options a {
-    border-radius: 3px;
-    color: white;
-    display: block;
-    padding: 4px 4px;
-    text-decoration: none; }
-    .dk_options a:hover {
-      background-color: #3498DB; }
-
-.dk_option_current a {
-  background-color: #3498DB; }
-  
-.pokerHover_1{
-  background: url('pokerBW.png');
-  background-size: 37px 37px;
-  float:left;
-  width: 37px;
-  height: 37px;
-  text-align: center;
-  line-height: 37px;
-  margin-top: -8px;
-  margin-right: 15px;
-  cursor: pointer;
-}
-
-.pokerHover_1:hover{
-  background-image: url('pokerlike.png') ;
-  background-size: 37px 37px;
-  color: #2980b9 !important;
-}
-
-.pokerHover_1 a{
-  font-weight: bold !important;
-  color:#8a8a8a;
-  font-family:Tahoma !important;
-  text-decoration:  none;
-  font-size: 12px;
-}
-
-.pokerHover_1 a:hover{
-  color:#2980b9 !important;
-}
 
 .social_1 a{
   float:left; 
@@ -162,4 +98,18 @@
 
 .memberOnly {
   height:50px;
+  margin-left:110px
+  }
+
+.tags img{
+  width:50px;
+  height:50px;
+  float:left;
 }
+
+.deck_back {
+  width:1200px;
+  margin:auto;
+  padding-left: 50px;
+}
+

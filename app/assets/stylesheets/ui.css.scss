@@ -722,8 +722,7 @@ h6 {
       border-left-color: transparent; }
 
 .dk_options {
-  padding-top: 14px; 
-  width:500px;}
+  padding-top: 14px; }
   .dk_options:before {
     content: "";
     border-style: solid;
@@ -731,7 +730,6 @@ h6 {
     border-color: transparent transparent #242625 transparent;
     height: 0px;
     position: absolute;
-    left: 15px;
     top: 5px;
     width: 0px;
     -webkit-transform: rotate(360deg); }
@@ -789,11 +787,11 @@ h6 {
     color: inherit; }
 
 .dk_options {
-  margin-top: -21px;
+  margin-top: -10px;
   position: absolute;
-  left: 0;
+  left: -40px;
   opacity: 0;
-  width: 220px;
+  width: 20px;
   z-index: -50;
   display: none\9;
   -webkit-transition: 0.3s ease-out;

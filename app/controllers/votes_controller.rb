@@ -1,4 +1,6 @@
 class VotesController < ApplicationController
+  respond_to :html, :js
+  
   before_filter :setup
 
   def up_vote
@@ -14,7 +16,7 @@ class VotesController < ApplicationController
   private
 
   def setup 
-    @comment = Comment.find(params[:card_id])
+    @comment = Comment.find(params[:comment_id])
     @vote = @comment.votes.where(user_id: current_user.id).first
    
   end

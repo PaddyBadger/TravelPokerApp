@@ -21,4 +21,9 @@ module ApplicationHelper
   def resource_class
     devise_mapping.to
   end
+
+  def comment_url_helper(comment)
+    card = comment.card
+    [card, comment]
+  end
 end

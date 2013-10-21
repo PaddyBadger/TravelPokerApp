@@ -1,0 +1,40 @@
+.likes {
+  position:absolute;
+  margin-top:14px;
+  margin-left:9px;
+  color:white;
+  font-weight:bold;
+  font-size:12px;
+}
+
+.likes1 {
+  margin-left:10px;
+}
+
+.likes2 {
+  float:left;
+}
+
+.pokerLike {
+  background:url('grey_heart.png') no-repeat;
+  width:25px;
+  height:25px;
+  float:left;
+  margin-top:8px;
+}
+
+.pokerLike:hover {
+  background:url('red_heart.png') no-repeat;
+  width:25px;
+  height:25px;
+  float:left;
+  margin-top:8px;
+}
+
+.pokerLiked {
+  background:url('red_heart.png') no-repeat;
+  width:25px;
+  height:25px;
+  float:left;
+  margin-top:8px;
+}

@@ -1,5 +1,5 @@
-//= require jquery_ujs
 //= require jquery
+//= require jquery_ujs
 //= require_tree .
 
 $=jQuery;
@@ -7,12 +7,12 @@ $=jQuery;
 $(document).ready(function(){
 jQuery(function(){
 
-  $('.pokerHover,.trip,.deck').hover(function(){
-    $(this).children('.tripMeta,.pokerHover').fadeIn(500);
+  $('.trip,.deck').hover(function(){
+    $(this).children('.tripMeta').fadeIn(500);
   },
   function(){
   $('.dk_container.span3.dk_shown.dk_theme_default').removeClass('dk_open');
-    $(this).children('.tripMeta,.pokerHover').fadeOut(500);
+    $(this).children('.tripMeta').fadeOut(500);
 });
 });
 });

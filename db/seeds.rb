@@ -4,7 +4,11 @@ end
 
 puts "#{Season.count} Seasons"
 
+%w[Eating Sleeping Epic_Journeys Sports Entertainment Drinks_and_Night_Life Sightseeing Shopping Festivals_and_Events].each do |category|
+  Category.create(name: 'category', image: "/assets/#{category}.png")
+end
 
+puts "#{Category.count} Categories"
 
 user = User.create(email: "patriciaestridgedubai@gmail.com", password: 'helloworld')
 
@@ -16,7 +20,7 @@ nandsamerica = user.decks.create(title: 'Exploring the Americas', location: 'Nor
 
 europeandus = user.decks.create(title: 'Dream Trip to Europe and The US', location: 'Europe and US', remote_image_url: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR25OHcqsjLO4swCXmLdSOzP3jQWnmb_LXqYoP7sdi9E6yY62MguQ')
 
-london = user.cards.create(title: 'Saunter Down South Bank', location: 'London, UK', remote_image_url: 'http://photorefraction.files.wordpress.com/2011/03/london-south-bank-1.jpg', url: 'n/a', description: 'If you\'re lucky with the weather, nothing in London beats a wander down South Bank in a crisp sunny day. yes you should totally definitely do this. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.')
+london = user.cards.create(title: 'Saunter Down South Bank', location: 'London, UK', remote_image_url: 'http://photorefraction.files.wordpress.com/2011/03/london-south-bank-1.jpg', url: 'n/a', description: 'If you\'re lucky with the weather, nothing in London beats a wander down South Bank in a crisp sunny day. yes you should totally definitely do this. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.' )
 
 nyc = user.cards.create(title: 'Kayack on the Hudson', location: 'Manhattan, New York', remote_image_url: 'http://paddleforourplanet.org/wp-content/uploads/2010/09/5036264103_57198a78e9.jpg', url: 'n/a', description: 'A novel way to see New York from the river, you can kayak for free on pier 40. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.')
 

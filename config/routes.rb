@@ -1,6 +1,6 @@
 Travelpoker::Application.routes.draw do
 
-  resources :cards_decks, only: [:create, :destroy]
+  resource :cards_decks, only: [:create, :destroy]
 
   resources :decks do
     resources :likes, only: [:create, :destroy]
@@ -18,7 +18,7 @@ Travelpoker::Application.routes.draw do
       
   resources :users, only: [:show, :index] do
     resources :cards, only: [:index]
-    resources :decks, only: [:index]
+    resources :decks, only: [:index, :create], controller: 'users/decks'
   end
 
   match "about" => 'welcome#about', via: :get

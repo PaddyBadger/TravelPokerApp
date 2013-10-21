@@ -1,5 +1,4 @@
 <div class="trip">
-  <%= render partial: 'likes/like', locals: { likeable: card } %>
   <div class="tripMeta">
     <div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
       <div class="dk_toggle" id="keep">
@@ -13,8 +12,10 @@
                 <%= link_to "To: #{deck.title}", ("#{cards_decks_path}?card_id=#{card.id}&deck_id=#{deck.id}"), method: :post, remote: true, data: { 'dk-dropdown-value' => 0 } %>
               </li>
             <% end %>
+          <% else %>
+            <li><a href="/decks/new/" data-dk-dropdown-value="1">Log In | Register?</a></li>
           <% end %>
-          <li class=""><a href="/decks/new/" data-dk-dropdown-value="1">+ Create New</a></li>
+          <li><div class="likes1"><%= render partial: 'likes/like', locals: { likeable: card } %></div></li>
         </ul>
       </div>
     </div>
@@ -33,14 +34,12 @@
           </li>
         </ul>
       </div>
-      <% if can? :manage, Card %>
-        <span><%= link_to "Edit", edit_card_path(card), id: "keep", class: "keep1a" %></span>
-      <% end %>
     </div>
+    <%= render partial: 'likes/like', locals: { likeable: card } %>
   </div>
 
   <!-- render partials for, categories, likes, keep and share...? , edit_card_path(@card)-->
-  <%= image_tag (card.image) %>
+  <%= image_tag (card.image.front) %>
   <div class="tripInfo">
     <h4><%= link_to card.title, card %></h4>
     <p><%= markdown (card.location)%></p>

@@ -1,4 +1,6 @@
 class LikesController < ApplicationController
+  respond_to :html, :js
+  
   before_filter :load_likeable
 
   def create
@@ -7,10 +9,11 @@ class LikesController < ApplicationController
 
     if @like.save
       flash[:notice] = "Liked!"
-      redirect_to @likeable
     else
       flash[:error] = "There was an error liking. Please try again."
     end
+
+    respond_with(@likeable, location: @likeable)
   end
 
   def destroy
@@ -19,10 +22,11 @@ class LikesController < ApplicationController
 
     if @like.destroy
       flash[:notice] = "Unliked!"
-      redirect_to @likeable
     else
       flash[:error] = "There was an error unliking. Please try again."
     end
+    
+    respond_with(@likeable, location: @likeable)
   end
 
   private

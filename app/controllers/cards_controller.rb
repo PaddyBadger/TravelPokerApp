@@ -1,13 +1,20 @@
 class CardsController < ApplicationController
+  respond_to :html, :js
 
   def index
     @cards = Card.paginate(page: params[:page], per_page: 12)
   end
 
   def show
-     @card = Card.find(params[:id])
-     @comments = @card.comments.includes(:user)
-     @json = @card.to_gmaps4rails
+    @card = Card.where(id: params[:id]).first
+
+    if @card
+       @comments = @card.comments.includes(:user)
+       @json = @card.to_gmaps4rails
+    else
+      redirect_to :root
+    end
+
   end
 
   def new
@@ -22,11 +29,12 @@ class CardsController < ApplicationController
     
     if @card.save
       flash[:notice] = "card was saved."
-      redirect_to @card
     else
       flash[:error] = "There was an error saving the card. Please try again."
       render :new 
     end
+
+    respond_with(@card)
   end
 
   def update
@@ -34,16 +42,18 @@ class CardsController < ApplicationController
     
       if @card.update_attributes(params[:card])
         flash[:notice] = "card was updated."
-        redirect_to @card, notice: "card was saved successfully."
       else
         flash[:error] = "There was an error saving the card. Please try again."
         render :edit
       end
+
+      respond_with(@card)
   end
 
   def edit
     @card = Card.find(params[:id])
     authorize! :edit, Card, message: "You must own a card to edit it."
+    respond_with(@card)
   end
 
   def destroy
@@ -53,11 +63,12 @@ class CardsController < ApplicationController
      
     if @card.destroy
       flash[:notice] = "\"#{title}\" was deleted successfully."
-      redirect_to cards_path
     else
       flash[:error] = "There was an error deleting the card."
       render :show
     end
+
+    respond_with(@card)
   end
 
 end

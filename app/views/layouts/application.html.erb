@@ -17,9 +17,19 @@
       </div>
       <div class="topCol1">
         <p>My Decks</p>
+          <% current_user.decks.each do |deck| %>
+            <li class="">
+              <img class="spade" src="/assets/spade.svg"><%= link_to deck.title, deck %><br>
+            </li>
+          <% end %>
       </div>
        <div class="topCol1">
         <p>My Cards</p>
+          <% current_user.cards.each do |card| %>
+            <li class="">
+              <img class="spade" src="/assets/spade.svg"><%= link_to card.title, card %><br>
+            </li>
+          <% end %>
       </div>
       <div class="topCol1">
         <%= button_to('Logout', destroy_user_session_path, class: 'btn topButton', method: :delete) %>

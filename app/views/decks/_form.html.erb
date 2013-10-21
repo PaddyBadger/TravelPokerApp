@@ -10,7 +10,7 @@
     </div>
   <% end %>
   <div class="iinput">
-    <%= image_tag(deck.image.back.url) if deck.image? %>
+    <%= image_tag(deck.image.url) if deck.image? %>
     <%= f.label :image, class: 'formlabel' %>
     <div class="iinputtext"> 
       <%= f.file_field :image %>
