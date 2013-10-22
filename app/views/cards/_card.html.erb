@@ -1,4 +1,7 @@
 <div class="trip">
+  <div class="edit">
+    <%= render partial: 'decks/carddeck', locals: { deck: @deck, card: card } %>
+  </div>
   <div class="tripMeta">
     <%= render partial: 'cards/keep', locals: { card: card } %>
     <div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
@@ -10,7 +13,6 @@
           <li class="social">
             <a href="#"><img src="/assets/twitter.png"></a>
             <a href="#"><img src="/assets/facebook.png"></a>
-            <a href="#"><img src="/assets/gplus.png"></a>
             <a href="#"><img src="/assets/pinterest.png"></a>
             <a href="#"><img src="/assets/rss.png"></a>
           </li>

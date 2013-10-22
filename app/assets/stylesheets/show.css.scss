@@ -127,6 +127,27 @@
   max-height: 244px;
   padding: 3px 3px 0; }
 
+.edit {
+  position:absolute;
+  background: #242625 !important;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align:center !important;
+  width: 55px;
+  padding-top:2px;
+  height:20px;
+  color: white;
+  border-radius: 3px !important;
+  overflow: hidden;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.edit li {
+  color: white;
+  font-size: 10px;
+  text-decoration:none !important;
+}
 
 .social_1 a{
   float:left; 

@@ -7,7 +7,7 @@
       <% if current_user %>
         <% current_user.decks.each do |deck| %>
           <li class="">
-            <%= link_to "To: #{deck.title}", ("#{cards_decks_path}?card_id=#{card.id}&deck_id=#{deck.id}"), method: :post, remote: true, data: { 'dk-dropdown-value' => 0 } %>
+            <%= link_to "To: #{deck.title}", cards_decks_path(card_id: card.id, deck_id: deck.id), method: :post, method: :post, remote: true, data: { 'dk-dropdown-value' => 0 } %>
           </li>
         <% end %>
       <% else %>
