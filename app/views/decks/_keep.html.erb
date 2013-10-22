@@ -1,0 +1,15 @@
+<div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
+      <a class="dk_toggle" id="keep">
+        <span class="dk_label">Keep</span>
+      </a>
+      <div class="dk_options">
+        <ul class="dk_options_inner">
+          <% if current_user %>
+            <li class="">
+              <%= link_to "Keep Deck", copy_deck_path(deck), method: :post %>
+            </li>
+          <% end %>
+          <li><div class="likes1"><%= render partial: 'likes/like', locals: { likeable: deck } %></div></li>
+        </ul>
+      </div>
+    </div>

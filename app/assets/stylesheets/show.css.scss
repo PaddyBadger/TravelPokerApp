@@ -45,6 +45,11 @@
   margin-bottom:20px;
 }
 
+.backInfo h3 {
+  font-family: "Opal";
+
+}
+
 .backInfo p {
   width:600px;
   white-space:pre-wrap;
@@ -82,10 +87,46 @@
     #keep1:active .select-icon {
       border-left-color: transparent; }
 
-  .keep11 {
-    float:left;
-    width:100px;
-  }
+.dk_options_1{width:200px !important; }
+
+.dk_options_1:before{left:15px !important;}
+
+.dk_options_1 {
+  padding-top: 14px; }
+  .dk_options_1:before {
+    content: "";
+    border-style: solid;
+    border-width: 0 9px 9px 9px;
+    border-color: transparent transparent #242625 transparent;
+    height: 0px;
+    position: absolute;
+    top: 5px;
+    width: 0px;
+    -webkit-transform: rotate(360deg); }
+  .dk_options_1:before {
+    left: auto;
+    right: 12px; }
+  .dk_options_1 li {
+    padding-bottom: 3px; }
+  .dk_options_1 a {
+    border-radius: 3px;
+    color: white;
+    display: block;
+    padding: 4px 4px;
+    text-decoration: none; }
+    .dk_options_1 a:hover {
+      background-color: #3498DB; }
+
+.dk_option_current a {
+  background-color: #3498DB; }
+
+.dk_options_inner {
+  background-color: #242625;
+  border-radius: 5px;
+  margin: 0;
+  max-height: 244px;
+  padding: 3px 3px 0; }
+
 
 .social_1 a{
   float:left; 
@@ -96,10 +137,19 @@
   height: 20px;
 }
 
+.deckCards {
+  width: 1200px;
+  margin:auto;
+}
 .memberOnly {
   height:50px;
-  margin-left:110px
   }
+
+.memberOnlyDeck {
+  height:50px;
+  margin-left:35px;
+  }
+
 
 .tags img{
   width:50px;

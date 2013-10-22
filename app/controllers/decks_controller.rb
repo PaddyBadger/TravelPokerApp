@@ -16,7 +16,7 @@ class DecksController < ApplicationController
 
   def create
     @deck = current_user.decks.new(params[:deck])
-    authorize! :create, Card, message: "Please Register with TravelPoker to create your own cards."
+    authorize! :create, Deck, message: "Please Register with TravelPoker to create your own cards."
     
     if @deck.save
       flash[:notice] = "Deck was saved."
@@ -30,13 +30,13 @@ class DecksController < ApplicationController
   def update
     @deck = Deck.find(params[:id])
     
-      if @deck.update_attributes(params[:deck])
-        flash[:notice] = "Deck was updated."
-        redirect_to @deck, notice: "Deck was saved successfully."
-      else
-        flash[:error] = "There was an error saving the deck. Please try again."
-        render :edit
-      end
+    if @deck.update_attributes(params[:deck])
+      flash[:notice] = "Deck was updated."
+      redirect_to @deck, notice: "Deck was saved successfully."
+    else
+      flash[:error] = "There was an error saving the deck. Please try again."
+      render :edit
+    end
   end
 
   def edit
@@ -61,4 +61,22 @@ class DecksController < ApplicationController
     end
   end
 
+  def copy
+    @original_deck = Deck.find(params[:id])
+    @deck = @original_deck.clone
+    authorize! :create, Deck, message: "Please Register with TravelPoker to create your own cards."
+    @deck.user = current_user
+    @deck.cards.delete_all
+    @original_deck.cards.each do |card|
+      @deck.cards << card
+    end
+    
+    if @deck.save
+      flash[:notice] = "Deck was saved."
+      redirect_to @deck
+    else
+      flash[:error] = "There was an error saving the deck. Please try again."
+      render :new 
+    end
+  end
 end

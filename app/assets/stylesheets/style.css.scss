@@ -440,9 +440,56 @@ input{
   margin-left:4px;
 }
 
-.dk_options{width:200px !important; }
+.dk_options_1{
+  width:200px !important; 
+  margin-left:50px;
+  top:30px;}
 
-.dk_options:before{left:15px !important;}
+.dk_options_1 li{
+  font-family: "Opal";
+  }
+
+.dk_options_1:before{left:15px !important;}
+
+.dk_open {
+  position: relative; }
+  .dk_open .dk_options_1 {
+    margin-top: -1px;
+    opacity: 1;
+    z-index: 10;
+    display: block\9; }
+  .dk_open .dk_label {
+    color: inherit; }
+
+.dk_options_1 {
+  margin-top: -10px;
+  position: absolute;
+  left: -40px;
+  opacity: 0;
+  width: 20px;
+  z-index: -50;
+  display: none\9;
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  -webkit-backface-visibility: hidden; }
+  .select-right .dk_options_1 {
+    left: auto;
+    right: 0; }
+  .dk_options_1 a {
+    display: block; }
+
+.dk_options_inner {
+  overflow: auto;
+  outline: none;
+  position: relative; }
+
+.dk_touch .dk_options_1 {
+  overflow: hidden; }
+.dk_touch .dk_options_inner {
+  max-height: none;
+  overflow: visible; }
 
 .inputAll{
   width: 180px;

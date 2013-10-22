@@ -1,10 +1,14 @@
+.like {
+  float:left;
+}
+
 .likes {
   position:absolute;
-  margin-top:14px;
+  margin-top:12px;
   margin-left:9px;
   color:white;
   font-weight:bold;
-  font-size:12px;
+  font-size:10px;
 }
 
 .likes1 {
@@ -17,24 +21,40 @@
 
 .pokerLike {
   background:url('grey_heart.png') no-repeat;
-  width:25px;
-  height:25px;
+  width:30px;
+  height:30px;
   float:left;
   margin-top:8px;
 }
 
 .pokerLike:hover {
   background:url('red_heart.png') no-repeat;
-  width:25px;
-  height:25px;
+  width:30px;
+  height:30px;
   float:left;
   margin-top:8px;
 }
 
 .pokerLiked {
   background:url('red_heart.png') no-repeat;
-  width:25px;
-  height:25px;
+  width:30px;
+  height:30px;
+  float:left;
+  margin-top:8px;
+}
+
+.done {
+  background:url('grey_spade.png') no-repeat;
+  width:30px;
+  height:30px;
+  float:left;
+  margin-top:8px;
+}
+
+.done:hover {
+  background:url('black_spade.png') no-repeat;
+  width:30px;
+  height:30px;
   float:left;
   margin-top:8px;
 }

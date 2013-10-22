@@ -23,7 +23,7 @@
         <div class="dk_toggle">
          <span class="dk_label" id="keep1">Keep</span>
         </div>
-        <div class="dk_options">
+        <div class="dk_options_1">
           <ul class="dk_options_inner">
           <% if current_user %>
             <% current_user.decks.each do |deck| %>
@@ -42,7 +42,7 @@
         <div class="dk_toggle">
           <span class="dk_label" id="keep1">Share</span>
         </div>
-        <div class="dk_options">
+        <div class="dk_options_1">
           <ul class="dk_options_inner">
             <li class="social_1">
               <a href="#"><img src="/assets/twitter.png"></a>
@@ -55,7 +55,7 @@
         </div>
       </div>
         
-        <h6><%= @card.title%></h6>
+        <h3><%= @card.title%></h3>
         <div class="likes2"><%= render partial: 'likes/like', locals: { likeable: @card } %></div>
         <div class="tags"><%=image_tag @card.category.image %></div>
         <div class="tags"><%=image_tag @card.season.image %></div>

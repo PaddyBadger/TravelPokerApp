@@ -4,6 +4,9 @@ Travelpoker::Application.routes.draw do
 
   resources :decks do
     resources :likes, only: [:create, :destroy]
+    member do
+      post :copy
+    end
   end
   
   resources :cards do 
@@ -17,8 +20,8 @@ Travelpoker::Application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
       
   resources :users, only: [:show, :index] do
-    resources :cards, only: [:index]
-    resources :decks, only: [:index, :create], controller: 'users/decks'
+    resources :cards, only: [:index], controller: 'users/cards'
+    resources :decks, only: [:index], controller: 'users/decks'
   end
 
   match "about" => 'welcome#about', via: :get

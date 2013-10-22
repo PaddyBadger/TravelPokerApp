@@ -1,19 +1,19 @@
 <div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
-      <div class="dk_toggle" id="keep">
-        <span class="dk_label">Keep</span>
-      </div>
-      <div class="dk_options">
-        <ul class="dk_options_inner">
-          <% if current_user %>
-            <% current_user.decks.each do |deck| %>
-              <li class="">
-                <%= link_to "To: #{deck.title}", ("#{cards_decks_path}?card_id=#{card.id}&deck_id=#{deck.id}"), method: :post, remote: true, data: { 'dk-dropdown-value' => 0 } %>
-              </li>
-            <% end %>
-          <% end %>
-          <li class=""><a href="/decks/new/" data-dk-dropdown-value="1">+ Create New Deck</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- <%= likeable.likes.count %>
+  <div class="dk_toggle" id="keep">
+    <span class="dk_label">Keep</span>
+  </div>
+  <div class="dk_options">
+    <ul class="dk_options_inner">
+      <% if current_user %>
+        <% current_user.decks.each do |deck| %>
+          <li class="">
+            <%= link_to "To: #{deck.title}", ("#{cards_decks_path}?card_id=#{card.id}&deck_id=#{deck.id}"), method: :post, remote: true, data: { 'dk-dropdown-value' => 0 } %>
+          </li>
+        <% end %>
+      <% else %>
+        <li><a href="/decks/new/" data-dk-dropdown-value="1">Log In | Register?</a></li>
+      <% end %>
+      <li><div class="likes1"><%= render partial: 'likes/like', locals: { likeable: card } %></div></li>
+    </ul>
+  </div>
+</div>
