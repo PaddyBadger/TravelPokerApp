@@ -1,0 +1,58 @@
+<div id="toppanel">
+  <div id="panel">
+  <div class="centerDiv">
+    <% if user_signed_in? %>
+      <div class="topCol1">
+        <p>My Likes</p>
+      </div>
+      <div class="topCol1">
+        <p>My Decks</p>
+          <% current_user.decks.each do |deck| %>
+            <li class="">
+              <img class="spade" src="/assets/spade.svg"><%= link_to deck.title, deck %><br>
+            </li>
+          <% end %>
+      </div>
+       <div class="topCol1">
+        <p>My Cards</p>
+          <% current_user.cards.each do |card| %>
+            <li class="">
+              <img class="spade" src="/assets/spade.svg"><%= link_to card.title, card %><br>
+            </li>
+          <% end %>
+      </div>
+      <div class="topCol1">
+        <%= button_to('Logout', destroy_user_session_path, class: 'btn topButton', method: :delete) %>
+        <a href="/decks/new" class="btn topButton">Create a Deck</a>
+        <a href="/cards/new" class="btn topButton">Create a Card</a>
+      </div>    
+    <% else %>
+      <div class="topCol">
+        <%= render partial: '/devise/sessions/new' %>
+      </div>
+      <div class="topCol">
+        <%= render partial: '/devise/registrations/new' %>
+       </div>
+    <% end %>
+  </div>  
+  </div> <!-- /login -->  
+
+<!-- The tab on top --> 
+  <div class="tab">
+    <ul class="login">
+      <li class="left">&nbsp;</li>
+      <li>Hello <% if current_user %>
+        <%= link_to (current_user.name || current_user.email), current_user %>
+      <% end %></li>
+      <li id="toggle">
+        <% if user_signed_in? %> 
+          <a id="open" class="open" href="#">Log Out | Panel</a> 
+        <% else %>
+          <a id="open" class="open" href="#">Log In | Register</a>
+        <% end %>
+        <a id="close" style="display: none;" class="close" href="#">Close Panel</a>     
+      </li>
+      <li class="right">&nbsp;</li>
+    </ul> 
+  </div> <!-- / top -->
+</div> 

@@ -10,38 +10,8 @@
   </div>
 <div class="deck_back">
   <div class="likes1"><%= render partial: 'likes/like', locals: { likeable: @deck } %></div>
-  <div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
-    <div class="dk_toggle">
-     <span class="dk_label" id="keep1">Keep</span>
-    </div>
-    <div class="dk_options_1">
-      <ul class="dk_options_inner">
-      <% if current_user %>
-        <li class="">
-          <%= link_to "Keep Deck", method: :post, remote: true %>
-        </li>
-      <% else %>
-        <li><a href="/decks/new/" data-dk-dropdown-value="1">Log In | Register?</a></li>
-      <% end %>
-        <li><div class="likes1"><%= render partial: 'likes/like', locals: { likeable: @deck } %></div></li>
-      </ul>
-    </div>
-  </div>
-  <div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
-    <div class="dk_toggle">
-      <span class="dk_label" id="keep1">Share</span>
-    </div>
-    <div class="dk_options_1">
-      <ul class="dk_options_inner">
-        <li class="social_1">
-          <a href="#"><img src="/assets/twitter.png"></a>
-          <a href="#"><img src="/assets/facebook.png"></a>
-          <a href="#"><img src="/assets/pinterest.png"></a>
-          <a href="#"><img src="/assets/rss.png"></a>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <%= render partial: 'decks/keep', locals: { deck: @deck } %>
+  <%= render partial: 'decks/social', locals: { deck: @deck } %>
 </div>
 <div class="deckCards">
   <div class="topDeck">

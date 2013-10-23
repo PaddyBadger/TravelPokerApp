@@ -1,8 +1,11 @@
 <div class="centerDiv topSlider fade">
-  <div class="searchIn">
-    <input type="text" placeholder="Be Inspired for Your Trip!!">
-    <a href="#" class="button">Deal</a>
-  </div>      
+  <%= form_tag search_cards_path, :method => :get do %>
+    <div class="searchIn">
+      <%= text_field_tag :query, params[:query], placeholder: "Where or what are you looking for?" %> 
+      <%= button_tag "Deal", class: "button" %>
+   <!-- <input type="text" > -->
+    </div>  
+  <% end %>        
 </div>
 <div class="pic">
   <img src="assets/homepage1.png" />

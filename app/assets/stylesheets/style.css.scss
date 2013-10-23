@@ -57,9 +57,13 @@ header{
 
 .searchIn .button{
   height: 43px;
-  line-height: 48px;
-  font-size: 22px;
+  line-height: 43px;
+  padding-bottom:8px;
+  font-size: 20px;
   font-family: "Opal";
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border:none;
 }
 input{
   outline:0px ;
@@ -425,7 +429,6 @@ input{
 
 #keep {
   padding: 4px 8px 4px 8px  !important;
-  width:40px !important;
   text-align:center !important;
   background: #242625 !important;
   border-radius: 3px !important;
@@ -434,10 +437,7 @@ input{
   left:-30px;
   bottom:-10px;
   float:left;
-}
-
-.keep1a {
-  margin-left:4px;
+  margin-left:5px;
 }
 
 .dk_options_1{

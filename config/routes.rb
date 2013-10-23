@@ -10,6 +10,9 @@ Travelpoker::Application.routes.draw do
   end
   
   resources :cards do 
+    collection do
+      get :search
+    end
     resources :likes, only: [:create, :destroy]
     resources :comments do
       match '/up-vote', to: 'votes#up_vote', as: :up_vote

@@ -1,4 +1,6 @@
 class DecksController < ApplicationController
+  respond_to :html, :js
+  
   def index
     @decks = Deck.paginate(page: params[:page], per_page: 12)
   end
@@ -61,15 +63,11 @@ class DecksController < ApplicationController
     end
   end
 
-  def copy
-    @original_deck = Deck.find(params[:id])
-    @deck = @original_deck.clone
-    authorize! :create, Deck, message: "Please Register with TravelPoker to create your own cards."
-    @deck.user = current_user
-    @deck.cards.delete_all
-    @original_deck.cards.each do |card|
-      @deck.cards << card
-    end
+ def copy
+    @deck = Deck.find(params[:id])
+    @deck_copy = @deck.dup
+    @deck_copy.user = current_user
+    @deck_copy.cards << @deck.cards
     
     if @deck.save
       flash[:notice] = "Deck was saved."

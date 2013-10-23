@@ -1,21 +1,7 @@
 <div class="deck">
   <div class="tripMeta">
     <%= render partial: 'decks/keep', locals: { deck: deck } %>
-    <div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
-      <a class="dk_toggle" id="keep">
-        <span class="dk_label">Share</span>
-      </a>
-      <div class="dk_options">
-        <ul class="dk_options_inner">
-          <li class="social">
-            <a href="#"><img src="assets/twitter.png"></a>
-            <a href="#"><img src="assets/facebook.png"></a>
-            <a href="#"><img src="assets/pinterest.png"></a>
-            <a href="#"><img src="assets/rss.png"></a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <%= render partial: 'decks/social', locals: {deck: deck } %>
     <%= render partial: 'likes/like', locals: { likeable: deck } %>
   </div>
   <%= image_tag (deck.image.front) %>

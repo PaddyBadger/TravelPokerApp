@@ -1,7 +1,6 @@
 .tripBack {
   width:1020px;
   margin: auto;
-
 }
 
 .tripBack img {
@@ -17,7 +16,6 @@
   height: 70px;
   top: -10px;
   width:1002px;
-  margin-bottom:15px;
 }
 
 .tripInfoBack:before{
@@ -47,7 +45,7 @@
 
 .backInfo h3 {
   font-family: "Opal";
-
+  padding-top:10px;
 }
 
 .backInfo p {
@@ -127,14 +125,15 @@
   max-height: 244px;
   padding: 3px 3px 0; }
 
-.edit {
+.edit a {
   position:absolute;
   background: #242625 !important;
   font-size: 10px;
+  font-weight:bold;
   text-transform: uppercase;
   text-align:center !important;
   width: 55px;
-  padding-top:2px;
+  padding-top:5px;
   height:20px;
   color: white;
   border-radius: 3px !important;
@@ -143,17 +142,11 @@
   white-space: nowrap;
 }
 
-.edit li {
-  color: white;
-  font-size: 10px;
-  text-decoration:none !important;
-}
-
-.social_1 a{
+.social a{
   float:left; 
 }
 
-.social_1 img{
+.social img{
   width: 20px;
   height: 20px;
 }
@@ -163,7 +156,7 @@
   margin:auto;
 }
 .memberOnly {
-  height:50px;
+  float:left;
   }
 
 .memberOnlyDeck {
@@ -171,15 +164,32 @@
   margin-left:35px;
   }
 
-
+.tags {
+  height:300px;
+  float:right;
+}
 .tags img{
   width:50px;
   height:50px;
   float:left;
+  padding-left:50px;
+}
+
+.category {
+  width:160px;
+  height:120px;
+  text-align:center;
+  
+}
+
+.season {
+  width:160px;
+  height:120px;
+  text-align:center; 
 }
 
 .deck_back {
-  width:1200px;
+  width:1180px;
   margin:auto;
   padding-left: 50px;
 }

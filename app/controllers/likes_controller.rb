@@ -6,6 +6,7 @@ class LikesController < ApplicationController
   def create
     @like = @likeable.likes.new(params[:like])
     @like.user = current_user
+    authorize! :create, Like, message: "Please Register to Like."
 
     if @like.save
       flash[:notice] = "Liked!"

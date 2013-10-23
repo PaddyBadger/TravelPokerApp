@@ -7,78 +7,17 @@
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
-<div id="toppanel">
-  <div id="panel">
-  <div class="centerDiv">
-    <% if user_signed_in? %>
-      <div class="topCol1">
-        <p>My Likes</p>
-      </div>
-      <div class="topCol1">
-        <p>My Decks</p>
-          <% current_user.decks.each do |deck| %>
-            <li class="">
-              <img class="spade" src="/assets/spade.svg"><%= link_to deck.title, deck %><br>
-            </li>
-          <% end %>
-      </div>
-       <div class="topCol1">
-        <p>My Cards</p>
-          <% current_user.cards.each do |card| %>
-            <li class="">
-              <img class="spade" src="/assets/spade.svg"><%= link_to card.title, card %><br>
-            </li>
-          <% end %>
-      </div>
-      <div class="topCol1">
-        <%= button_to('Logout', destroy_user_session_path, class: 'btn topButton', method: :delete) %>
-        <a href="/decks/new" class="btn topButton">Create a Deck</a>
-        <a href="/cards/new" class="btn topButton">Create a Card</a>
-      </div>    
-    <% else %>
-      <div class="topCol">
-        <%= render partial: '/devise/sessions/new' %>
-      </div>
-      <div class="topCol">
-        <%= render partial: '/devise/registrations/new' %>
-       </div>
-    <% end %>
-  </div>  
-  </div> <!-- /login -->  
-
-<!-- The tab on top --> 
-  <div class="tab">
-    <ul class="login">
-      <li class="left">&nbsp;</li>
-      <li>Hello <% if current_user %>
-        <%= link_to (current_user.name || current_user.email), current_user %>
-      <% end %></li>
-      <li class="sep">|</li>
-      <li id="toggle">
-        <% if user_signed_in? %> 
-          <a id="open" class="open" href="#">Log Out | My Panel</a> 
-        <% else %>
-          <a id="open" class="open" href="#">Log In | Register</a>
-        <% end %>
-        <a id="close" style="display: none;" class="close" href="#">Close Panel</a>     
-      </li>
-      <li class="right">&nbsp;</li>
-    </ul> 
-  </div> <!-- / top -->
-</div> 
-
-
-
+  <body> 
+    <%= render partial: 'layouts/panel' %>
      <!--panel -->
   <div class="wrapper fade">
     <header>
       <div class="centerDiv">
         <div class="logo">
-          <a href="#"><img src="/assets/logo.png" /></a>
+          <a href="/"><img src="/assets/logo.png" /></a>
         </div>
 
-        <div class="topMenu fade">
+     <!--   <div class="topMenu cat">
           <ul>
             <li><a href="#" class="menuTop home"></a></li>
             <li><a href="#" class="menuTop drink"></a></li>
@@ -90,58 +29,17 @@
             <li><a href="#" class="menuTop sport"></a></li>
             <li><a href="#" class="menuTop festival"></a></li>
           </ul>
-        </div>
+        </div> -->
+        <%= form_tag search_cards_path, :method => :get do %>
+          <div class="searchHead">
+            <%= text_field_tag :query, params[:query], placeholder: "Search" %> 
+            <%= button_tag "Deal", class: "btnAll button" %>
+         </div>  
+       <% end %>  
       </div>
     </header>
 
 <%= yield %>
-
-<div class="topFooter">
-      <div class="centerDiv">
-        <div class="footCol">
-          <h3>Top Destinations</h3>
-          <ul>
-            <li><a href="#">New York</a></li>
-            <li><a href="#">Paris</a></li>
-            <li><a href="#">Cairo</a></li>
-            <li><a href="#">Roma</a></li>
-          </ul>
-        </div>
-        <div class="footCol">
-          <h3>Travel Poker</h3>
-          <ul>
-            <li><a href="#">How it Works</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footCol">
-          <a href="/decks/new" class="btn btn-large btn-block creatDeck">Create a Deck</a>
-          <a href="/cards/new" class="btn btn-large btn-block creatDeck">Create a Card</a>
-        </div>
-        <div class="footCol">
-          <a href="#" class="footLogo"></a>
-        </div>
-      </div>
-    </div>
-    <footer>
-      <div class="centerDiv">
-      <ul class="footMenu">
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">Ts & Cs</a></li>
-      </ul>
-      <p class="copyrights"> &copy; Copyrights 2013 all copyrights reserved - Travel Poker </p>
-        <div class="footerSocial">
-          <a href="#"><img src="/assets/facebook.png"></a>
-          <a href="#"><img src="/assets/twitter.png"></a>
-          <a href="#"><img src="/assets/gplus.png"></a>
-          <a href="#"><img src="/assets/pinterest.png"></a>
-        </div>
-      </div>
-      <%= yield :scripts %>
-    </footer>
+  <%= render partial: 'layouts/footer' %>
 </body>
 </html>

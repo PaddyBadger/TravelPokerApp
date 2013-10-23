@@ -1,0 +1,33 @@
+.searchHead {
+  width:410px;
+  position:absolute;
+  top: 50px;
+  left: 590px;
+}
+.searchHead input{
+  width:300px;
+  height:14px;
+  float:left;
+  -webkit-border-radius: 6px !important;
+  border-radius: 6px !important;
+  border:none;
+  outline:none;
+}
+
+.searchHead button {
+  background: #2980B9 !important;
+  border-color: #2980B9 !important;
+  color: white;
+  width: 70px;
+  display: block;
+  padding: 3px 5px 4px 5px;
+  vertical-align:center;
+  text-decoration: none;
+  font-weight: bold;
+  height: 35px;
+  line-height: 33px;
+  font-size: 25px;
+  font-family: "Opal";
+  float:right;
+  border: none;
+}

@@ -1,0 +1,2 @@
+$('.vote').html('<%=escape_javascript(render partial: 'votes/vote', locals: { vote: @vote })%>');
+$('.js-votes-count').html("<%= comment.points %>");

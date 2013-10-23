@@ -1,10 +1,15 @@
-<div class='<%=dom_id(likeable)%> like'>
-<% if current_user %>
-  <% if likeable.likes.where(user_id: current_user.id).first %>
-    <%= link_to "", [likeable, likeable.likes.where(user_id: current_user.id).first], class: "pokerLiked", method: :delete, remote: true %> 
-  <% else %>
-    <%= link_to "", [likeable, Like.new], class: "pokerLike", method: :post, remote: true %>
-  <% end %>
-  <div class="likes"><%= likeable.likes.count %></div>
+<% unless action_name == 'edit' %>
+  <div class='<%=dom_id(likeable)%> like'>
+    <% if current_user %>
+      <% if likeable.likes.where(user_id: current_user.id).first %>
+        <%= link_to "", [likeable, likeable.likes.where(user_id: current_user.id).first], class: "pokerLiked", method: :delete, remote: true %> 
+      <% else %>
+        <%= link_to "", [likeable, Like.new], class: "pokerLike", method: :post, remote: true %>
+      <% end %>
+      <div class="likes"><%= likeable.likes.count %></div>
+    <% else %>
+      <div class="pokerLike" title="Log in to like."></div>
+      <div class="likes"><%= likeable.likes.count %></div>
+    <% end %>
+  </div>
 <% end %>
-</div>
