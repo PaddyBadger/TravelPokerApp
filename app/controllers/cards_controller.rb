@@ -39,7 +39,6 @@ class CardsController < ApplicationController
     authorize! :create, Card, message: "Please Register with TravelPoker to create your own cards."
     
     if @card.save
-      alert[:notice] = "card was saved."
       respond_with(@card)
     else
       alert[:error] = "There was an error saving the card. Please try again."
@@ -51,7 +50,6 @@ class CardsController < ApplicationController
     @card = Card.find(params[:id])
     
       if @card.update_attributes(params[:card])
-        alert[:notice] = "card was updated."
         respond_with(@card)
       else
         alert[:error] = "There was an error saving the card. Please try again."

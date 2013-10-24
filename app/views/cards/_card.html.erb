@@ -1,6 +1,6 @@
-<div class="trip">
+<div class="trip <%= dom_id(card) %>">
   <div class="edit">
-    <%= render partial: 'decks/carddeck', locals: { deck: @deck, card: card } %>
+    <%= render partial: 'decks/carddeck', locals: { card: card } %>
   </div>
   <div class="tripMeta">
     <%= render partial: 'cards/keep', locals: { card: card } %>

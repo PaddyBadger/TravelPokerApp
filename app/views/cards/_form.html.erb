@@ -20,7 +20,11 @@
     <div class="iinputtext"> 
       <%= f.file_field :image %>
     </div>
-    <%= f.label :url, class: 'formlabel' %>
+    <%= f.label :image_url, class: 'formlabel' %>
+    <div class="tinput"> 
+      <%= f.text_field :remote_image_url %>
+    </div>
+    <%= f.label :website, class: 'formlabel' %>
     <div class="tinput">
       <%= f.text_field :url %>
     </div>

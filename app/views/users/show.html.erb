@@ -1,6 +1,16 @@
+<% if can? :read, @user %>
+
 <div class="topDeck">
   <h3>Your Cards and Decks</h3>
   <%= render @user.cards %>
   <%= render @user.decks %>
-  <%#= render current_user.likes %>
+  <%= render @user.liked_cards %>
+  <%= render @user.liked_decks %>
 </div>
+
+<div class="topDeck">
+    <h3>Your Information</h3>
+     <%= render partial: 'users/user' %>
+</div>
+
+<% end %>
