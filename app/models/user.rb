@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   has_many :cards
   has_many :decks
   has_many :likes, dependent: :destroy
+  has_many :likeables, through: :likes #, source: :likeable, source_type: :Card
   has_many :comments, dependent: :destroy
   has_many :votes, dependent: :destroy
 

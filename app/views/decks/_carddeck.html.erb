@@ -1,7 +1,8 @@
 <% if action_name == 'edit' %>
   <div class="edit">
   <% if @deck.cards.include?(card) %> 
-    <%= link_to "Remove", cards_decks_path(card_id: card.id, deck_id: @deck.id), method: :delete, remote: true %>
+   <div class="js-card"></div>
+   <div id="<%= dom_id(card) %>"> <%= link_to "Remove", cards_decks_path(card_id: card.id, deck_id: @deck.id), method: :delete, remote: true %></div>
   <% else %>
      <%= link_to "Add", cards_decks_path(card_id: card.id, deck_id: @deck.id), method: :post, remote: true %>
   <% end %>

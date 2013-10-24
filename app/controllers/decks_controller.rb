@@ -8,6 +8,7 @@ class DecksController < ApplicationController
   def show
      @deck = Deck.find(params[:id])
      @cards = @deck.cards.includes(:user).paginate(page: params[:page], per_page: 12)
+     @json = @deck.cards.to_gmaps4rails
   end
 
   def new
@@ -67,11 +68,12 @@ class DecksController < ApplicationController
     @deck = Deck.find(params[:id])
     @deck_copy = @deck.dup
     @deck_copy.user = current_user
+    @deck_copy.remote_image_url = @deck.image.url
     @deck_copy.cards << @deck.cards
     
-    if @deck.save
+    if @deck_copy.save
       flash[:notice] = "Deck was saved."
-      redirect_to @deck
+      redirect_to @deck_copy
     else
       flash[:error] = "There was an error saving the deck. Please try again."
       render :new 

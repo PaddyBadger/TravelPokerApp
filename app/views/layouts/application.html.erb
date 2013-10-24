@@ -16,7 +16,7 @@
         <div class="logo">
           <a href="/"><img src="/assets/logo.png" /></a>
         </div>
-
+    
      <!--   <div class="topMenu cat">
           <ul>
             <li><a href="#" class="menuTop home"></a></li>
@@ -38,8 +38,30 @@
        <% end %>  
       </div>
     </header>
+    
+      <% if flash[:error] %>
+      <div class="alert">
+        <%= flash[:error] %>
+      </div>
+      <% end %>
+  
+    
+      <% if flash[:notice] %>
+      <div class="alert">
+        <%= flash[:notice] %>
+      </div>
+      <% end %>
+   
+    
+      <% if flash[:message] %>
+      <div class="alert">
+        <%= flash[:message] %>
+       </div>
+      <% end %>
+   
 
-<%= yield %>
-  <%= render partial: 'layouts/footer' %>
+    <%= yield %>
+
+    <%= render partial: 'layouts/footer' %>
 </body>
 </html>

@@ -4,10 +4,10 @@
   </div>
   <div class="tripMeta">
     <%= render partial: 'cards/keep', locals: { card: card } %>
-    <%= render partial: 'cards/social', locals: { card: @card } %>
+    <%= render partial: 'cards/social', locals: { card: card } %>
     <%= render partial: 'likes/like', locals: { likeable: card } %>
   </div>
-  <%= image_tag (card.image.front) %>
+  <%= image_tag(card.image.front) %>
   <div class="tripInfo">
     <h4><%= link_to card.title, card %></h4>
     <p><%= markdown (card.location)%></p>

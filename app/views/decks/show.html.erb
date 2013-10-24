@@ -20,7 +20,7 @@
       <%= will_paginate @cards %>
     </div>
   </div>
-  <% if can? :manage, Deck %>
+  <% if can? :manage, @deck %>
     <div class="memberOnlyDeck">
       <span><%= link_to "Edit", edit_deck_path(@deck), class: "keep11", id: "keep1" %></span>
       <span> <%= link_to "Delete", @deck, method: :delete, class: 'keep11', id: "keep1", confirm: 'Are you sure you want to delete this deck?' %></span>

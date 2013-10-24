@@ -26,7 +26,7 @@
     <%= render partial: 'cards/social', locals: { card: @card } %>
     <%= render partial: 'cards/keep', locals: { card: @card } %>
    
-    <% if can? :manage, Card %>
+    <% if can? :manage, @card %>
     <div class="memberOnly">
       <span><%= link_to "Edit", edit_card_path(@card), class: "dk_label keep", id: "keep" %></span>
       <span> <%= link_to "Delete", @card, method: :delete, class: "dk_label keep", id: "keep", confirm: 'Are you sure you want to delete this card?' %></span>
