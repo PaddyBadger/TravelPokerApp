@@ -5,12 +5,15 @@ class VotesController < ApplicationController
 
   def up_vote
     update_vote(1)
-    respond_with(vote: @vote)
+    respond_with(@vote) do |f|
+      f.html { redirect_to [@comment] }
+    end
   end
 
   def down_vote
     update_vote(-1)
-    respond_with(vote: @vote)
+    respond_with(@vote) do |f|
+      f.html { redirect_to [@comment] }
   end
   
   private

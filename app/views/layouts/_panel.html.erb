@@ -4,13 +4,27 @@
     <% if user_signed_in? %>
       <div class="topCol1">
         <p>My Likes</p>
+          <% current_user.liked_decks.take(3).each do |deck| %>
+            <li class="">
+              <img class="heart" src="/assets/red_heart.png"><%= link_to deck.title, deck %><br>
+            </li>
+          <% end %>
+          <% current_user.liked_cards.take(4).each do |card| %>
+            <li class="">
+              <img class="heart" src="/assets/red_heart.png"><%= link_to card.title, card %><br>
+            </li>
+          <% end %>
+          <%= link_to '... more', current_user %>
       </div>
       <div class="topCol1">
         <p>My Decks</p>
-          <% current_user.decks.each do |deck| %>
+          <% current_user.decks.take(7).each do |deck| %>
             <li class="">
               <img class="spade" src="/assets/spade.svg"><%= link_to deck.title, deck %><br>
             </li>
+          <% end %>
+          <% if current_user.cards.count > 7 %>
+            <%= link_to '... more', current_user %>
           <% end %>
       </div>
        <div class="topCol1">
@@ -23,9 +37,6 @@
           <% if current_user.cards.count > 7 %>
             <%= link_to '... more', current_user %>
           <% end %>
-        <li class="">
-          <img class="spade" src="/assets/spade.svg"><%= link_to "My Cards", @user %></a><br>
-        </li>
       </div>
       <div class="topCol1">
         <%= button_to('Logout', destroy_user_session_path, class: 'btn topButton', method: :delete) %>

@@ -1,16 +1,22 @@
 <% if can? :read, @user %>
-
-<div class="topDeck">
-  <h3>Your Cards and Decks</h3>
-  <%= render @user.cards %>
-  <%= render @user.decks %>
-  <%= render @user.liked_cards %>
-  <%= render @user.liked_decks %>
-</div>
-
-<div class="topDeck">
-    <h3>Your Information</h3>
-     <%= render partial: 'users/user' %>
-</div>
-
+  <div class="userPanel">
+      <h3 id="userCards">Your Cards and Decks</h3>
+      <h3 id="userLike">Your Likes</h3>
+      <h3 id="userInfo">Your Information</h3>
+      
+      <div class="userCards">
+        <%= render @user.cards %>
+        <%= render @user.decks %>
+      </div>
+   
+      <div class="userLike"> 
+        <%= render @user.liked_cards %>
+        <%= render @user.liked_decks %>
+      </div>
+   
+      <div class="userInfo">
+         <%= render partial: 'users/user' %>
+      </div>
+    
+  </div>
 <% end %>

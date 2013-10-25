@@ -1,9 +1,9 @@
 <% if can? :create, Vote %>
-  <div class="vote" id='vote'>
+  <div class="vote">
     <%= link_to " ", card_comment_up_vote_path(comment.card, comment), 
       class: "upChevron #{(current_user.voted(comment) && current_user.voted(comment).up_vote?) ? 'voted' : '' }", method: :post, remote: true %>
     <div>
-      <strong class="js-votes-count"><%= comment.points %></strong>
+      <strong id='vote' class="js-votes-count"><%= comment.points %></strong>
     </div>
     <div>
       <%= link_to " ", card_comment_down_vote_path(comment.card, comment), 

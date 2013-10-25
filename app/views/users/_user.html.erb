@@ -1,3 +1,21 @@
-<p>Email</p>
-<p>Password</p>
-<p>Change Password</p>
+<div class="form">
+  <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
+    <%= devise_error_messages! %>
+    <%= f.hidden_field :reset_password_token %>
+    <h2>Change your password</h2>
+
+    <%= f.label :password, "New password", class: 'formlabel' %>
+    <div class="tinput">
+      <%= f.password_field :password %>
+    </div>
+
+    <%= f.label :password_confirmation, "Confirm", class: 'formlabel' %>
+    <div class="tinput">
+      <%= f.password_field :password_confirmation %>
+    </div>
+    
+    <div class="cbutton">
+      <div><%= f.submit "Change", class: 'btn btn-large' %></div>
+    </div>
+  <% end %>
+</div>

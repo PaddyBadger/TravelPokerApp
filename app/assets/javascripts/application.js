@@ -35,3 +35,25 @@ $(document).ready(function() {
     $("#toggle a").toggle();
   });       
 });
+
+  // User Panel Tabs
+  $(document).ready(function() {
+   $('.userLike, .userInfo').hide();
+   $('.userCards').fadeIn();
+  
+  $('#userCards').click(function() {
+    $('.userLike, .userInfo, .userCards').hide();
+    $('.userCards').show();
+  });
+
+ $('#userLike').click(function() {
+   $('.userLike, .userInfo, .userCards').hide();
+   $('.userLike').show();
+ });
+
+ $('#userInfo').click(function() {
+   $('.userCards, .userInfo, .userLike').hide();
+   $('.userInfo').show();
+ });
+});
+
