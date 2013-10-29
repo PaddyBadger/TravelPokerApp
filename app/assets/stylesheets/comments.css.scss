@@ -19,6 +19,11 @@
   background: #E0EAFF;
 }
 
+.comment p {
+  font-size:13px;
+  margin-left:25px;
+}
+
 .commentButton {
   height:50px;
   margin-left:455px;
@@ -48,4 +53,18 @@
   width:15px;
   background:url('downChevron.png');
   display:block;
+}
+
+.editable {
+  border:2px dashed #dce4ec;
+   -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+}
+
+.editable h9 {
+  font-size:10px;
+  float:right;
+  margin-top:-28px;
+  margin-right:5px;
+
 }

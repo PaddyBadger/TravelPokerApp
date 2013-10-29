@@ -40,19 +40,26 @@ $(document).ready(function() {
   $(document).ready(function() {
    $('.userLike, .userInfo').hide();
    $('.userCards').fadeIn();
+   $('#userCards').addClass('focus');
   
-  $('#userCards').click(function() {
+  $('#userCards').click(function() {  
     $('.userLike, .userInfo, .userCards').hide();
+    $('#userCards, #userLike, #userInfo').removeClass('focus');
+    $('#userCards').addClass('focus');
     $('.userCards').show();
   });
 
  $('#userLike').click(function() {
    $('.userLike, .userInfo, .userCards').hide();
+   $('#userCards, #userLike, #userInfo').removeClass('focus');
+   $('#userLike').addClass('focus');
    $('.userLike').show();
  });
 
  $('#userInfo').click(function() {
    $('.userCards, .userInfo, .userLike').hide();
+   $('#userCards, #userLike, #userInfo').removeClass('focus');
+    $('#userInfo').addClass('focus');
    $('.userInfo').show();
  });
 });

@@ -42,23 +42,30 @@
   padding:-10px;
   float:left;
   color:#2980B9;
-  
+  display:inline;
 }
 
 .topCol1 li a:hover {
   color:#ffffff;
   font-weight:bold;
+  display:inline;
+  text-align:left;
 }
 
 .topCol1 li {
   -webkit-appearance: none;
    text-decoration: none;
+   display:inline;
+   text-align:left;
 }
 
 .topCol1 .spade {
   width:10px;
   height:10px;
   float:left;
+  display:inline;
+   text-align:left;
+
 }
 
 .topCol1 .heart {
@@ -66,6 +73,7 @@
   height:7px;
   margin-right:3px;
   float:left;
+   text-align:left;
 }
 
 .signInMeta{

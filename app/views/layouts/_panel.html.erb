@@ -10,22 +10,20 @@
             </li>
           <% end %>
           <% current_user.liked_cards.take(4).each do |card| %>
-            <li class="">
+            <li>
               <img class="heart" src="/assets/red_heart.png"><%= link_to card.title, card %><br>
             </li>
           <% end %>
           <%= link_to '... more', current_user %>
       </div>
       <div class="topCol1">
-        <p>My Decks</p>
-          <% current_user.decks.take(7).each do |deck| %>
-            <li class="">
-              <img class="spade" src="/assets/spade.svg"><%= link_to deck.title, deck %><br>
-            </li>
-          <% end %>
-          <% if current_user.cards.count > 7 %>
-            <%= link_to '... more', current_user %>
-          <% end %>
+      <p>My Decks</p>
+        <% current_user.decks.take(7).each do |deck| %>
+          <li class="">
+            <img class="spade" src="/assets/spade.svg"><%= link_to deck.title, deck %><br>
+          </li>
+        <% end %>
+        <%= link_to '... more', current_user %>
       </div>
        <div class="topCol1">
         <p>My Cards</p> 

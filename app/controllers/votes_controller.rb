@@ -30,6 +30,11 @@ class VotesController < ApplicationController
     else # create it
       @vote = current_user.votes.create(vote: new_vote, comment: @comment)
     end
+
+    respond_with(@vote) do |f|
+      f.html { redirect_to @comment }
+      f.js { render :update }
+    end
   end
 
 end

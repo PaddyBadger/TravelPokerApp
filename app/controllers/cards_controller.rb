@@ -6,6 +6,7 @@ class CardsController < ApplicationController
   end
 
   def search
+    
     @cards = Card.search do
       keywords params[:query]
     end.results
@@ -77,3 +78,6 @@ class CardsController < ApplicationController
     end
   end
 end
+
+    #autocomplete = client.autocomplete(:input => :query)
+    #autocomplete.predictions.first.description

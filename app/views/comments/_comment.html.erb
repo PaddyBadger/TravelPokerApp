@@ -1,12 +1,22 @@
 <div class="comment" id='<%= dom_id(comment) %>'>
-  <h7><%= comment.title %></h7>
+  <% if can? :manage, comment %>
+    <h7 class="editable" contenteditable="true"><%= comment.title %></h7>
+  <% else %>
+    <h7><%= comment.title %></h7>
+  <% end %>
   <h8>
-    <%= comment.user.name %> commented <%= time_ago_in_words(comment.created_at) %> ago
+    <%= comment.user.name %> contributed <%= time_ago_in_words(comment.created_at) %> ago
     <% if can? :manage, comment %>
      | <%= link_to "Delete", card_comment_path(comment.card, comment), method: :delete, remote: true %>
-     | <%= link_to "Edit", edit_card_comment_path(comment.card, comment) %>
+      <h8> | To edit key esc to exit | enter to save</h8>
     <% end %>
   </h8>
   <%= render partial: 'votes/vote', locals: { comment: comment } %>
-  <p><%= comment.description %></p>
+  <% if can? :manage, comment %>
+    <p class="editable" contenteditable="true">
+      <%= comment.description %> 
+    </p>
+  <% else %>
+    <p><%= comment.description %></p>
+  <% end %>
 </div>

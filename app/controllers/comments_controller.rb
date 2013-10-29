@@ -19,13 +19,13 @@ class CommentsController < ApplicationController
     end
   end
 
-  def update
+    def update
     @card = Card.find(params[:card_id])
 
     @comment = @card.comments.find(params[:id])
-    authorize! :update, comment, message: "You must own a comment to edit or delete it."
+    authorize! :update, @comment, message: "You must own a comment to edit or delete it."
     
-    if @comment.update_attributes(params[:card_id])
+    if @comment.update_attributes(params[:comment_id])
       flash[:notice] = "comment was updated."
     else
       flash[:error] = "There was an error saving the comment. Please try again."
@@ -35,6 +35,11 @@ class CommentsController < ApplicationController
     respond_with(@comment) do |f|
       f.html { redirect_to [@card] }
     end
+  end
+
+  def edit
+    @card = Card.find(params[:card_id])
+    @comment = @card.comments.find(params[:id])
   end
 
   def destroy
