@@ -39,6 +39,8 @@
   margin-right:5px;
 }
 
+
+
 .upChevron {
   margin-left:2px;
   height:15px;
@@ -47,12 +49,20 @@
   display:block;
 }
 
+.upChevron:hover {
+  background:url('upChevron.png')no-repeat;
+}
+
 .downChevron {
   margin-left:3px;
   height:15px;
   width:15px;
   background:url('downChevron.png');
   display:block;
+}
+
+.downChevron:hover {
+   background:url('downChevron.png');
 }
 
 .editable {

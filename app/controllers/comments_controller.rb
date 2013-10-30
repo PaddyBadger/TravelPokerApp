@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.build(params[:comment])
     authorize! :create, Comment, message: "Please Register with TravelPoker to make comments."
     @comment.card = @card
+    @new_comment = Comment.new
 
     if @comment.save
       flash[:notice] = "Comment was created."

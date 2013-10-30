@@ -45,7 +45,7 @@ gem 'omniauth-twitter'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 gem "breadcrumbs_on_rails"
-gem 'google_places_autocomplete'
+
 
 
 # To use ActiveModel has_secure_password

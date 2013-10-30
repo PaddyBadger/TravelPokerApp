@@ -1,2 +1,1 @@
-$('#upVote').html('<%=escape_javascript(render partial: 'votes/vote', locals: { comment: @comment, vote: @vote })%>');
-$('.js-votes-count').html("<%= comment.points %>");
+$('#<%= dom_id(@comment) %> .vote').replaceWith('<%=escape_javascript(render partial: 'votes/vote', locals: { comment: @comment, vote: @vote })%>');

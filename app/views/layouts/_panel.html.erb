@@ -32,9 +32,7 @@
               <img class="spade" src="/assets/spade.svg"><%= link_to card.title, card %><br>
             </li>
           <% end %>
-          <% if current_user.cards.count > 7 %>
-            <%= link_to '... more', current_user %>
-          <% end %>
+          <%= link_to '... more', current_user %>
       </div>
       <div class="topCol1">
         <%= button_to('Logout', destroy_user_session_path, class: 'btn topButton', method: :delete) %>

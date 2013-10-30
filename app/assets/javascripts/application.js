@@ -64,3 +64,33 @@ $(document).ready(function() {
  });
 });
 
+document.addEventListener('keydown', function (event) {
+  var esc = event.which == 27,
+      nl = event.which == 13,
+      el = event.target,
+      input = el.nodeName != 'INPUT' && el.nodeName != 'TEXTAREA',
+      data = {};
+
+  if (input) {
+    if (esc) {
+      // restore state
+      document.execCommand('undo');
+      el.blur();
+    } else if (nl) {
+      // save
+      data[el.getAttribute('editable')] = el.innerHTML;
+
+      $.ajax({
+        url: window.location.toString(),
+        data: data,
+        type: 'comment'
+      });
+    
+      log(JSON.stringify(data));
+
+      el.blur();
+      event.preventDefault();
+    }
+  }
+}, true);
+

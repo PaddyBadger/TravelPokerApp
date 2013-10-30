@@ -1,13 +1,13 @@
 <% if can? :create, Vote %>
   <div class="vote">
     <%= link_to " ", card_comment_up_vote_path(comment.card, comment), 
-      class: "upChevron #{(current_user.voted(comment) && current_user.voted(comment).up_vote?) ? 'voted' : '' }", id: "upVote", method: :post, remote: true %>
+      class: "upChevron #{(current_user.voted(comment) && current_user.voted(comment).up_vote?) ? 'voted' : '' }", method: :post, remote: true %>
     <div>
       <strong id='vote' class="js-votes-count"><%= comment.points %></strong>
     </div>
     <div>
       <%= link_to " ", card_comment_down_vote_path(comment.card, comment), 
-      class: "downChevron #{(current_user.voted(comment) && current_user.voted(comment).down_vote?) ? 'voted' : '' }", id: "downVote", method: :post, remote: true %>
+      class: "downChevron #{(current_user.voted(comment) && current_user.voted(comment).down_vote?) ? 'voted' : '' }", method: :post, remote: true %>
     </div>
   </div>
 <% end %>

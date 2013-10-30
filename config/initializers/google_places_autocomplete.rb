@@ -1,1 +1,0 @@
-client = GooglePlacesAutocomplete::Client.new(:api_key => 'GooglePlacesAutocomplete')
