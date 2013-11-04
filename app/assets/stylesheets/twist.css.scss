@@ -33,9 +33,14 @@
   margin-left:70px;
 }
 
-.tripBackTwist #map img {
+.tripBackTwist .map img {
   width: 325px;
   display:inline-block;
+}
+
+.map {
+  width: 325px;
+  height: 325px;
 }
 
 .tripInfoBackTwist:before{

@@ -5,13 +5,13 @@
   <h3><%= card.title%>: <%= card.location%></h3>
   <h8><%= link_to card.user.name %> contributed <%= time_ago_in_words(card.created_at) %> ago</h8>
     
-    <div id="map">
-      <%= image_tag card.image%>
-      <%= image_tag card.image%>
+    <div class="map">
+      <%#= image_tag card.image%>
+      <%#= image_tag card.image%>
     </div>  
     
     <div class="tripInfoBackTwist">
-      <h4><%= card.title%>: <%= card.location%></h4>
+      <h4><%= card.title%>: <span class= 'location'><%= card.location%></span></h4>
     </div>
 
     <div class="cardComs">

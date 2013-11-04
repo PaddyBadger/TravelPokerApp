@@ -25,6 +25,7 @@ $(document).ready(function() {
   $('.twistCardAll').hide();
   $('.card').click(function() {
     $(this).children('.twistCardAll').toggle("slide", 500);
+    $(this).find('.location').geocomplete({map: $(this).find('.map'), location: $(this).find('.location').text()});
     });
 });
 
