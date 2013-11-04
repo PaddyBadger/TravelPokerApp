@@ -66,6 +66,5 @@ Travelpoker::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   #devise
   config.action_mailer.default_url_options = { :host => 'travelpoker.co' }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
+  
 end
