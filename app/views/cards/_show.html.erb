@@ -1,41 +1,23 @@
 <div class="tripBack">
-      <h3><%= card.title%>: <%= card.location %></h3>
-      <h8>
-        <%= link_to card.user.name %> contributed <%= time_ago_in_words(card.created_at) %> ago
-      </h8>
-     <%= gmaps4rails(@json) %> 
-     <%= image_tag card.image%>
-    <div class="tripInfoBack">
-      <h4><%= card.title%>: <%= card.location%></h4>
-    </div>
-
-    <div class="cardComs">
-    <div class=""><%= render partial: 'likes/like', locals: { likeable: card } %></div>
-    <%= render partial: 'cards/social', locals: { card: card } %>
-    <%= render partial: 'cards/keep', locals: { card: card } %>
-   
-    <% if can? :manage, @card %>
-    <div class="memberOnly">
-      <span><%= link_to "Edit", edit_card_path(@card), class: "dk_label keep", id: "keep" %></span>
-      <span> <%= link_to "Delete", @card, method: :delete, class: "dk_label keep", id: "keep", confirm: 'Are you sure you want to delete this card?' %></span>
-    </div>
-    <% end %>
-  </div>
+  <h8><%= link_to card.user.name %> contributed <%= time_ago_in_words(card.created_at) %> ago</h8>
+    <div id="map"><%= image_tag card.image%></div>
+      <div class="tripInfoBackTwist">
+        <h4><%= card.title%>: <%= card.location%></h4>
+      </div>
 
     <div class="backInfo">
-       <h4><%= card.title%></h4>
+       <h2><%= link_to card.title, card, title: 'View More About This Card'%></h2>
       
-       <div class="tags">
-        <div class="category"><h4>Category</h4><%=image_tag card.category.image %></div>
-        <div class="season"><h4>Season</h4><%=image_tag card.season.image %></div>
-      </div>
-      
+    <div class="tags">
+      <div class="category"><h4>Category</h4><%=image_tag card.category.image %></div>
+      <div class="season"><h4>Season</h4><%=image_tag card.season.image %></div>
+    </div> 
       <p><%= card.description%></p>
       <p><%= link_to card.url%></p>
       <h4>Other Decks this Card is Part of</h4>
       <% card.decks.each do |deck| %>
-        <%= link_to deck.title %><br>
+        <%= link_to deck.title, deck %><br>
       <% end %>
 
     </div>
-  </div>
+</div>

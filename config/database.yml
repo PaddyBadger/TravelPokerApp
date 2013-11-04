@@ -3,7 +3,6 @@ development:
   database: travelpoker_development
   host: localhost
 
-
 test:
   adapter: postgresql
   database: travelpoker_test

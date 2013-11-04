@@ -1,10 +1,14 @@
 //= require jquery
 //= require jquery_ujs
+//= require jquery.geocomplete.min.js
 //= require_tree .
+
 
 $=jQuery;
 
 $(document).ready(function(){
+  $(function(){$("#geocomplete").geocomplete();});
+
 jQuery(function(){
 
   $('.trip,.deck').hover(function(){
@@ -16,6 +20,17 @@ jQuery(function(){
 });
 });
 });
+
+$(document).ready(function() {
+  $('.twistCard').hide();
+  $('.card').click(function() {
+    $(this).children('#dialog-modal').dialog({
+      modal: true,
+      dialogClass: "no-close",
+    });
+  });
+});
+
 
 $(document).ready(function() {
   
@@ -83,7 +98,7 @@ document.addEventListener('keydown', function (event) {
       $.ajax({
         url: window.location.toString(),
         data: data,
-        type: 'comment'
+        type: 'post'
       });
     
       log(JSON.stringify(data));

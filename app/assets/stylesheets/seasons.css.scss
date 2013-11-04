@@ -9,6 +9,34 @@
   margin-bottom:10px;
 }
 
+.seasons h1 {
+ color: white;
+ font-size: 30px;
+ text-align:center;
+ }
+
+ .jan {
+  height:100px;
+  width:100px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  background: #4E4C71;
+  margin: 20px;
+  border:2px solid #A873C1;
+  float:left;
+}
+
+.jul {
+  height:100px;
+  width:100px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  background: #E34D3C;
+  margin: 20px;
+  border:2px solid #8E3433;
+  float:left;
+}
+
 .seasons img {
   height:40px;
   width:40px;

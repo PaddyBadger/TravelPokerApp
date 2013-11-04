@@ -1,4 +1,4 @@
-%w[jan feb mar apr may jun jul aug sep oct nov dec q1 q2 q3 q4 h1 h2 all].each do |season|
+%w[jan feb mar apr may jun jul aug sep oct nov dec q1 q2 q3 q4 h1 h2 h3 h4 all].each do |season|
   Season.create(name: 'season', image: "/assets/#{season}.png")
 end
 

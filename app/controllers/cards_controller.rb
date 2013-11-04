@@ -23,9 +23,11 @@ class CardsController < ApplicationController
     if @card
        @comments = @card.comments.includes(:user)
        @json = @card.to_gmaps4rails
+       respond_with(@card, @json)
     else
       redirect_to :root
     end
+
 
   end
 

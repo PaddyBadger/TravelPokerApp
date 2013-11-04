@@ -1,3 +1,4 @@
-$('.<%= dom_id(@card) %>').remove();
-$('.addedCard').append( '<%= escape_javascript(render @card) %>')
-  
+<% if ['edit','destroy','create'].include?(action_name) %>
+  $('.<%= dom_id(@card) %>').remove();
+  $('.addedCard').append( '<%= escape_javascript(render @card) %>')
+<% end %>

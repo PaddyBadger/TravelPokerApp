@@ -40,16 +40,16 @@
   <div class="backInfo">
      <h3><%= @card.title%></h3>
     
-     <div class="tags">
-      <div class="category"><h3>Category</h3><%=image_tag @card.category.image %></div>
+   <div class="tags">
+       <div class="category"><h3>Category</h3><%=image_tag @card.category.image %></div>
       <div class="season"><h3>Season</h3><%=image_tag @card.season.image %></div>
-    </div>
+    </div> 
     
     <p><%= @card.description%></p>
     <p><%= link_to @card.url%></p>
     <h3>Other Decks this Card is Part of</h3>
     <% @card.decks.each do |deck| %>
-      <%= link_to deck.title %><br>
+      <%= link_to deck.title, deck %><br>
     <% end %>
 
     <div class="comments">  
