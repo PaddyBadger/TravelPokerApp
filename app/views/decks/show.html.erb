@@ -9,7 +9,7 @@
     </div>
   </div>
 <div class="deckComs">
-  <div class="likes1"><%= render partial: 'likes/like', locals: { likeable: @deck } %></div>
+  <div class=""><%= render partial: 'likes/like', locals: { likeable: @deck } %></div>
   <%= render partial: 'decks/keep', locals: { deck: @deck } %>
   <%= render partial: 'decks/social', locals: { deck: @deck } %>
   <% if can? :manage, @deck %>

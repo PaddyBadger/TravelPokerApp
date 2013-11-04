@@ -22,14 +22,12 @@ jQuery(function(){
 });
 
 $(document).ready(function() {
-  $('.twistCard').hide();
+  $('.twistCardAll').hide();
   $('.card').click(function() {
-    $(this).children('#dialog-modal').dialog({
-      modal: true,
-      dialogClass: "no-close",
+    $(this).children('.twistCardAll').toggle("slide", 500);
     });
-  });
 });
+
 
 
 $(document).ready(function() {

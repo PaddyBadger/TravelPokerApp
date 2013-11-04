@@ -1,9 +1,31 @@
-<div class="tripBack">
+
+<div class="tripBackTwist">
+  <div class="left"><img src="/assets/leftarrow.png"></div>
+  <div class="right"><img src="/assets/rightarrow.png"></div>
+  <h3><%= card.title%>: <%= card.location%></h3>
   <h8><%= link_to card.user.name %> contributed <%= time_ago_in_words(card.created_at) %> ago</h8>
-    <div id="map"><%= image_tag card.image%></div>
-      <div class="tripInfoBackTwist">
-        <h4><%= card.title%>: <%= card.location%></h4>
+    
+    <div id="map">
+      <%= image_tag card.image%>
+      <%= image_tag card.image%>
+    </div>  
+    
+    <div class="tripInfoBackTwist">
+      <h4><%= card.title%>: <%= card.location%></h4>
+    </div>
+
+    <div class="cardComs">
+      <div class=""><%= render partial: 'likes/like', locals: { likeable: card } %></div>
+      <%= render partial: 'cards/social', locals: { card: card } %>
+      <%= render partial: 'cards/keep', locals: { card: card } %>
+     
+      <% if can? :manage, card %>
+      <div class="memberOnly">
+        <span><%= link_to "Edit", edit_card_path(card), class: "dk_label keep", id: "keep" %></span>
+        <span> <%= link_to "Delete", card, method: :delete, class: "dk_label keep", id: "keep", confirm: 'Are you sure you want to delete this card?' %></span>
       </div>
+      <% end %>
+    </div>
 
     <div class="backInfo">
        <h2><%= link_to card.title, card, title: 'View More About This Card'%></h2>
@@ -18,6 +40,5 @@
       <% card.decks.each do |deck| %>
         <%= link_to deck.title, deck %><br>
       <% end %>
-
-    </div>
+    </div> 
 </div>

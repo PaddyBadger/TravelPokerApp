@@ -1,0 +1,90 @@
+.twistCardAll {
+  position: absolute; 
+    top: 495px; 
+    left: 0; 
+    width: 2000px; 
+    height: 805px; 
+    background: rgba(36, 38, 37, 0.7);
+    z-index: 400;
+}
+
+.twistCard {
+
+  position:absolute;
+  width:800px!important;
+  height:800px;
+  margin-left:580px;
+  background: #ffffff;
+  border:1px solid #242625;
+  overflow-y: scroll;
+  z-index: 400;
+   border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.twistAd {
+  height:100px;
+  text-align:center;
+}
+
+.tripBackTwist {
+  width: 670px;
+  margin-left:70px;
+}
+
+.tripBackTwist #map img {
+  width: 325px;
+  display:inline-block;
+}
+
+.tripInfoBackTwist:before{
+  content: "";
+  border-style: solid;
+  border-width: 0 20px 20px 20px;
+  border-color: transparent transparent #2980B9 transparent;
+  height: 0px;
+  position: absolute;
+  right: 20px;
+  top: -20px;
+  width: 0px;
+  -webkit-transform: rotate(360deg);
+}
+
+
+.tripInfoBackTwist{
+  background:#2980B9;
+  position: relative;
+  color: #fff;
+  height: 50px;
+  top: -10px;
+  width:655px;
+}
+
+.tripBackTwist .cardComs {
+   margin-top: -95px;
+   margin-left: -188px;
+}
+
+.left {
+  float:left;
+  width:100px;
+  height:100px;
+  margin-left:-95px;
+  margin-top:-30px;
+}
+
+.right {
+  float:right;
+  width:100px;
+  height:100px;
+  margin-right:-85px;
+  margin-top:-20px;
+}
+
+.tripBackTwist h3 {
+  margin-top:20px;
+  margin-bottom: 25px;
+  font-size:30px;
+}
+

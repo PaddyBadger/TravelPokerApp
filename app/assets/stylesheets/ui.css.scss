@@ -704,11 +704,13 @@ h8 {
   -moz-transition: 0.25s;
   -o-transition: 0.25s;
   transition: 0.25s;
-  -webkit-backface-visibility: hidden; }
+  -webkit-backface-visibility: hidden; 
+  }
   #keep:hover, #keep:focus, .dk_focus #keep {
     background-color: #2fe2bf;
     color: white;
-    outline: none; }
+    outline: none; 
+    }
   #keep:active {
     background-color: #16a085;
     outline: none; }

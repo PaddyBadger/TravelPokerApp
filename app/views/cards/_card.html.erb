@@ -14,9 +14,9 @@
       <p><%= markdown (card.location)%></p>
     </div> 
   </div>
-  <div class="twistCard" id="dialog-modal">
-    <%= render partial: 'cards/show', locals: { card: card } %>
-  </div> 
+    <span class="twistCardAll">
+      <div class="twistCard"><%= render partial: 'cards/show', locals: { card: card, comment: @comment } %></div> 
+    </span>
 </div>
 
 
