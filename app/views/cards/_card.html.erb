@@ -1,12 +1,8 @@
 <div class="card">
+  
   <div class="trip <%= dom_id(card) %>" >
     <div class="edit">
       <%= render partial: 'decks/carddeck', locals: { card: card } %>
-    </div>
-    <div class="tripMeta">
-      <%= render partial: 'cards/keep', locals: { card: card } %>
-      <%= render partial: 'cards/social', locals: { card: card } %>
-      <%= render partial: 'likes/like', locals: { likeable: card } %>
     </div>
     <%= image_tag(card.image.front) %>
     <div class="tripInfo">
@@ -14,10 +10,15 @@
       <p><%= markdown (card.location)%></p>
     </div> 
   </div>
-    <span class="twistCardAll">
-      <div class="twistCard"><%= render partial: 'cards/show', locals: { card: card, comment: @comment } %></div> 
-    </span>
+
+  <span class="twistCardAll">
+    <div class="twistCard"><%= render partial: 'cards/show', locals: { card: card, comment: @comment } %></div> 
+  </span>
+
 </div>
+
+
+
 
 
 

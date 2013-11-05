@@ -1,0 +1,102 @@
+.share {
+  background-color: #1abc9c;
+  color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 11px 45px 11px 13px;
+  text-decoration: none !important;
+  white-space: nowrap;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-backface-visibility: hidden; 
+  }
+  .share:hover, .share:focus, .dk_focus .share {
+    background-color: #2fe2bf;
+    color: white;
+    outline: none; 
+    }
+  .share:active {
+    background-color: #16a085;
+    outline: none; }
+    .share:active .select-icon {
+      border-left-color: transparent; }
+
+.share {
+  padding: 3px 6px 3px 6px  !important;
+  text-align:center !important;
+  background: #242625 !important;
+  border-radius: 3px !important;
+  text-transform: uppercase; 
+  font-size: 10px;
+  left:-30px;
+  bottom:-10px;
+  float:left;
+  margin-left:5px;
+}
+
+.dk_open {
+  z-index: 10; }
+  .dk_open .share {
+    background-color: #1abc9c; }
+    .dk_open .share .select-icon {
+      background-color: #16a085;
+      border-left-color: transparent; }
+
+.share {
+  display: block;
+  position: relative; }
+
+.social a{
+  float:left; 
+}
+
+.social img{
+  width: 30px;
+  height: 30px;
+}
+
+.share {
+  background-color: #ecf0f5;
+  border-radius: 6px;
+  position: relative; }
+  .share:before {
+    content: "";
+    border-style: solid;
+    border-width: 0 9px 9px 9px;
+    border-color: transparent transparent #ecf0f5 transparent;
+    height: 0px;
+    position: absolute;
+    left: 23px;
+    top: -9px;
+    width: 0px;
+    -webkit-transform: rotate(360deg); }
+  .share ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px; }
+  .share li {
+    padding-top: 11px;
+    *zoom: 1; }
+    .share li:before, .share li:after {
+      display: table;
+      content: ""; }
+    .share li:after {
+      clear: both; }
+    .share li:first-child {
+      padding-top: 0; }
+  .share .toggle {
+    float: right;
+    margin: 0; }
+  .share .btn {
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px; }
+
+.share-label {
+  float: left;
+  font-size: 15px;
+  padding-top: 5px;
+  width: 50%; }
+

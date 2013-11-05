@@ -10,7 +10,7 @@ end
 
 puts "#{Category.count} Categories"
 
-user = User.create(email: "patriciaestridgedubai@gmail.com", password: 'helloworld')
+user = User.create(email: "patriciaestridgedubai@gmail.com", name: 'Paddy', password: 'helloworld')
 
 europe = user.decks.create(title: 'Eating in Europe', location: 'Europe', remote_image_url: 'http://t0.gstatic.com/images?q=tbn:ANd9GcSNVsO5DNbbKJr4VWQIiQCCz40QhvjV4LBccVGo3gzSDdOLPfIOJQ')
 

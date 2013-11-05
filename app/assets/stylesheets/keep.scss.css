@@ -1,0 +1,128 @@
+.keep {
+  background-color: #1abc9c;
+  color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 11px 45px 11px 13px;
+  text-decoration: none !important;
+  white-space: nowrap;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-backface-visibility: hidden; 
+  }
+  .keep:hover, .keep:focus, .dk_focus .keep {
+    background-color: #2fe2bf;
+    color: white;
+    outline: none; 
+    }
+  .keep:active {
+    background-color: #16a085;
+    outline: none; }
+    .keep:active .select-icon {
+      border-left-color: transparent; }
+
+.keep {
+  padding: 3px 6px 3px 6px  !important;
+  text-align:center !important;
+  background: #242625 !important;
+  border-radius: 3px !important;
+  text-transform: uppercase; 
+  font-size: 10px;
+  left:-30px;
+  bottom:-10px;
+  float:left;
+  margin-left:5px;
+}
+
+.dk_open {
+  z-index: 10; }
+  .dk_open .keep {
+    background-color: #1abc9c; }
+    .dk_open .keep .select-icon {
+      background-color: #16a085;
+      border-left-color: transparent; }
+
+.keep {
+  display: block;
+  position: relative; }
+
+.options {
+  padding-top: 14px; 
+  z-index: 10;
+  display:inline-block;}
+  .options:before {
+    border-style: solid;
+    border-width: 0 9px 9px 9px;
+    border-color: transparent transparent #242625 transparent;
+    height: 0px;
+    position: absolute;
+    top: 5px;
+    width: 0px;
+    -webkit-transform: rotate(360deg); }
+  .options:before {
+    left: 12px;
+    right: auto; }
+  .options li {
+    padding-bottom: 3px; }
+  .options a {
+    border-radius: 3px;
+    color: white;
+    display: block;
+    padding: 4px 4px;
+    text-decoration: none; }
+    .options a:hover {
+      background-color: #3498DB; }
+
+.dk_option_current a {
+  background-color: #3498DB; }
+
+.options_inner {
+  background-color: #242625;
+  border-radius: 5px;
+  margin: 0;
+  max-height: 244px;
+  padding: 3px 3px 0; }
+
+.dk_touch .options {
+  max-height: 250px; }
+
+.dk_container {
+  position: relative;
+  vertical-align: middle; }
+  .dk_container.dk_shown {
+    display: inline-block;}
+  .dk_container[class*="span"] {
+    float: none;
+    margin-left: 0; }
+
+.options {
+  margin-top: -10px;
+  position: absolute;
+  left: -40px;
+  width: 160px;
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  -webkit-backface-visibility: hidden; }
+  .select-right .options {
+    left: auto;
+    right: 0; }
+  .options a {
+    display: block; }
+
+.options_inner {
+  overflow: auto;
+  outline: none;
+  position: relative; }
+
+.dk_touch .options {
+  overflow: hidden; }
+.dk_touch .options_inner {
+  max-height: none;
+  overflow: visible; }
+
+
+

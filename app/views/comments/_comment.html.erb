@@ -1,6 +1,6 @@
 <div class="comment" id='<%= dom_id(comment) %>'>
   <% if can? :manage, comment %>
-    <h7 class="editable" contenteditable="true"><%= comment.title %></h7>
+    <h7 class=""><%= comment.title %></h7>
   <% else %>
     <h7><%= comment.title %></h7>
   <% end %>
@@ -8,12 +8,11 @@
     <%= comment.user.name %> contributed <%= time_ago_in_words(comment.created_at) %> ago
     <% if can? :manage, comment %>
      | <%= link_to "Delete", card_comment_path(comment.card, comment), method: :delete, remote: true %>
-      <h8> | To edit key esc to exit | enter to save</h8>
     <% end %>
   </h8>
   <%= render partial: 'votes/vote', locals: { comment: comment } %>
   <% if can? :manage, comment %>
-    <p class="editable" contenteditable="true">
+    <p class="">
       <%= comment.description %> 
     </p>
   <% else %>

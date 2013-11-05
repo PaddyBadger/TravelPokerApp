@@ -1,15 +1,15 @@
-
 <div class="tripBackTwist">
   <div class="left"><img src="/assets/leftarrow.png"></div>
   <div class="right"><img src="/assets/rightarrow.png"></div>
   <h3><%= card.title%>: <%= card.location%></h3>
   <h8><%= link_to card.user.name %> contributed <%= time_ago_in_words(card.created_at) %> ago</h8>
     
-    <div class="map">
-      <%#= image_tag card.image%>
-      <%#= image_tag card.image%>
-    </div>  
     
+    <div class="image">
+       <div class="map"></div> 
+      <%= image_tag card.image%>
+    </div>
+
     <div class="tripInfoBackTwist">
       <h4><%= card.title%>: <span class= 'location'><%= card.location%></span></h4>
     </div>
@@ -28,7 +28,6 @@
     </div>
 
     <div class="backInfo">
-       <h2><%= link_to card.title, card, title: 'View More About This Card'%></h2>
       
     <div class="tags">
       <div class="category"><h4>Category</h4><%=image_tag card.category.image %></div>

@@ -1,10 +1,10 @@
 <% unless action_name == 'edit' %>
-  <div class="dk_container span3 dk_shown dk_theme_default" id="dk_container_herolist" tabindex="1">
-    <a class="dk_toggle" id="keep">
+  <div class="dk_container dk_shown">
+    <a class="keep">
       <span class="dk_label">Keep</span>
     </a>
-    <div class="dk_options">
-      <ul class="dk_options_inner">
+    <div class="options">
+      <ul class="options_inner">
         <% if current_user %>
           <li class="">
             <%= link_to "Keep Deck", copy_deck_path(deck), method: :post %>

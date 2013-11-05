@@ -46,6 +46,10 @@ header{
   position:relative;
 }
 
+.logo a:hover {
+  background:none;
+}
+
 .searchIn{
   width: 610px;
   margin-right: 20px;
@@ -81,11 +85,15 @@ input{
   float: right;
 }
 
-.pic img{
-  height:500px;
-  width:98%;
-  border-left:20px solid #0d0d0d;
-  border-right:20px solid #0d0d0d;
+.picSlider {
+  height:545px;
+  background: #242625;
+  min-width:100%;
+}
+
+.picSliderImages{
+  width:1399px;
+  margin: auto;
 }
 
 .signIn{
@@ -236,7 +244,6 @@ input{
   margin-bottom: 25px;
   float: left;
   width: 245px;
-  height:350px;
   margin-right: 27px;
   margin-left: 27px;
   border-top: 1px solid #2980B9;
@@ -244,7 +251,7 @@ input{
   -moz-box-shadow: 5px 5px 1px rgb(110, 110, 110);
   -webkit-box-shadow: 5px 5px 1px rgb(110, 110, 110);
   box-shadow: 5px 5px 1px rgb(110, 110, 110);
-  height: 300px;
+  height: 290px;
   z-index:0;
 }
 .tripImg img{max-width:100%; height:220px; margin-bottom:-3px;}
@@ -255,7 +262,7 @@ input{
   position: relative;
   color: #fff;
   height: 70px;
-  top: -20px;
+  top: -27px;
 }
 
 .tripInfo:before{
@@ -400,15 +407,6 @@ input{
 
 .tripMeta .btn-group {float:left;}
 
-.social a{
-  float:left; 
-}
-
-.social img{
-  width: 30px;
-  height: 30px;
-}
-
 /* .deckRibbon{
   display:block;
   width:53px;
@@ -420,69 +418,6 @@ input{
   margin-top: -9px;
 } */
 
-#keep {
-  padding: 3px 6px 3px 6px  !important;
-  text-align:center !important;
-  background: #242625 !important;
-  border-radius: 3px !important;
-  text-transform: uppercase; 
-  font-size: 10px;
-  left:-30px;
-  bottom:-10px;
-  float:left;
-  margin-left:5px;
-}
-
-.dk_options_1{
-  width:200px !important; 
-  margin-left:50px;
-  top:30px;}
-
-.dk_options_1 li{
-  font-family: "Opal";
-  }
-
-.dk_options_1:before{left:15px !important;}
-
-.dk_open {
-  position: relative; }
-  .dk_open .dk_options_1 {
-    margin-top: -1px;
-    opacity: 1;
-    z-index: 10;
-    display: block\9; }
-  .dk_open .dk_label {
-    color: inherit; }
-
-.dk_options_1 {
-  margin-top: -10px;
-  position: absolute;
-  left: -40px;
-  opacity: 0;
-  width: 20px;
-  z-index: -50;
-  display: none\9;
-  -webkit-transition: 0.3s ease-out;
-  -moz-transition: 0.3s ease-out;
-  -o-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-  -webkit-backface-visibility: hidden; }
-  .select-right .dk_options_1 {
-    left: auto;
-    right: 0; }
-  .dk_options_1 a {
-    display: block; }
-
-.dk_options_inner {
-  overflow: auto;
-  outline: none;
-  position: relative; }
-
-.dk_touch .dk_options_1 {
-  overflow: hidden; }
-.dk_touch .dk_options_inner {
-  max-height: none;
-  overflow: visible; }
 
 .inputAll{
   width: 180px;

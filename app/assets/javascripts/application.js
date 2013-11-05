@@ -9,20 +9,26 @@ $=jQuery;
 $(document).ready(function(){
   $(function(){$("#geocomplete").geocomplete();});
 
-jQuery(function(){
+  jQuery(function(){
 
-  $('.trip,.deck').hover(function(){
-    $(this).children('.tripMeta').fadeIn(500);
-  },
-  function(){
-  $('.dk_container.span3.dk_shown.dk_theme_default').removeClass('dk_open');
-    $(this).children('.tripMeta').fadeOut(500);
-});
-});
+    $('.cardContainer,.deck').hover(function(){
+      $(this).children('.tripMeta').toggle();
+    });
+  });
 });
 
-$(document).ready(function() {
-  $('.twistCardAll').hide();
+ $(document).ready(function() {
+$('.options').hide();
+ $('.keep').click(function() {
+    $('.options').show();
+  });
+ $('.card').mouseleave(function() {
+  $('.options').hide();
+ });
+});
+
+  $(document).ready(function() {
+  $('.twistCardAll').hide();   
   $('.card').click(function() {
     $(this).children('.twistCardAll').toggle("slide", 500);
     $(this).find('.location').geocomplete({map: $(this).find('.map'), location: $(this).find('.location').text()});

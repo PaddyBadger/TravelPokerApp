@@ -1,17 +1,17 @@
 .twistCardAll {
   position: absolute; 
-    top: 495px; 
+    top: 0; 
     left: 0; 
     width: 2000px; 
-    height: 805px; 
+    height: 1500px; 
     background: rgba(36, 38, 37, 0.7);
     z-index: 400;
 }
 
 .twistCard {
-
+  top:450px;
   position:absolute;
-  width:800px!important;
+  width:810px!important;
   height:800px;
   margin-left:580px;
   background: #ffffff;
@@ -33,14 +33,19 @@
   margin-left:70px;
 }
 
-.tripBackTwist .map img {
-  width: 325px;
+.tripBackTwist .image {
   display:inline-block;
 }
 
 .map {
-  width: 325px;
-  height: 325px;
+  float:left;
+  width: 326px;
+  height: 200px;
+}
+
+.image img {
+  width: 327px;
+  height: 200px;
 }
 
 .tripInfoBackTwist:before{
@@ -62,12 +67,12 @@
   position: relative;
   color: #fff;
   height: 50px;
-  top: -10px;
+  top: -25px;
   width:655px;
 }
 
 .tripBackTwist .cardComs {
-   margin-top: -95px;
+   margin-top: -110px;
    margin-left: -188px;
 }
 
