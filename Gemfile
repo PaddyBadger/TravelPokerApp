@@ -35,7 +35,7 @@ gem 'haml'
 gem 'fog'
 gem 'figaro'
 
-gem 'gmaps4rails'
+gem 'gmaps4rails', '< 2.0'
 gem 'newrelic_rpm'  
 
 gem 'omniauth'
