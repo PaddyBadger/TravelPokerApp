@@ -9,6 +9,15 @@ $=jQuery;
 $(document).ready(function(){
   $(function(){$("#geocomplete").geocomplete();});
 
+$(document).ready(function(){
+$('.categories, .tags, .category').tooltip({
+    position: {
+      my: "right center",
+      at: "right bottom",
+    }
+    });
+});
+
   $('#slider-code').tinycarousel({
             start: 1,
             display: 1,
@@ -51,8 +60,6 @@ $(document).ready(function() {
     $(this).find('.location').geocomplete({map: $(this).find('.map'), location: $(this).find('.location').text()});
     });
 });
-
-
 
 $(document).ready(function() {
   

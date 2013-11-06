@@ -77,13 +77,30 @@ input[type="radio"] {
 
 .ui-tooltip {
   position: absolute;
-  background: white;
   text-align: center;
-  font-size: 13px;
+  font-size: 11px;
+  font-family:"Opal";
   font-weight: bold;
-  width: 130px;
-  padding: 5px;
-  color: black;
-  text-transform: uppercase;
-  box-shadow: 0 0 3px black;
+  top: -10px;
+  padding: 3px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  background: #2980B9 !important;
+  border-color: #2980B9 !important;
+  color: white;
+  z-index:1000;
+}
+
+
+.ui-tooltip:before {
+  content: "";
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #2980B9 transparent;
+  height: 0px;
+  position: absolute;
+  right: 10px;
+  top: -10px;
+  width: 0px;
+  -webkit-transform: rotate(360deg);
 }
