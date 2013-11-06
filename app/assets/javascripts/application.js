@@ -8,6 +8,7 @@ $=jQuery;
 
 $(document).ready(function(){
   $(function(){$("#geocomplete").geocomplete();});
+
   $('#slider-code').tinycarousel({
             start: 1,
             display: 1,
@@ -24,21 +25,24 @@ $(document).ready(function(){
 
   jQuery(function(){
 
-    $('.cardContainer,.deck').hover(function(){
+    $('.trip,.deck').hover(function(){
       $(this).children('.tripMeta').toggle();
     });
   });
 });
 
- $(document).ready(function() {
-$('.options').hide();
- $('.keep').click(function() {
-    $('.options').show();
+$(document).ready(function() {
+  $('.keepOptions, .shareOptions').hide();
+   $('.keep').click(function() {
+      $('.keepOptions').show();
+    });
+   $('.share').click(function() {
+      $('.shareOptions').show();
+    });
+   $('.keepOptions, .shareOptions').mouseleave(function() {
+    $(this).hide();
+   });
   });
- $('.card').mouseleave(function() {
-  $('.options').hide();
- });
-});
 
   $(document).ready(function() {
   $('.twistCardAll').hide();   
@@ -126,4 +130,8 @@ document.addEventListener('keydown', function (event) {
     }
   }
 }, true);
+
+
+
+
 

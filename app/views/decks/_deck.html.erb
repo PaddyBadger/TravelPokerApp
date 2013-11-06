@@ -1,7 +1,5 @@
 <div class="deck">
   <div class="tripMeta">
-    <%= render partial: 'decks/keep', locals: { deck: deck } %>
-    <%= render partial: 'decks/social', locals: {deck: deck } %>
     <%= render partial: 'likes/like', locals: { likeable: deck } %>
   </div>
   <%= image_tag (deck.image.front) %>

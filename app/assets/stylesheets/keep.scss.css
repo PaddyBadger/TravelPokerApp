@@ -48,11 +48,11 @@
   display: block;
   position: relative; }
 
-.options {
+.keepOptions {
   padding-top: 14px; 
   z-index: 10;
   display:inline-block;}
-  .options:before {
+  .keepOptions:before {
     border-style: solid;
     border-width: 0 9px 9px 9px;
     border-color: transparent transparent #242625 transparent;
@@ -61,31 +61,31 @@
     top: 5px;
     width: 0px;
     -webkit-transform: rotate(360deg); }
-  .options:before {
+  .keepOptions:before {
     left: 12px;
     right: auto; }
-  .options li {
+  .keepOptions li {
     padding-bottom: 3px; }
-  .options a {
+  .keepOptions a {
     border-radius: 3px;
     color: white;
     display: block;
     padding: 4px 4px;
     text-decoration: none; }
-    .options a:hover {
+    .keepOptions a:hover {
       background-color: #3498DB; }
 
 .dk_option_current a {
   background-color: #3498DB; }
 
-.options_inner {
+.keepOptions_inner {
   background-color: #242625;
   border-radius: 5px;
   margin: 0;
   max-height: 244px;
   padding: 3px 3px 0; }
 
-.dk_touch .options {
+.dk_touch .keepOptions {
   max-height: 250px; }
 
 .dk_container {
@@ -97,7 +97,7 @@
     float: none;
     margin-left: 0; }
 
-.options {
+.keepOptions {
   margin-top: -10px;
   position: absolute;
   left: -40px;
@@ -107,18 +107,18 @@
   -o-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
   -webkit-backface-visibility: hidden; }
-  .select-right .options {
+  .select-right .keepOptions {
     left: auto;
     right: 0; }
-  .options a {
+  .keepOptions a {
     display: block; }
 
-.options_inner {
+.keepOptions_inner {
   overflow: auto;
   outline: none;
   position: relative; }
 
-.dk_touch .options {
+.dk_touch .keepOptions {
   overflow: hidden; }
 .dk_touch .options_inner {
   max-height: none;

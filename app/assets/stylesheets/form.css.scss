@@ -73,3 +73,17 @@ input[type="radio"] {
     -o-appearance: checkbox; 
     width:20px;
 }
+
+
+.ui-tooltip {
+  position: absolute;
+  background: white;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  width: 130px;
+  padding: 5px;
+  color: black;
+  text-transform: uppercase;
+  box-shadow: 0 0 3px black;
+}
