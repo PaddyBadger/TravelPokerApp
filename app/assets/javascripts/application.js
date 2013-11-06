@@ -8,6 +8,19 @@ $=jQuery;
 
 $(document).ready(function(){
   $(function(){$("#geocomplete").geocomplete();});
+  $('#slider-code').tinycarousel({
+            start: 1,
+            display: 1,
+            axis: "x",
+            controls: false,
+            pager: false,
+            interval: true,
+            intervaltime: 10000,
+            rewind: true,
+            animation: true,
+            duration: 500,
+            callback: null
+  });
 
   jQuery(function(){
 

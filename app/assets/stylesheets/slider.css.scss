@@ -1,0 +1,9 @@
+.sliderContainer {height: 545px;background: #242625  url('bg_all.png')-27px -13px !important;min-width:100%;background-image:url('grid-bg.gif');}
+#slider-code .viewport { margin:auto; width: 1450px; height: 545px; overflow: hidden; position: relative; }
+#slider-code .buttons { display: block; margin: 0 0 0 0; float: left; }
+#slider-code .next { margin: 0 0 0 0;  }
+#slider-code .disable { visibility: hidden; }
+#slider-code .overview { list-style: none; position: absolute; margin: auto; left: -50px; top: 0; }
+#slider-code .overview li{ float: left; margin-right: 150px; padding: 1px; height: 545px; width: 1399px;}
+                 
+
