@@ -27,7 +27,20 @@
     <div class="apple_pagination">
       <%= will_paginate @cards %>
     </div>
+
+  <div class="card">
+
     <%= render @cards %>
+
+    <span class="twistCardAll">
+      <div class="twistCardBack"></div>
+      <div class="twistCenter">
+        <div class="twistCard"><%= render partial: 'cards/show', collection: @cards, as: :card %></div> 
+      </div>
+    </span>
+
+  </div>
+
 </div>
 <div class="topDeck">
     <h3>Top Decks</h3>

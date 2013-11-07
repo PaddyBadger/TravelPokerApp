@@ -1,27 +1,17 @@
-<div class="card">
-  
-  <div class="trip <%= dom_id(card) %>" >
-    <div class="edit">
-      <%= render partial: 'decks/carddeck', locals: { card: card } %>
-    </div>
-    <%= image_tag(card.image.front) %>
-    <div class="tripInfo">
-      <h4><%= link_to card.title, card %></h4>
-      <p><%= markdown (card.location)%></p>
-    </div> 
-     <div class="tripMeta">
-      <%= render partial: 'likes/like', locals: { likeable: card } %>
-     </div>
+<div class="trip <%= dom_id(card) %>" >
+  <div class="edit">
+    <%= render partial: 'decks/carddeck', locals: { card: card } %>
   </div>
-
-  <span class="twistCardAll">
-    <div class="twistCardBack"></div>
-    <div class="twistCenter">
-      <div class="twistCard"><%= render partial: 'cards/show', locals: { card: card, comment: @comment } %></div> 
-    </div>
-  </span>
-
+  <%= image_tag(card.image.front) %>
+  <div class="tripInfo">
+    <h4><%= link_to card.title, card %></h4>
+    <p><%= markdown (card.location)%></p>
+  </div> 
+   <div class="tripMeta">
+    <%= render partial: 'likes/like', locals: { likeable: card } %>
+   </div>
 </div>
+
 
 
 
