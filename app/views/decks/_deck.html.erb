@@ -1,10 +1,14 @@
-<div class="deck">
-  <div class="tripMeta">
-    <%= render partial: 'likes/like', locals: { likeable: deck } %>
+<%= link_to deck do %>
+  <div class="deck">
+    <div class="tripMeta">
+      <%= render partial: 'likes/like', locals: { likeable: deck } %>
+    </div>
+    <%= link_to deck do %>
+      <%= image_tag (deck.image.front) %>
+    <% end %>
+    <div class="tripInfo">
+      <h4><%= link_to deck.title, deck %></h4>
+      <p><%= markdown (deck.location)%></p>
+    </div>
   </div>
-  <%= image_tag (deck.image.front) %>
-  <div class="tripInfo">
-    <h4><%= link_to deck.title, deck %></h4>
-    <p><%= markdown (deck.location)%></p>
-  </div>
-</div>
+<% end %>

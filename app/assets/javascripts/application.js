@@ -10,12 +10,12 @@ $(document).ready(function(){
   $(function(){$("#geocomplete").geocomplete();});
 
 $(document).ready(function(){
-$('.categories, .tags, .category').tooltip({
+  $('.categories, .tags, .category').tooltip({
     position: {
       my: "right center",
       at: "right bottom",
     }
-    });
+  });
 });
 
   $('#slider-code').tinycarousel({

@@ -33,6 +33,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'haml'
 gem 'fog'
+gem 'unf' 
 gem 'figaro'
 
 gem 'gmaps4rails', '< 2.0'
