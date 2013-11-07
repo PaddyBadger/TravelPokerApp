@@ -16,11 +16,12 @@ class Card < ActiveRecord::Base
     "#{self.location}" 
   end
 
+  searchable do
+    text :title, :description, :location, :comments, :category_id, :season_id
+  end
+  
   validates :title, length: { minimum: 5 }, presence: true
   validates :description, length: { minimum: 20 }, presence: true
   validates :user, presence: true 
 
-  searchable do
-    text :title, :description, :location, :comments, :category_id, :season_id
-  end
 end

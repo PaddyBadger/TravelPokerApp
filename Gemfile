@@ -43,9 +43,8 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 
-gem 'sunspot_rails'
+gem 'sunspot_rails', '< 2.1.0'
 gem 'sunspot_solr'
-gem "breadcrumbs_on_rails"
 
 
 

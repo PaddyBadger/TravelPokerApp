@@ -54,10 +54,17 @@ $(document).ready(function() {
   });
 
   $(document).ready(function() {
-  $('.twistCardAll').hide();   
-  $('.card').click(function() {
-    $(this).children('.twistCardAll').toggle("slide", 500);
-    $(this).find('.location').geocomplete({map: $(this).find('.map'), location: $(this).find('.location').text()});
+  $('.twistCardAll').hide();  
+    
+    $('.trip').on('click', function() {
+      var card = $(this).closest('.card'); 
+      $(card).children('.twistCardAll').show("slide", 500);
+      $(card).find('.location').geocomplete({map: $(card).find('.map'), location: $(card).find('.location').text()});
+    });
+    $('.twistCardBack').on('click', function() {
+        var card = $(this).closest('.card'); 
+        $(card).children('.twistCardAll').hide("slide", 500);
+        $('.keepOptions, .shareOptions').hide();
     });
 });
 

@@ -1,4 +1,4 @@
-.twistCardAll {
+.twistCardBack {
   position: absolute; 
     top: 0; 
     left: 0; 
@@ -8,16 +8,20 @@
     z-index: 400;
 }
 
+.twistCenter {
+  width:810px;
+  margin:auto;
+}
+
 .twistCard {
   top:450px;
   position:absolute;
   width:810px!important;
   height:800px;
-  margin-left:25%;
   background: #ffffff;
   border:1px solid #242625;
   overflow-y: scroll;
-  z-index: 400;
+  z-index: 450;
    border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
