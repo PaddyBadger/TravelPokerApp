@@ -31,8 +31,8 @@
    
     <% if can? :manage, @card %>
     <div class="memberOnly">
-      <span><%= link_to "Edit", edit_card_path(@card), class: "dk_label keep", id: "keep" %></span>
-      <span> <%= link_to "Delete", @card, method: :delete, class: "dk_label keep", id: "keep", confirm: 'Are you sure you want to delete this card?' %></span>
+      <span><%= link_to "Edit", edit_card_path(@card), class: "dk_label editDelete" %></span>
+      <span> <%= link_to "Delete", @card, method: :delete, class: "dk_label editDelete", confirm: 'Are you sure you want to delete this card?' %></span>
     </div>
     <% end %>
   </div>

@@ -70,35 +70,47 @@
   min-height:50px;
 }
 
-.dk_options_1{width:200px !important; }
-
-.dk_options_1:before{left:15px !important;}
-
-.dk_options_1 {
-  padding-top: 14px; }
-  .dk_options_1:before {
-    content: "";
-    border-style: solid;
-    border-width: 0 9px 9px 9px;
-    border-color: transparent transparent #242625 transparent;
-    height: 0px;
-    position: absolute;
-    top: 5px;
-    width: 0px;
-    -webkit-transform: rotate(360deg); }
-  .dk_options_1:before {
-    left: auto;
-    right: 12px; }
-  .dk_options_1 li {
-    padding-bottom: 3px; }
-  .dk_options_1 a {
-    border-radius: 3px;
+.editDelete {
+  background-color: #1abc9c;
+  color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 11px 45px 11px 13px;
+  text-decoration: none !important;
+  white-space: nowrap;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-backface-visibility: hidden; 
+  }
+  .editDelete:hover, .keep:focus, .dk_focus .keep {
+    background-color: #2fe2bf;
     color: white;
-    display: block;
-    padding: 4px 4px;
-    text-decoration: none; }
-    .dk_options_1 a:hover {
-      background-color: #3498DB; }
+    outline: none; 
+    }
+  .editDelete:active {
+    background-color: #16a085;
+    outline: none; }
+    .editDelete:active .select-icon {
+      border-left-color: transparent; }
+
+.editDelete {
+  padding: 3px 6px 3px 6px  !important;
+  text-align:center !important;
+  background: #242625 !important;
+  border-radius: 3px !important;
+  text-transform: uppercase; 
+  font-size: 10px;
+  left:-30px;
+  bottom:-10px;
+  float:left;
+  margin-left:5px;
+}
+
+.editDelete {
+  display: block;
+  position: relative; }
 
 .dk_option_current a {
   background-color: #3498DB; }

@@ -1,9 +1,23 @@
 .sliderContainer {height: 545px;background: #242625  url('bg_all.png')-27px -13px !important;min-width:100%;background-image:url('grid-bg.gif');}
-#slider-code .viewport { margin:auto; width: 1399px; height: 545px; overflow: hidden; position: relative; left: -25px;}
+#slider-code .viewport { margin:auto; width: 1395px; height: 545px; overflow: hidden; position: relative; left: -25px;}
 #slider-code .buttons { display: block; margin: 0 0 0 0; float: left; }
 #slider-code .next { margin: 0 0 0 0;  }
 #slider-code .disable { visibility: hidden; }
 #slider-code .overview { list-style: none; position: absolute; margin: auto; left: 0px; top: 0; }
-#slider-code .overview li{ float: left; margin: auto; padding-right: 50px; height: 545px; width: 1399px;}
+#slider-code .overview li{ float: left; margin: auto; padding-right: 50px; height: 545px; width: 1395px;}
+
+.sliderContainer ul li a {
+  font-family:"Opal";
+  color:white;
+  background:rgba(36, 38, 37, 0.7);
+  padding: 5px;
+  top:505px;
+  font-size:25px;
+  z-index:350;
+  height:30px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  position:absolute;
+}
                  
 

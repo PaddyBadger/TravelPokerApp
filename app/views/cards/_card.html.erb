@@ -15,7 +15,10 @@
   </div>
 
   <span class="twistCardAll">
-    <div class="twistCard"><%= render partial: 'cards/show', locals: { card: card, comment: @comment } %></div> 
+    <div class="twistCardBack"></div>
+    <div class="twistCenter">
+      <div class="twistCard"><%= render partial: 'cards/show', locals: { card: card, comment: @comment } %></div> 
+    </div>
   </span>
 
 </div>

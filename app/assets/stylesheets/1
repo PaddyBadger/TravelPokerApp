@@ -1,4 +1,7 @@
-.seasons {
+
+
+
+  .seasons {
   padding-top:700px;
 }
 .seasons h1 {
