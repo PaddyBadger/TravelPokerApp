@@ -35,7 +35,13 @@
     <span class="twistCardAll">
       <div class="twistCardBack"></div>
       <div class="twistCenter">
-        <div class="twistCard"><%= render partial: 'cards/show', collection: @cards, as: :card %></div> 
+        <div id="showBacks">
+          <a class="buttons prev" id="left" href="#"><img src="/assets/leftarrow.png"></a>
+            <div class="viewport twistCard">   
+                <%= render partial: 'cards/show', collection: @cards, as: :card %>
+            </div> 
+          <a class="buttons next" id="right" href="#"><img src="/assets/rightarrow.png"></a>
+        </div>
       </div>
     </span>
 

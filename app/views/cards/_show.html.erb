@@ -1,11 +1,11 @@
- <% unless ['edit'].include?(action_name) %> 
-   <div class="tripBackTwist">
-    <div class="left"><img src="/assets/leftarrow.png"></div>
-    <div class="right"><img src="/assets/rightarrow.png"></div>
-    <h3><%= card.title%>: <%= card.location%></h3>
-    <h8><%= link_to card.user.name %> contributed <%= time_ago_in_words(card.created_at) %> ago</h8>
+<ul class="overview">
+  <li> 
+  <div class="tripBackTwist <%= dom_id(card) %>">
       
-      
+      <h3><%= card.title%>: <%= card.location%></h3>
+      <h8><%= link_to card.user.name %> contributed <%= time_ago_in_words(card.created_at) %> ago</h8>
+    
+    
       <div class="image">
          <div class="map"></div> 
         <%= image_tag card.image%>
@@ -42,12 +42,16 @@
           <% end %>
         </div> 
 
-          <div class="comments">  
-             <h3 class='js-comments-count'><%= card.comments.count %> Additional Thoughts</h3>
-            <div class="js-comments"> 
-              <%= render partial: "comments/comment", collection: card.comments, locals: { card: @cards} %>
-            </div>
-              <%= render partial: "comments/form", locals:{ card: card, comment: Comment.new } %>
+        <div class="comments">  
+           <h4 class='js-comments-count'><%= card.comments.count %> Additional Thoughts</h4>
+          <div class="js-comments"> 
+            <%= render partial: "comments/comment", collection: card.comments, locals: { card: @cards} %>
           </div>
-      </div>
-<% end %>
+            <%= render partial: "comments/form", locals:{ card: card, comment: Comment.new } %>
+        </div>
+  </div>
+  </li>
+</ul>
+    
+
+

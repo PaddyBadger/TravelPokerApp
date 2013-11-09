@@ -1,5 +1,5 @@
 <% if can? :create, Comment %>
-  <h3>Have Your Say</h3>
+  <h4>Have Your Say</h4>
   <%= form_for [card, comment], html: { class: '' }, remote: true do |f| %>    
     <div class="tinput"> 
       <%= f.text_field :title, placeholder: "Title" %>

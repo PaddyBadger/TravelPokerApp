@@ -1,6 +1,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.geocomplete.min.js
+//= require jquery.tinycarousel.min.js
 //= require_tree .
 
 
@@ -32,6 +33,19 @@ $(document).ready(function(){
             callback: null
   });
 
+  $('#showBacks').tinycarousel({
+            start: 1,
+            display: 1,
+            axis: "x",
+            controls: true,
+            pager: false,
+            interval: false,
+            rewind: true,
+            animation: true,
+            duration: 500,
+            callback: null
+  });
+
   jQuery(function(){
 
     $('.trip,.deck').hover(function(){
@@ -54,18 +68,15 @@ $(document).ready(function() {
   });
 
   $(document).ready(function() {
-  $('.twistCardAll').hide();  
-    
-    $('.trip').on('click', function() {
-      var card = $(this).closest('.card'); 
-      $(card).children('.twistCardAll').show("slide", 500);
-      $(card).find('.location').geocomplete({map: $(card).find('.map'), location: $(card).find('.location').text()});
-    });
-    $('.twistCardBack').on('click', function() {
-        var card = $(this).closest('.card'); 
-        $(card).children('.twistCardAll').hide("slide", 500);
-        $('.keepOptions, .shareOptions').hide();
-    });
+  $('.twistCardAll, .tripBackTwist').hide();
+  $('.trip').click(function(e) {
+    card = '.' + $(this).attr('class').match(/card_\d/);
+    $('.twistCardAll, ' + card).show("slide", 500);
+    $(card).find('.location').geocomplete({map: $(card).find('.map'), location: $(card).find('.location').text()});;
+  });
+  $('.twistCardBack').on('click', function() {
+    $('.twistCardAll, .tripBackTwist' + card).hide("slide", 500);
+  });
 });
 
 $(document).ready(function() {

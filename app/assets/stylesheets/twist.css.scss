@@ -16,11 +16,12 @@
 .twistCard {
   top:450px;
   position:absolute;
-  width:810px!important;
+  width:802px!important;
   height:800px;
   background: #ffffff;
   border:1px solid #242625;
   overflow-y: scroll;
+  overflow-x: hidden;
   z-index: 450;
    border-radius: 5px;
   -moz-border-radius: 5px;
@@ -80,20 +81,28 @@
    margin-left: -188px;
 }
 
-.left {
-  float:left;
+#left {
+  margin-left:-1100px;
+  margin-top:-297px;
   width:100px;
-  height:100px;
-  margin-left:-95px;
-  margin-top:-30px;
+  height:80px;
+  z-index:600;
+  position:absolute;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
 }
 
-.right {
-  float:right;
+#right {
+  margin-left:-200px;
+  margin-top:-293px;
   width:100px;
-  height:100px;
-  margin-right:-85px;
-  margin-top:-20px;
+  height:80px;
+  z-index:600;
+  position:absolute;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
 }
 
 .tripBackTwist h3 {

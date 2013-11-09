@@ -21,11 +21,21 @@
 </div>
 <div class="deckCards">
   <div class="topDeck">
-    <%= render @cards %>
-    <div class="apple_pagination">
-      <%= will_paginate @cards %>
-    </div>
+  <div class="card">
+     <%= render @cards %>
+      <div class="apple_pagination">
+        <%= will_paginate @cards %>
+      </div>
+
+      <span class="twistCardAll">
+        <div class="twistCardBack"></div>
+        <div class="twistCenter">
+          <div class="twistCard"><%= render partial: 'cards/show', collection: @cards, as: :card %></div> 
+        </div>
+      </span>
+
   </div>
+</div>
 </div>
 
 
