@@ -39,6 +39,10 @@
 
   <div class="backInfo">
      
+     <div class="tags">
+       <div class="category"><h3>Category</h3><%=image_tag @card.category.image, title: @card.category.title %></div>
+       <div class="season"><h3>Season</h3><%=image_tag @card.season.image %></div>
+     </div>
   
     <p><%= @card.description%></p>
     <p><%= link_to @card.url%></p>
