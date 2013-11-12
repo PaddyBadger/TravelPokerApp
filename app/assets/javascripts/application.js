@@ -26,7 +26,7 @@ $(document).ready(function(){
             controls: false,
             pager: false,
             interval: true,
-            intervaltime: 10000,
+            intervaltime: 5000,
             rewind: true,
             animation: true,
             duration: 500,
