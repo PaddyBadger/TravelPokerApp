@@ -2,6 +2,7 @@
 //= require jquery_ujs
 //= require jquery.geocomplete.min.js
 //= require jquery.tinycarousel.min.js
+//= require slider.js.coffee
 //= require_tree .
 
 
@@ -66,18 +67,6 @@ $(document).ready(function() {
     $(this).hide();
    });
   });
-
-  $(document).ready(function() {
-  $('.twistCardAll, .tripBackTwist').hide();
-  $('.trip').click(function(e) {
-    card = '.' + $(this).attr('class').match(/card_\d/);
-    $('.twistCardAll, ' + card).show("slide", 500);
-    $(card).find('.location').geocomplete({map: $(card).find('.map'), location: $(card).find('.location').text()});;
-  });
-  $('.twistCardBack').on('click', function() {
-    $('.twistCardAll, .tripBackTwist' + card).hide("slide", 500);
-  });
-});
 
 $(document).ready(function() {
   
