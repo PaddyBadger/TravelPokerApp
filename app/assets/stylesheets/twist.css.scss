@@ -9,15 +9,16 @@
 }
 
 .twistCenter {
-  width:810px;
+  width:998px;
   margin:auto;
 }
 
-#twistCard {
-  top:450px;
+.twistCard {
+  top:120px;
   position:absolute;
-  width:802px!important;
-  height:800px;
+  width:952px!important;
+  height:700px;
+  padding-left:50px;
   background: #ffffff;
   border:1px solid #242625;
   overflow-y: scroll;
@@ -33,24 +34,22 @@
   text-align:center;
 }
 
-.tripBackTwist {
-  width: 670px;
-  margin-left:70px;
+.back {
 }
 
-.tripBackTwist .image {
-  display:inline-block;
+.hide {
+  display: none;
 }
 
 .map {
   float:left;
-  width: 326px;
-  height: 200px;
+  width: 450px;
+  height: 300px;
 }
 
 .image img {
-  width: 327px;
-  height: 200px;
+  width: 450px;
+  height: 300px;
 }
 
 .tripInfoBackTwist:before{
@@ -73,17 +72,17 @@
   color: #fff;
   height: 50px;
   top: -25px;
-  width:655px;
+  width:902px;
 }
 
 .tripBackTwist .cardComs {
-   margin-top: -110px;
+   margin-top: -120px;
    margin-left: -188px;
 }
 
-#left {
-  margin-left:-1100px;
-  margin-top:-297px;
+.prev {
+  margin-left:-1175px;
+  margin-top:-397px;
   width:100px;
   height:80px;
   z-index:600;
@@ -93,9 +92,9 @@
   -webkit-border-radius: 5px;
 }
 
-#right {
-  margin-left:-200px;
-  margin-top:-293px;
+.next {
+  margin-left:-110px;
+  margin-top:-393px;
   width:100px;
   height:80px;
   z-index:600;
@@ -105,9 +104,13 @@
   -webkit-border-radius: 5px;
 }
 
-.tripBackTwist h3 {
+.back h3 {
   margin-top:20px;
   margin-bottom: 25px;
   font-size:30px;
+}
+
+.back p {
+  width:700px;
 }
 
