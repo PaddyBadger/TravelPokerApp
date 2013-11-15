@@ -16,6 +16,10 @@
       <%= f.file_field :image %>
     </div>
   </div>
+  <%= f.label :image_url, class: 'formlabel' %>
+    <div class="tinput"> 
+      <%= f.text_field :remote_image_url %>
+    </div>
   <%= f.label :title, class: 'formlabel' %>
   <div class="tinput">
     <%= f.text_field :title %>

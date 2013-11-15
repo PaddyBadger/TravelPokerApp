@@ -6,10 +6,13 @@
       <div class="shareOptions">
         <ul class="shareOptions_inner">
           <li class="social">
-            <a href="#"><img src="/assets/twitter.png"></a>
-            <a href="#"><img src="/assets/facebook.png"></a>
-            <a href="#"><img src="/assets/pinterest.png"></a>
-            <a href="#"><img src="/assets/hyperlink.png"></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.travelpoker.co/decks/<%= deck.id %>&p[title]=<%= deck.title %>%>&p[images][0]=<%= deck.image %>">
+          <img src="/assets/facebook.png"></a>
+
+          <a href="http://twitter.com/share?url=http%3A%2F%2Fwww.travelpoker.co/decks/<%= deck.id %>&text=<%= deck.title %>&media=https://lh6.googleusercontent.com/-zhmCkumDcYM/UoUnpfq7YvI/AAAAAAAABPk/VZbRePfm6rk/w190-h90-no/logo.png"><img src="/assets/twitter.png"></a>
+          <a href="http://pinterest.com/pin/create/button/?url=www.travelpoker.co/decks<%= deck.id %>&media=<%= deck.image %>&description=<%= deck.title %>"><img src="/assets/pinterest.png"></a>
+          <a href="https://plus.google.com/share?url=www.travelpoker.co/decks/<%= deck.id %>&title=<%= deck.title %>&media=<%= deck.image %>"><img src="/assets/gplus.png"></a>
+          <a class="link hide" href="#">www.travelpoker.co/decks/<%= deck.id %></a>
           </li>
         </ul>
       </div>
