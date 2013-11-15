@@ -10,7 +10,7 @@ $.fn.orElse = (f) ->
 
 # Selects all elements with same `card_#{n}` as container of matched elements
 $.fn.card = ->
-  c = $(this).closest('.card').attr('class').match(/card_\d/)
+  c = $(this).closest('.card').attr('class').match(/card_\d+/)
   $('.' + c)
 
 
