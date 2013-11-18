@@ -73,7 +73,7 @@ class CardsController < ApplicationController
      
     if @card.destroy
       alert[:notice] = "\"#{title}\" was deleted successfully."
-      respond_with(@card)
+      respond_with :root
     else
       alert[:error] = "There was an error deleting the card."
       render :show
