@@ -28,6 +28,12 @@ Travelpoker::Application.routes.draw do
   end
 
   match "about" => 'welcome#about', via: :get
+  match "how" => 'welcome#how', via: :get
+  match "blog" => 'welcome#blog', via: :get
+  match "faq" => 'welcome#faq', via: :get
+  match "privacy" => 'welcome#privacy', via: :get
+  match "terms" => 'welcome#terms', via: :get
+  match "contact" => 'welcome#contact', via: :get
 
   root :to => 'welcome#index'
 end

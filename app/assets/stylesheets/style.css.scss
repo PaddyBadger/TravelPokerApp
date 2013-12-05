@@ -69,6 +69,14 @@ input{outline:0px ;margin-bottom:10px;}
   margin-top: -15px;
 }
 
+.footColPic {
+  padding: 10px;
+  position: relative;
+  margin-top: 25px;
+  float: left;
+  width: 215px;
+  margin-left: 20px;
+}
 
 .footCol {
   padding: 10px;
@@ -79,12 +87,16 @@ input{outline:0px ;margin-bottom:10px;}
   margin-left: 20px;
 }
 
+.footCol a:hover {
+  background:none;
+}
+
 .footCol h3{
   padding: 4px;
   color: rgb(122, 122, 122);
   font-size: 24px;
   text-align: left;
-  padding-left: 5px;
+  margin-left: -1em;
   margin-top: -6px;
 }
 
@@ -405,6 +417,10 @@ footer{
   margin-top: 20px;
   padding:0px !important;
   float:left;
+}
+
+.footMenu a:hover {
+  background:none;
 }
 
 .copyrights{
