@@ -281,7 +281,7 @@ h8 {
   -o-transition: 0.25s;
   transition: 0.25s;
   -webkit-backface-visibility: hidden; }
-  .btn:hover, .btn:focus {
+  .btn:hover, .btn:focus, button:hover {
     background-color: #2676ab;
     color: white;
     -webkit-transition: 0.25s;
