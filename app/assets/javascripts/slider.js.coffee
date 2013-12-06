@@ -36,6 +36,7 @@ showBack = ->
   
 showNext = ->
   $(this).nextCard().trigger('click')
+  
 showPrev = ->
   $(this).prevCard().trigger('click')
 
@@ -46,8 +47,8 @@ hideBack = ->
 
 #Add Map to Card
 mapAdd = ->
-  $(this).card().find('.location').geocomplete({map: $(this).card().find('.map'), location: $(this).card().find('.location').text()});;
-
+  $(this).card().find('.location').geocomplete({map: $(this).card().find('.map'), location: $(this).card().find('.location').text()});; 
+  
 # Main
 $ ->
   $('.card.trip').click(showBack)

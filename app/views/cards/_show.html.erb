@@ -42,7 +42,7 @@
               <% card.decks.each do |deck| %>
                 <%= link_to deck.title, deck %><br>
               <% end %>
-            </div> 
+          </div> 
 
             <div class="comments">  
                <h4 class='js-comments-count'><%= card.comments.count %> Additional Thoughts</h4>
@@ -51,6 +51,18 @@
               </div>
                 <%= render partial: "comments/form", locals:{ card: card, comment: Comment.new } %>
             </div>
+
+          <div class="advert">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- tp backs -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-1244420710031131"
+                 data-ad-slot="9375366351"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>  
        
       </div>
       <a class="next" href="#"><img src="/assets/rightarrow.png"></a>
