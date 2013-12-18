@@ -20,8 +20,8 @@ class Card < ActiveRecord::Base
     text :title, :description, :location, :comments, :category_id, :season_id
   end
   
-  validates :title, length: { minimum: 5 }, presence: true
-  validates :description, length: { minimum: 20 }, presence: true
+  validates :title, length: { minimum: 5 }
+  validates :description, length: { minimum: 20 }
   validates :user, presence: true 
 
 end

@@ -44,7 +44,7 @@ class CardsController < ApplicationController
     if @card.save
       respond_with(@card)
     else
-      alert[:error] = "There was an error saving the card. Please try again."
+      flash[:error] = "There was an error saving the card. Please see errors below."
       render :new
     end
   end
@@ -55,11 +55,11 @@ class CardsController < ApplicationController
       if @card.update_attributes(params[:card])
         respond_with(@card)
       else
-        alert[:error] = "There was an error saving the card. Please try again."
+        flash[:error] = "There was an error saving the card. Please make sure all of the information is filled in."
         render :edit
       end
   end
-
+  
   def edit
     @card = Card.find(params[:id])
     authorize! :edit, Card, message: "You must own a card to edit it."
@@ -72,10 +72,10 @@ class CardsController < ApplicationController
     title = @card.title
      
     if @card.destroy
-      alert[:notice] = "\"#{title}\" was deleted successfully."
+      flash[:notice] = "\"#{title}\" was deleted successfully."
       respond_with :root
     else
-      alert[:error] = "There was an error deleting the card."
+      flash[:error] = "There was an error deleting the card."
       render :show
     end
   end

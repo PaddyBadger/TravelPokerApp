@@ -1,3 +1,20 @@
+.alertBlock {
+   width: 598px;
+   padding: 10px;
+   color:#2980B9;
+   font-family:"Opal";
+   margin: -20px 0 10px 170px;
+   font-weight: bold;
+   font-size:15px;
+   border: 1px solid #2f8dc9;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
 .alert {
    position:absolute;
    color:#2980B9;
@@ -9,3 +26,5 @@
    margin-top:-20px;
    margin-left:56%;
 }
+
+

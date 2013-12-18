@@ -58,26 +58,11 @@
       </div>
     </header>
     
-      <% if flash[:error] %>
+      <% if flash[:error] || flash[:message] || flash[:notice] %>
       <div class="alert">
-        <%= flash[:error] %>
+        <%= flash[:error] || flash[:message] || flash[:notice] %>
       </div>
       <% end %>
-  
-    
-      <% if flash[:notice] %>
-      <div class="alert">
-        <%= flash[:notice] %>
-      </div>
-      <% end %>
-   
-    
-      <% if flash[:message] %>
-      <div class="alert">
-        <%= flash[:message] %>
-       </div>
-      <% end %>
-   
 
     <%= yield %>
 

@@ -1,4 +1,5 @@
-<p class="formlabel">When To Go?</p>
+<span class="req">*</span>
+<p class="formlabelreq">When To Go?</p>
   <div class="seasons">
     <% Season.all.each do |season| %>
       <%= label_tag dom_id(season), season.name do %>
@@ -6,25 +7,4 @@
       <% end %>
       <%= radio_button_tag 'card[season_id]', season.id, id: dom_id(season) %>
     <% end %>
-    <!-- <button type="button" title="January"><img src="/assets/jan.png"></button>
-    <button type="button" title="February"><img src="/assets/feb.png"></button>
-    <button type="button" title="March"><img src="/assets/mar.png"></button>
-    <button type="button" title="April"><img src="/assets/apr.png"></button>
-    <button type="button" title="May"><img src="/assets/may.png"></button>
-    <button type="button" title="June"><img src="/assets/jun.png"></button>
-    <button type="button" title="July"><img src="/assets/jul.png"></button>
-    <button type="button" title="August"><img src="/assets/aug.png"></button>
-    <button type="button" title="September"><img src="/assets/sep.png"></button>
-    <button type="button" title="October"><img src="/assets/oct.png"></button>
-    <button type="button" title="November"><img src="/assets/nov.png"></button>
-    <button type="button" title="December"><img src="/assets/dec.png"></button>
-    <button type="button" title="Jan-Mar"><img src="/assets/q1.png"></button>
-    <button type="button" title="Apr-Jun"><img src="/assets/q2.png"></button>
-    <button type="button" title="Jul-Sep"><img src="/assets/q3.png"></button>
-    <button type="button" title="Oct-Dec"><img src="/assets/q4.png"></button>
-    <button type="button" title="Jan-Jun"><img src="/assets/h1.png"></button>
-    <button type="button" title="Jul-Dec"><img src="/assets/h2.png"></button>
-    <div class="all">
-      <button type="button" title="AllYearRound"><img src="/assets/all.png"></button>
-    </div> -->
   </div>

@@ -14,7 +14,7 @@
 }
 
 .formLinksSmall {
-margin-left:223px;
+  margin-left:223px;
   text-align:left;
   font-family:"Opal"!important;
 }
@@ -22,6 +22,16 @@ margin-left:223px;
 .formlabel {
   float:left;
   width:170px;
+}
+
+.formlabelreq {
+  margin: 0 0 0 12px;
+  width:155px;
+  float:left;
+}
+
+.req {
+  position:absolute;
 }
 
 .pinput textarea {
@@ -34,10 +44,15 @@ margin-left:223px;
   width: 610px;
 }
 
+.tiinput input {
+  width: 432px;
+}
+
 .iinputtext {
   font-family: "Opal";
-  font-size:18px;
-  padding-left:150px;
+  font-size:13px;
+  float:left;
+  width: 180px;
 }
 
 .cbutton {
@@ -67,13 +82,33 @@ margin-left:223px;
 input[type="radio"] {
     display:inline-block;
     height:20px;
-    -webkit-appearance: checkbox;
-    -moz-appearance: checkbox;
-    -ms-appearance: checkbox;     /* not currently supported */
-    -o-appearance: checkbox; 
     width:20px;
 }
 
+.check {
+  border: 2px solid #2f8dc9!important;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.categories img {
+ border: 2px solid #ffffff;
+}
+
+.categories img:hover {
+  border: 2px solid #2f8dc9;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  
+}
 
 .ui-tooltip {
   position: absolute;

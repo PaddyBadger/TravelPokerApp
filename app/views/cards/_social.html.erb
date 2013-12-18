@@ -6,7 +6,9 @@
     <div class="shareOptions">
       <ul class="shareOptions_inner">
         <li class="social">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.travelpoker.co/cards/<%= card.id %>&p[title]=<%= card.title %>: <%= card.location%>&p[images][0]=<%= card.image %>" target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')">
+          <meta property="og:image" content=<%= card.image%>/>
+          <meta property="og:title" content=<%= card.title%>/>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.travelpoker.co/cards/<%= card.id %>&p[title]=<%= card.title %>&p[images][0]=<%= card.image %>" target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')">
           <img src="/assets/facebook.png"></a>
           <a href="http://twitter.com/share?url=http%3A%2F%2Fwww.travelpoker.co/cards/<%= card.id %>&text=<%= card.title %>: <%= card.location%>&media=https://lh6.googleusercontent.com/-zhmCkumDcYM/UoUnpfq7YvI/AAAAAAAABPk/VZbRePfm6rk/w190-h90-no/logo.png" target="_blank" onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')"><img src="/assets/twitter.png"></a>
           <a href="https://plus.google.com/share?url=www.travelpoker.co/cards/<%= card.id %>&title=<%= card.title %>&media=<%= card.image %>" target="_blank" onclick="return !window.open(this.href, 'Google+', 'width=640,height=300')"><img src="/assets/gplus.png" ></a>
