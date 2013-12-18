@@ -46,6 +46,7 @@
 
 .tiinput input {
   width: 432px;
+  float:left;
 }
 
 .iinputtext {
@@ -80,7 +81,7 @@
 }
 
 input[type="radio"] {
-    display:inline-block;
+    display:none;
     height:20px;
     width:20px;
 }
@@ -97,6 +98,7 @@ input[type="radio"] {
 
 .categories img {
  border: 2px solid #ffffff;
+ padding: 1px;
 }
 
 .categories img:hover {
@@ -109,6 +111,32 @@ input[type="radio"] {
   box-shadow: none;
   
 }
+
+.checkSeason {
+  border: 2px solid #2f8dc9!important;
+  -webkit-border-radius: 5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.seasons img {
+ border: 2px solid #ffffff;
+}
+
+.seasons img:hover {
+  border: 2px solid #2f8dc9;
+  -webkit-border-radius: 5px;
+  -moz-border-radius:5px;
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  
+}
+
 
 .ui-tooltip {
   position: absolute;

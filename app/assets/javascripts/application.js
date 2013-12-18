@@ -145,8 +145,132 @@ document.addEventListener('keydown', function (event) {
   }
 }, true);
 
+$(document).ready(function() {
+    $('.categories img').click(function() {
+      $('.categories img').removeClass('check');
+    });
+    $("#image_id_1").click(function() {
+      $(this).addClass('check');
+      $("#card_category_id_1").prop("checked", "true")
+     });  
+    $("#image_id_2").click(function() {
+      $(this).addClass('check');
+      $("#card_category_id_2").prop("checked", "true")
+     });  
+    $("#image_id_3").click(function() {
+      $(this).addClass('check');
+      $("#card_category_id_3").prop("checked", "true")
+     });  
+    $("#image_id_4").click(function() {
+      $(this).addClass('check');
+      $("#card_category_id_4").prop("checked", "true")
+     });  
+    $("#image_id_5").click(function() {
+      $(this).addClass('check');
+      $("#card_category_id_5").prop("checked", "true")
+     });  
+    $("#image_id_6").click(function() {
+      $(this).addClass('check');
+      $("#card_category_id_6").prop("checked", "true")
+     }); 
+    $("#image_id_7").click(function() {
+      $(this).addClass('check');
+      $("#card_category_id_7").prop("checked", "true")
+     });  
+    $("#image_id_8").click(function() {
+      $(this).addClass('check');
+      $("#card_category_id_8").prop("checked", "true")
+     });     
+    $("#image_id_9").click(function() {
+      $(this).addClass('check');
+      $("#card_category_id_9").prop("checked", "true")
+     });     
+});
 
-
-
+$(document).ready(function() {
+    $('.seasons img').click(function() {
+      $('.seasons img').removeClass('checkSeason');
+    });
+    $("#season_image_id_1").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_1").prop("checked", "true")
+     });  
+    $("#season_image_id_2").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_2").prop("checked", "true")
+     });  
+    $("#season_image_id_3").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_3").prop("checked", "true")
+     });  
+    $("#season_image_id_4").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_4").prop("checked", "true")
+     });  
+    $("#season_image_id_5").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_5").prop("checked", "true")
+     });  
+    $("#season_image_id_6").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_6").prop("checked", "true")
+     }); 
+    $("#season_image_id_7").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_7").prop("checked", "true")
+     });  
+    $("#season_image_id_8").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_8").prop("checked", "true")
+     });     
+    $("#season_image_id_9").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_9").prop("checked", "true")
+     });    
+      $("#season_image_id_10").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_10").prop("checked", "true")
+     });  
+    $("#season_image_id_11").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_11").prop("checked", "true")
+     });  
+    $("#season_image_id_12").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_12").prop("checked", "true")
+     });  
+    $("#season_image_id_13").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_13").prop("checked", "true")
+     });  
+    $("#season_image_id_14").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_14").prop("checked", "true")
+     });  
+    $("#season_image_id_15").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_15").prop("checked", "true")
+     }); 
+    $("#season_image_id_16").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_16").prop("checked", "true")
+     });  
+    $("#season_image_id_17").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_17").prop("checked", "true")
+     });     
+    $("#season_image_id_18").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_18").prop("checked", "true")
+     });  
+    $("#season_image_id_19").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_19").prop("checked", "true")
+     });     
+    $("#season_image_id_20").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_20").prop("checked", "true")
+     }); 
+});
 
 
