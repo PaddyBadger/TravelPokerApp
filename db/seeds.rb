@@ -4,7 +4,7 @@ end
 
 puts "#{Season.count} Seasons"
 
-%w[Eating Sleeping Epic_Journeys Sports Entertainment Drinks_and_Night_Life Sightseeing Shopping Festivals_and_Events].each do |category|
+%w[Eating Sleeping Epic_Journeys Sports Entertainment Drinks_and_Night_Life Sightseeing shopping Festivals_and_Events].each do |category|
   Category.create(title: "#{category}", image: "/assets/#{category}.png")
 end
 
