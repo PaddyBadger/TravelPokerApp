@@ -271,6 +271,10 @@ $(document).ready(function() {
       $(this).addClass('checkSeason');
       $("#card_season_id_20").prop("checked", "true")
      }); 
+    $("#season_image_id_21").click(function() {
+      $(this).addClass('checkSeason');
+      $("#card_season_id_21").prop("checked", "true")
+     }); 
 });
 
 

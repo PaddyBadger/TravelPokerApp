@@ -17,8 +17,11 @@
   </div>
     
   <%= render partial: '/categories/form' %>
-    
-  <%= image_tag(card.image.url) if card.image? %>
+  
+  <div class="imagePreview">
+    <%= image_tag(card.image.url) if card.image? %>
+  </div>
+
   <span class="req">*</span>
   <%= f.label :image, class: 'formlabelreq' %>
   <div class="iinputtext"> 
