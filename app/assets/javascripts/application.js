@@ -145,6 +145,8 @@ document.addEventListener('keydown', function (event) {
   }
 }, true);
 
+
+
 $(document).ready(function() {
     $('.categories img').click(function() {
       $('.categories img').removeClass('check');
@@ -277,4 +279,8 @@ $(document).ready(function() {
      }); 
 });
 
+$('input #card_title').keyup(function() {
+    var cs = $(this).val().length;
+    $('#characters').text(cs);
+});
 
