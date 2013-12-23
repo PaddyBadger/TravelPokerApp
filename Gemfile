@@ -45,7 +45,7 @@ gem 'omniauth-twitter'
 
 gem 'sunspot_rails', '< 2.1.0'
 gem 'sunspot_solr'
-
+gem "friendly_id", '< 5.0'
 
 
 # To use ActiveModel has_secure_password

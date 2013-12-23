@@ -2,7 +2,7 @@ class CardsController < ApplicationController
   respond_to :html, :js
 
   def index
-    @cards = Card.order("created_at DESC").paginate(page: params[:page], per_page: 12)
+    @cards = Card.order("likes_count DESC, created_at DESC").paginate(page: params[:page], per_page: 12)
   end
 
   def search
@@ -18,7 +18,7 @@ class CardsController < ApplicationController
   end
 
   def show
-    @card = Card.where(id: params[:id]).first
+    @card = Card.find(params[:id])
 
     if @card
        @comments = @card.comments.includes(:user)
@@ -27,8 +27,6 @@ class CardsController < ApplicationController
     else
       redirect_to :root
     end
-
-
   end
 
   def new

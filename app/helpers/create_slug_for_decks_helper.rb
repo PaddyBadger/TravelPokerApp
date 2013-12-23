@@ -1,0 +1,2 @@
+module CreateSlugForDecksHelper
+end

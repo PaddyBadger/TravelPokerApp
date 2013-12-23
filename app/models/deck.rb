@@ -8,4 +8,7 @@ class Deck < ActiveRecord::Base
 
   validates :title, length: { minimum: 5 }, presence: true
   validates :user, presence: true 
+
+  extend FriendlyId
+  friendly_id :title, use: :slugged
 end

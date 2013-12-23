@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131106162432) do
+ActiveRecord::Schema.define(:version => 20131223195108) do
 
   create_table "cards", :force => true do |t|
     t.string   "title"
@@ -27,10 +27,12 @@ ActiveRecord::Schema.define(:version => 20131106162432) do
     t.float    "latitude"
     t.float    "longitude"
     t.boolean  "gmaps"
+    t.string   "slug"
   end
 
   add_index "cards", ["category_id"], :name => "index_cards_on_category_id"
   add_index "cards", ["season_id"], :name => "index_cards_on_season_id"
+  add_index "cards", ["slug"], :name => "index_cards_on_slug", :unique => true
   add_index "cards", ["user_id"], :name => "index_cards_on_user_id"
 
   create_table "cards_decks", :id => false, :force => true do |t|
@@ -57,6 +59,20 @@ ActiveRecord::Schema.define(:version => 20131106162432) do
   add_index "comments", ["card_id"], :name => "index_comments_on_card_id"
   add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
 
+  create_table "create_slug_for_cards", :force => true do |t|
+    t.string   "title"
+    t.string   "slug"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "create_slug_for_decks", :force => true do |t|
+    t.string   "title"
+    t.string   "slug"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "decks", :force => true do |t|
     t.string   "title"
     t.string   "location"
@@ -64,8 +80,10 @@ ActiveRecord::Schema.define(:version => 20131106162432) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "slug"
   end
 
+  add_index "decks", ["slug"], :name => "index_decks_on_slug", :unique => true
   add_index "decks", ["user_id"], :name => "index_decks_on_user_id"
 
   create_table "likes", :force => true do |t|

@@ -1,5 +1,11 @@
 Travelpoker::Application.routes.draw do
 
+  resources :create_slug_for_decks
+
+
+  resources :create_slug_for_cards
+
+
   resource :cards_decks, only: [:create, :destroy]
 
   resources :decks do

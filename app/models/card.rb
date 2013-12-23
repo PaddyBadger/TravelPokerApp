@@ -9,6 +9,9 @@ class Card < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   acts_as_gmappable process_geocoding: true
 
   def gmaps4rails_address
