@@ -12,7 +12,7 @@ $(document).ready(function(){
   $(function(){$("#geocomplete").geocomplete();});
 
 $(document).ready(function(){
-  $('.categories, .tags, .category').tooltip({
+  $('.categories, .tags, .category, .pokerLike').tooltip({
     position: {
       my: "right center",
       at: "right bottom",
@@ -279,8 +279,5 @@ $(document).ready(function() {
      }); 
 });
 
-$('input #card_title').keyup(function() {
-    var cs = $(this).val().length;
-    $('#characters').text(cs);
-});
+
 
