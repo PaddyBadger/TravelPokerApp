@@ -14,6 +14,11 @@ Travelpoker::Application.routes.draw do
       post :copy
     end
   end
+
+  resources :decks
+    match '/feed' => 'decks#feed',
+      :as => :feed,
+      :defaults => { :format => 'atom' }
   
   resources :cards do 
     collection do

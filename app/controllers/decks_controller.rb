@@ -79,4 +79,22 @@ class DecksController < ApplicationController
       render :new 
     end
   end
+
+  def feed
+    # this will be the name of the feed displayed on the feed reader
+    @title = "Travel Poker Feed"
+
+    # the news items
+    @decks = Deck.order("updated_at desc")
+
+    # this will be our Feed's update timestamp
+    @updated = @decks.first.updated_at unless @decks.empty?
+
+    respond_to do |format|
+      format.atom { render :layout => false }
+
+      # we want the RSS feed to redirect permanently to the ATOM feed
+      format.rss { redirect_to feed_path(:format => :atom), :status => :moved_permanently }
+    end
+  end
 end
