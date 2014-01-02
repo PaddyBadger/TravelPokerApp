@@ -23,7 +23,7 @@ class DecksController < ApplicationController
     
     if @deck.save
       flash[:notice] = "Deck was saved."
-      redirect_to @deck
+      redirect_to edit_deck_path(@deck)
     else
       flash[:error] = "There was an error saving the deck. Please try again."
       render :new 

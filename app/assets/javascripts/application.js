@@ -279,5 +279,10 @@ $(document).ready(function() {
      }); 
 });
 
-
+$(document).ready(function() {
+  $(".showEditDeck").slideUp();
+  $(".editDeck").click(function() {
+    $(".showEditDeck").toggle();
+  });
+});
 

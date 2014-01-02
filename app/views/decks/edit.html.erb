@@ -1,7 +1,16 @@
 <div class="topDeck">
-  <h3>Edit <%= @deck.title %></h3>
+  <h3>Add Cards To <%= @deck.title %></h3>
 </div>
-    <%= render partial: 'form', locals: { deck: @deck } %>
+<div class="editDeck">
+  <img class="cover" src="/assets/hide2.png">
+  <div class="openEdit"></div><h4>Edit Title, Description and Image</h4>
+  <img class="cover" src="/assets/hide2.png">
+</div>
+
+<div class="showEditDeck">
+  <%= render partial: 'form', locals: { deck: @deck } %>
+</div>
+
 <div class="topDeck">
   <h3>Current Cards in Deck</h3>
     <div class="addedCard">

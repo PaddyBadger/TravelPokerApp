@@ -25,9 +25,9 @@
     <%= f.text_field :remote_image_url, :placeholder => "Enter Image URL or Upload Image"%>
   </div>
 
-  <%= f.label :location, class: 'formlabel' %>
-  <div class="tinput">
-      <%= f.text_field :location, :placeholder => "A brief overview" %>
+  <%= f.label :description, class: 'formlabel' %>
+  <div class="pinput">
+      <%= f.text_area :description, :placeholder => "A brief overview" %>
   </div>
   <div class="cbutton">
     <%= f.submit "Save", class: 'btn btn-large' %>

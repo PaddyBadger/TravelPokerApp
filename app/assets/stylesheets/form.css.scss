@@ -157,3 +157,39 @@ input[type="radio"] {
   width: 610px;
   padding-left: 220px;
 }
+
+.editDeck {
+  margin-left: 200px;
+}
+
+.editDeck .openEdit {
+  float:left;
+  height:40px;
+  width:20px;
+  margin-right: 5px;
+  margin-top:-1px;
+  background: url(bt_open.png);
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.editDeck .openEdit:hover {
+  float:left;
+  height:40px;
+  width:20px;
+  margin-right: 5px;
+  margin-top: -21px;
+  background: url(bt_open.png);
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.cover {
+  position:absolute;
+  margin-top:-28px;
+  left:200px;
+}
