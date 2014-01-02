@@ -69,6 +69,7 @@ puts "#{user.decks.count} Decks"
 
 southbank = user.cards.create(
   title: 'Saunter Down South Bank', 
+  category: Category.find_by_title('Sightseeing'),
   location: 'Southbank, London, UK', 
   remote_image_url: 'http://photorefraction.files.wordpress.com/2011/03/london-south-bank-1.jpg', 
   url: 'http://southbanklondon.com/', 
@@ -77,8 +78,7 @@ southbank = user.cards.create(
 Along the way, you\'ll see The London Eye, Westminster, The Tate Modern, St. Paul\'s Catheral, Shakespeare\'s Globe, London Bridge, Tower Bridge and the Tower of London, all of which are worth a visit in their own right if you have time.
   
 Pop into the Oxo Tower for a drink or lunch on the top floor restaurant, and soak up the view. Stop at the Tate Modern\'s outside bar, or take a slight detour to London Bridge\'s Borough Market and be spoilt for food choices.',   
-  season_id: "all",
-  category_id: "Sightseeing"
+  season: Season.find_by_id(21)
   )
 
 puts "#{user.cards.count} Cards"
@@ -93,8 +93,8 @@ kayaknyc = user.cards.create(
 You\'ll have a short safety briefing, and be left pretty much to your own devises, while you paddle about within the area. It\'s a great way to cool down when it\'s hot, and an unusual way to see Manhattan.
   
 Also availabe at Pier 96.',
-  season_id: 'h4',
-  category_id: 'Sports'
+  season: Season.find_by_name('h4'),
+  category: Category.find_by_id(3)
   )
 
 puts "#{user.cards.count} Cards"
@@ -109,8 +109,8 @@ larchveche = user.cards.create(
 The bridge is decorated with thousands of ribbons and padlocks, left as declarations of love by couples wandering the city.
 
 Add your own, or let your mind be blown by the many different shapes, sizes and declaratons of love',
-  season_id: 'all',
-  category_id: 'Sightseeing'
+  season: Season.find_by_name('all'),
+  category: Category.find_by_id(7)
   )
 
 puts "#{user.cards.count} Cards"
@@ -125,8 +125,8 @@ sistine = user.cards.create(
 The Chapel is part of the Apostolic Palace, the Pope\'s official residence, and has hosted visitors since Michelangelo completed the ornate painting that covers the walls and ceilings in 1541.
 
 The painting took a total of 10 years in two separate stints, between 1508 and 1541, and is an unbelievably moving sight nearly 500 years later',
-  season_id: 'all',
-  category_id: 'Sightseeing'
+  season: Season.find_by_id(21),
+  category: Category.find_by_id(7)
   )
 
 puts "#{user.cards.count} Cards"
@@ -142,9 +142,9 @@ Historically, Lapa has been known for both its cultural sights and night life. S
 
 Bars and Clubs are plentiful, as are friendly locals and musicians. Start under the Arocos da Lapa around 11pm, and walk around the busy area, which keeps partying till dawn. 
 
-Be aware of staying in the busy areas, and of pickpockets - it\'s safer to carry only the ,oney that you need for the evening on your person.',
-  season_id: 'h3',
-  category_id: 'Drinks_and_Night_Life'
+Be aware of staying in the busy areas, and of pickpockets - it\'s safer to carry only the money that you need for the evening on your person.',
+  season: Season.find_by_name('h3'),
+  category: Category.find_by_title('Drinks_and_Night_Life')
   )
 
 puts "#{user.cards.count} Cards"
@@ -161,8 +161,8 @@ The best part of this town are the beaches, which are plentiful and stunning. Fr
 The easiest way to navigate between these beaches is with a buggy, of which there are many in Buzios, and which are great fun to bumble around in.
 
 Ask at your accommodation for their recommended provider, and make sure you do a test drive before agreeing in a buggy - sometimes mechanical standards can be a little lower than you might expect.',
-  season_id: 'h3',
-  category_id: 'Sightseeing'
+  season: Season.find_by_name('h3'),
+  category: Category.find_by_id(7)
   )
 
 puts "#{user.cards.count} Cards"
@@ -177,8 +177,8 @@ hanoifireworks = user.cards.create(
 The best places to watch from are the rooftops around Hanoi\'s Hoan Kiem Lake in Hanoi\'s Latin Quarter. Most of the hotel\'s in the area are built to be tall and thin (to avoid tax), so ask around about rooftop access when choosing your hotel.
 
 Make sure you take a walk around the lake during the day - the fireworks are organised by Vietnam\'s Military, and the fireworks are so big that you could well be forgiven for mistaking the firewoks for something more sinister at first glance!',
-  season_id: 'sep',
-  category_id: 'Festivals_and_Events'
+  season: Season.find_by_name('sep'),
+  category: Category.find_by_title('Festivals_and_Events')
   )
 
 puts "#{user.cards.count} Cards"

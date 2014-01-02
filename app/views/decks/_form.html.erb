@@ -9,24 +9,25 @@
       </ul>
     </div>
   <% end %>
-  <div class="iinput">
-    <%= image_tag(deck.image.url) if deck.image? %>
-    <%= f.label :image, class: 'formlabel' %>
-    <div class="iinputtext"> 
-      <%= f.file_field :image %>
-    </div>
-  </div>
-  <%= f.label :image_url, class: 'formlabel' %>
-    <div class="tinput"> 
-      <%= f.text_field :remote_image_url %>
-    </div>
-  <%= f.label :title, class: 'formlabel' %>
+
+  <span class="req">*</span>
+  <%= f.label :title, class: 'formlabelreq' %>
   <div class="tinput">
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :placeholder => "A playful summary of what and where your card is about - max 50 Characters" %>
   </div>
+
+  <span class="req">*</span>
+  <%= f.label :image, class: 'formlabelreq' %>
+  <div class="iinputtext"> 
+    <%= f.file_field :image %>
+  </div>
+  <div class="tiinput"> 
+    <%= f.text_field :remote_image_url, :placeholder => "Enter Image URL or Upload Image"%>
+  </div>
+
   <%= f.label :location, class: 'formlabel' %>
   <div class="tinput">
-      <%= f.text_field :location %>
+      <%= f.text_field :location, :placeholder => "A brief overview" %>
   </div>
   <div class="cbutton">
     <%= f.submit "Save", class: 'btn btn-large' %>

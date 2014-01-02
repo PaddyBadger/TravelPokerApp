@@ -5,7 +5,7 @@ class Card < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   has_many :likes, as: :likeable, dependent: :destroy
   has_and_belongs_to_many :decks, uniq: true
-  attr_accessible :description, :image, :remote_image_url, :location, :title, :url, :season_id, :category_id, :slugged
+  attr_accessible :description, :image, :remote_image_url, :location, :title, :url, :season, :category, :slugged
 
   mount_uploader :image, ImageUploader
 
@@ -20,7 +20,7 @@ class Card < ActiveRecord::Base
   end
 
   searchable do
-    text :title, :description, :location, :comments, :category_id, :season_id
+    text :title, :description, :location, :comments, :category, :season
   end
   
   validates :title, length: { 

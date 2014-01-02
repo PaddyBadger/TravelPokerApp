@@ -1,4 +1,4 @@
-<% if ['edit','destroy','create'].include?(action_name) %>
+<% if ['edit','destroy','create','new'].include?(action_name) %>
   <div class="edit">
     <% if @deck.cards.include?(card) %>
       <%= link_to "Remove", cards_decks_path(card_id: card.id, deck_id: @deck.id), method: :delete, remote: true %>
