@@ -1,4 +1,11 @@
 <%= form_for [deck], html: { class: 'form' } do |f| %>
+
+  <div class="cbutton" id="topButton">
+    <%= f.submit "Save", class: 'btn btn-large' %>
+  </div>
+
+<div class="showEditDeck">
+
   <% if deck.errors.any? %>
     <div class="alert alert-block">
       <h4>There are <%= pluralize(deck.errors.count, "error") %>.</h4>
@@ -16,6 +23,10 @@
     <%= f.text_field :title, :placeholder => "A playful summary of what and where your card is about - max 50 Characters" %>
   </div>
 
+  <div class="imagePreview">
+    <%= image_tag(deck.image.url) if deck.image? %>
+  </div>
+
   <span class="req">*</span>
   <%= f.label :image, class: 'formlabelreq' %>
   <div class="iinputtext"> 
@@ -27,9 +38,13 @@
 
   <%= f.label :description, class: 'formlabel' %>
   <div class="pinput">
-      <%= f.text_area :description, :placeholder => "A brief overview" %>
+      <%= f.text_area :description, :placeholder => "A brief overview of your deck" %>
   </div>
+
   <div class="cbutton">
     <%= f.submit "Save", class: 'btn btn-large' %>
   </div>
+
+</div>
+  
 <% end %>

@@ -38,7 +38,7 @@
           </div> 
               <p><%= card.description%></p>
               <p><%= link_to card.url, card.url %></p>
-              <h4>Other Decks this Card is Part of</h4>
+              <h4>Decks this Card is Part of</h4>
               <% card.decks.each do |deck| %>
                 <%= link_to deck.title, deck %><br>
               <% end %>
