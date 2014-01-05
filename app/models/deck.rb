@@ -11,4 +11,8 @@ class Deck < ActiveRecord::Base
 
   extend FriendlyId
   friendly_id :title, use: :slugged
+
+  searchable do
+    text :title, :description, :location, :comments, :category, :season
+  end
 end
