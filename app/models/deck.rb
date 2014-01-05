@@ -13,6 +13,6 @@ class Deck < ActiveRecord::Base
   friendly_id :title, use: :slugged
 
   searchable do
-    text :title, :description, :location, :comments, :category, :season
+    text :title, :description, :cards
   end
 end
