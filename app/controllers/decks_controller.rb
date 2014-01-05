@@ -5,18 +5,6 @@ class DecksController < ApplicationController
     @decks = Deck.order("created_at DESC").paginate(page: params[:page], per_page: 12)
   end
 
-  def search
-    
-    @decks = Deck.search do
-      keywords params[:query]
-    end.results
-
-    respond_to do |format|
-      format.html { render :action => "index" }
-      format.xml  { render :xml => @decks }
-    end
-  end
-
   def show
      @deck = Deck.find(params[:id])
      @cards = @deck.cards.includes(:user).paginate(page: params[:page], per_page: 12)

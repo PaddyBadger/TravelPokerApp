@@ -12,7 +12,4 @@ class Deck < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  searchable do
-    text :title, :description, :cards
-  end
 end
