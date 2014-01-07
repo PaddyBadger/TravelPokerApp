@@ -2,7 +2,7 @@ class CardsController < ApplicationController
   respond_to :html, :js
 
   def index
-    @cards = Card.order("likes_count DESC, created_at DESC").paginate(page: params[:page], per_page: 12)
+    @cards = Card.paginate(page: params[:page], per_page: 12)
   end
 
   def search

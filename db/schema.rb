@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140102215737) do
+ActiveRecord::Schema.define(:version => 20140106000652) do
 
   create_table "cards", :force => true do |t|
     t.string   "title"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20140102215737) do
     t.float    "longitude"
     t.boolean  "gmaps"
     t.string   "slug"
+    t.integer  "likes_count"
   end
 
   add_index "cards", ["category_id"], :name => "index_cards_on_category_id"
@@ -81,6 +82,7 @@ ActiveRecord::Schema.define(:version => 20140102215737) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "slug"
+    t.integer  "likes_count"
   end
 
   add_index "decks", ["slug"], :name => "index_decks_on_slug", :unique => true
