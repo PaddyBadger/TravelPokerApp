@@ -7,10 +7,6 @@ class Card < ActiveRecord::Base
   has_and_belongs_to_many :decks, uniq: true
   attr_accessible :description, :image, :remote_image_url, :location, :title, :url, :season, :category, :slugged, :category_id, :season_id
 
-  default_scope order('likes_count DESC')
-  default_scope order('created_at DESC')
-  default_scope order('updated_at DESC')
-
   mount_uploader :image, ImageUploader
 
   extend FriendlyId
