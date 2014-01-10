@@ -4,7 +4,7 @@ class Deck < ActiveRecord::Base
   has_and_belongs_to_many :cards, uniq: true
   attr_accessible :image, :remote_image_url,:description, :title, :slugged
 
-  default_scope order('updated_at DESC, likes_count DESC')
+  default_scope order('updated_at DESC')
 
   mount_uploader :image, ImageUploader
 

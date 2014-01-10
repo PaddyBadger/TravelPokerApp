@@ -1,0 +1,3 @@
+$('.<%= dom_id(@card) %>').remove();
+$('.addedCard').append( '<%= escape_javascript(render @card) %>')
+

@@ -1,0 +1,10 @@
+ <span class="req" >*</span>
+ <p class="formlabelreq">Kind of Activity<p>
+  <div class="categories">
+    <% Category.all.each do |category| %>
+      <%= label_tag dom_id(category), category.title do %>
+       <%= image_tag category.image, title: category.title, :id => "image_id_#{category.id}"%>
+      <% end %>
+      <%= radio_button_tag 'card[category_id]', category.id, id: dom_id(category) %>
+    <% end %>
+  </div>

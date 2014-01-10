@@ -1,0 +1,13 @@
+<div class="topDeck">
+  <div class="topDeck">
+  <h3>Top Cards</h3>
+  <div class="apple_pagination">
+    <%= will_paginate @cards %>
+  </div>
+
+  <%= render @cards %>
+    
+  <%= render partial: 'cards/show', collection: @cards, as: :card %>
+           
+  </div>
+</div>

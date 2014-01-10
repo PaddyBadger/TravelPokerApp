@@ -1,0 +1,21 @@
+<div class="allMobile">
+  <h3>Sign in</h3>
+  <div class="signInMetaMobile">
+    <%- if devise_mapping.omniauthable? %>
+      <%- resource_class.omniauth_providers.each do |provider| %>
+       <%= link_to image_tag("/assets/facebookMobile.png"), omniauth_authorize_path(resource_name, provider) %>
+      <% end -%>
+    <% end -%>
+  </div>
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    <%= f.email_field :email, class: "inputAllMobile", placeholder: "Email or Username" %>
+    <%= f.password_field :password, class: "inputAllMobile", placeholder: "Password" %>
+    <%= f.submit "Sign In", class: "btn btnAll button" %>
+    <% if devise_mapping.rememberable? -%>
+    <div class="formLinksSmallMobile">
+      <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+      <a href="/users/password/new">Forgot Password?</a><a href="/users/sign_up">Sign Up?</a>
+    </div>
+    <% end -%>
+  <% end -%>
+</div>

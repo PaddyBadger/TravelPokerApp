@@ -1,0 +1,31 @@
+<div class="form">
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+    <% if flash[:message] %>
+      <%= flash[:message] %>
+    <% end %>
+    <div class="topDeck">
+      <h3>Sign up</h3>
+    </div>
+
+    <%= f.label :email, class: 'formlabel' %>
+    <div class="tinput">
+      <%= f.email_field :email, class: 'tinput' %>
+    </div>
+    <%= f.label :password, class: 'formlabel' %>
+    <div class="tinput">
+      <%= f.password_field :password %>
+    </div>
+    <%= f.label :password_confirmation, class: 'formlabel' %>
+    <div class="tinput">
+      <%= f.password_field :password_confirmation %>
+    </div>
+    
+    <div class="cbutton">
+      <%= f.submit "Sign up", class: 'btn btn-large' %>
+    </div>
+  <% end %>
+   <div class="formLinks">
+    <%= render "devise/shared/links" %>
+   </div>
+</div>

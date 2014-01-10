@@ -1,0 +1,22 @@
+<% unless action_name == 'edit' %>
+  <div class="dk_container dk_shown">
+      <div class="share">
+        <span class="dk_label">Share</span>
+      </div>
+      <div class="shareOptions">
+        <ul class="shareOptions_inner">
+          <li class="social">
+            <meta property="og:image" content=<%= deck.image%>/>
+            <meta property="og:title" content=<%= deck.title%>/>
+            <meta property="og:summary" content="Inspired Travel"/>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.travelpoker.co/decks/<%= deck.id %>&p[title]=<%= deck.title %>&p[summary]=Inspired Travel&p[images][0]=<%= deck.image %>" target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')">
+          <img src="/assets/facebook.png"></a>
+
+          <a href="http://twitter.com/share?url=http%3A%2F%2Fwww.travelpoker.co/decks/<%= deck.id %>&text=<%= deck.title %>&media=https://lh6.googleusercontent.com/-zhmCkumDcYM/UoUnpfq7YvI/AAAAAAAABPk/VZbRePfm6rk/w190-h90-no/logo.png" target="_blank" onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')"><img src="/assets/twitter.png" ></a>
+          <a href="https://plus.google.com/share?url=www.travelpoker.co/decks/<%= deck.id %>&title=<%= deck.title %>&media=<%= deck.image %>" target="_blank" onclick="return !window.open(this.href, 'Google+', 'width=640,height=300')"><img src="/assets/gplus.png"></a>
+          <a class="link hide" href="#">www.travelpoker.co/decks/<%= deck.id %></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+<% end %>

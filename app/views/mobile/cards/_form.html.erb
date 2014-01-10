@@ -1,0 +1,57 @@
+<%= form_for [card], html: { class: 'form' } do |f| %>
+  <% if card.errors.any? %>
+    <div class="alertBlock">
+      <h4>There are <%= pluralize(card.errors.count, "error") %>.</h4>
+      <ul>
+        <% card.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <span class="req">*</span>
+  <%= f.label :title, class: 'formlabelreq' %>
+  <div class="tinput">
+    <%= f.text_field :title, :placeholder => "A playful summary of what and where your card is about - max 50 Characters" %>
+  </div>
+    
+  <%= render partial: '/categories/form' %>
+  
+  <div class="imagePreview">
+    <%= image_tag(card.image.url) if card.image? %>
+  </div>
+
+  <span class="req">*</span>
+  <%= f.label :image, class: 'formlabelreq' %>
+  <div class="iinputtext"> 
+    <%= f.file_field :image %>
+  </div>
+  <div class="tiinput"> 
+    <%= f.text_field :remote_image_url, :placeholder => "Enter Image URL or Upload Image"%>
+  </div>
+    
+    
+  <%= f.label :website, class: 'formlabel' %>
+  <div class="tinput">
+    <%= f.text_field :url %>
+  </div>
+  
+  <span class="req">*</span>
+  <%= f.label :location, class: 'formlabelreq' %>
+  <div class="tinput">
+      <%= f.text_field :location, id: 'geocomplete' %>
+  </div>
+  
+  <span class="req">*</span>
+  <%= f.label :description, class: 'formlabelreq' %>
+  <div class="pinput">
+    <%= f.text_area :description, rows: 8 %>
+  </div>
+  
+  <%= render partial: '/seasons/form', locals: {f: f} %>
+  
+  <div class="cbutton">
+    <%= f.submit "Save", class: 'btn btn-large' %>
+  </div>
+<% end %>

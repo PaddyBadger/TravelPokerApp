@@ -1,0 +1,6 @@
+<% if @comment.destroyed? %>
+  $('#<%= dom_id(@comment) %>').hide();
+  $('.js-comments-count').html("<%= @card.comments.count %> Comments");
+<% else %>
+  $('#<%= dom_id(@comment) %>').prepend("<div class='alert alert-error'><%= flash[:error] %></div>");
+<% end %>

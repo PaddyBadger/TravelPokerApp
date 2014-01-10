@@ -54,7 +54,7 @@
   <div class="tab">
     <ul class="login">
       <li class="left">&nbsp;</li>
-      <li>Hello <% if current_user %>
+      <li  class="hello">Welcome <% if current_user %>
         <%= link_to (current_user.name || current_user.email), current_user %>
       <% end %></li>
       <li id="toggle">

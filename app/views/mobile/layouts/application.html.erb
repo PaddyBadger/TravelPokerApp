@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+ <html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:fb="http://ogp.me/ns/fb#" >
+  <head>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45772305-1', 'travelpoker.co');
+      ga('send', 'pageview');
+
+    </script>
+
+    <%= auto_discovery_link_tag :atom, "/feed" %>
+    <%= auto_discovery_link_tag :rss, "/feed.rss" %>
+    
+    <link rel="shortcut icon" href="/assets/pokerlike.png"/>
+     <title>Travel Poker</title>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" %>
+    <%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places" %>
+    <%= csrf_meta_tags %>
+
+  </head>
+<body> 
+ <div class="allMobile"> 
+
+  <%= render partial: 'layouts/panel' %>
+
+  <div class="wrapper fade">
+    <header class="mobileHeader">
+      <div class="centerDivMobile">
+        <a href="/"><div class="logoMobile"></div></a>
+
+        <div class="hide">
+        
+        </div>
+    
+        <%= form_tag search_cards_path, :method => :get do %>
+          <div class="searchHeadMobile">
+            <%= text_field_tag :query, params[:query], placeholder: "Search" %> 
+            <%= button_tag "Deal", class: "btnAll button btn buttonMobile" %>
+         </div>  
+       <% end %>  
+      </div>
+    </header>
+    
+      <% if flash[:error] || flash[:message] || flash[:notice] %>
+      <div class="alert">
+        <%= flash[:error] || flash[:message] || flash[:notice] %>
+      </div>
+      <% end %>
+
+    <%= yield %>
+
+    <%= render partial: 'layouts/footer' %>
+  </div>  
+</body>
+
+</html>

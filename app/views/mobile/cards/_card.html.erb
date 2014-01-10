@@ -1,0 +1,27 @@
+<div class="card trip <%= dom_id(card) %>" >
+<a href="#">
+  <div class="edit">
+    <%= render partial: 'decks/carddeck', locals: { card: card } %>
+  </div>
+  <%= image_tag(card.image.front) %>
+  <div class="tripInfo">
+    <h4><%= link_to card.title, card %></h4>
+    <p><%= markdown (card.location)%></p>
+  </div> 
+   <div class="tripMeta">
+    <%= render partial: 'likes/like', locals: { likeable: card } %>
+   </div>
+</a>
+</div>
+
+
+
+
+
+
+
+
+ 
+
+
+

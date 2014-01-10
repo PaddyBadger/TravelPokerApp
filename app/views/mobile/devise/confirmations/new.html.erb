@@ -1,0 +1,21 @@
+<div class="form">
+  <%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
+  <%= devise_error_messages! %>
+  <div class="topDeck">
+    <h3>Resend confirmation instructions</h3>
+  </div>
+
+  <%= f.label :email, class: 'formlabel' %>
+  <div class="tinput">
+    <%= f.email_field :email %>
+  </div>
+
+   <div class="cbutton">
+    <div><%= f.submit "Resend", class: 'btn btn-large' %></div>
+   </div>
+  <% end %>
+
+  <div class="formLinks">
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

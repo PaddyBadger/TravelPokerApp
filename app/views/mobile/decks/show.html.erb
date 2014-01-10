@@ -1,0 +1,23 @@
+<div class="deckBackMobile">
+  <%= gmaps4rails(@json) %>
+  <div class="tripInfoMobile">
+    <h3><%= @deck.title%></h3>
+  </div>
+
+  <div class="deckDescription">
+    <p><%= @deck.description%></p>
+  </div>
+
+  <div class="deckCards">
+      <div class="apple_pagination">
+        <%= will_paginate @cards %>
+      </div>
+
+      <%= render @cards %>
+        
+      <%= render partial: 'cards/show', collection: @cards, as: :card %>
+  </div>
+</div>
+
+
+

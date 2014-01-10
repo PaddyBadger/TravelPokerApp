@@ -1,0 +1,1 @@
+$('#<%= dom_id(@comment) %> .vote').replaceWith('<%=escape_javascript(render partial: 'votes/vote', locals: { comment: @comment, vote: @vote })%>');

@@ -1,0 +1,14 @@
+<% if can? :create, Comment %>
+  <h4>Have Your Say</h4>
+  <%= form_for [card, comment], html: { class: '' }, remote: true do |f| %>    
+    <div class="tinput"> 
+      <%= f.text_field :title, placeholder: "Title" %>
+    </div>
+    <div class="pinput"> 
+      <%= f.text_area :description, rows: 4 %>
+    </div>
+    <div class="commentButton">
+        <%= f.submit "Save", class: 'btn btn-large' %>
+    </div>
+  <% end %>
+<% end %>

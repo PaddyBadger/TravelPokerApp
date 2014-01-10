@@ -1,0 +1,10 @@
+<span class="req">*</span>
+<p class="formlabelreq">When To Go?</p>
+  <div class="seasons">
+    <% Season.all.each do |season| %>
+      <%= label_tag dom_id(season), season.name do %>
+       <%= image_tag season.image, :id => "season_image_id_#{season.id}" %>
+      <% end %>
+      <%= radio_button_tag 'card[season_id]', season.id, id: dom_id(season) %>
+    <% end %>
+  </div>
