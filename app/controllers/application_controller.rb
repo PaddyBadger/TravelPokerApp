@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :prep_mobile
 
   def is_mobile?
-    request.user_agent =~ /Mobile|webOS|iPhone|Android/
+    request.user_agent =~ /Mobile|iPhone|Android/
   end
 
   def prep_mobile

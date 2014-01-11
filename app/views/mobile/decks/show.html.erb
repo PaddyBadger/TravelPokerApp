@@ -1,10 +1,10 @@
 <div class="deckBackMobile">
   <%= gmaps4rails(@json) %>
   <div class="tripInfoMobile">
-    <h3><%= @deck.title%></h3>
+    <h2><%= @deck.title%></h2>
   </div>
 
-  <div class="deckDescription">
+  <div class="deckDescriptionMobile">
     <p><%= @deck.description%></p>
   </div>
 
@@ -15,7 +15,6 @@
 
       <%= render @cards %>
         
-      <%= render partial: 'cards/show', collection: @cards, as: :card %>
   </div>
 </div>
 

@@ -21,6 +21,13 @@
   </div>
 </div>
 
+<div class="topDeck">
+    <h3>Top Decks</h3>
+     <div class="apple_pagination">
+      <%= will_paginate @decks %>
+    </div>
+    <%= render @decks %>
+</div>
 
 <div class="topDeck">
   <h3>Top Cards</h3>
@@ -32,13 +39,5 @@
     
   <%= render partial: 'cards/show', collection: @cards, as: :card %>
            
-</div>
-
-<div class="topDeck">
-    <h3>Top Decks</h3>
-     <div class="apple_pagination">
-      <%= will_paginate @decks %>
-    </div>
-    <%= render @decks %>
 </div>
     

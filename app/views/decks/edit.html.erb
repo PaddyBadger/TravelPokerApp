@@ -18,7 +18,13 @@
 <div class="topDeck">
   <h3>Add Cards To Deck</h3>
     <div class="removedCard">
+
+      <div class="apple_pagination">
+        <%= will_paginate @cards %>
+      </div>
+      
       <%= render @cards %>
+
     </div>
 </div>
 

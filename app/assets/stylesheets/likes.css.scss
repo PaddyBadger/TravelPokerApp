@@ -11,6 +11,15 @@
   font-size:10px;
 }
 
+.likesMobile {
+  position: absolute;
+  margin-top: -15px;
+  margin-left: 75px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 
 .pokerLike {
   background:url('grey_heart.png') no-repeat;
@@ -40,11 +49,48 @@
 
 .pokerLiked:hover {
   background:url('red_heart.png') no-repeat;
-  width:55px;
-  height:30px;
+  width:100px;
+  height:100px;
   float:left;
   margin-top:8px;
   padding: 0px;
+}
+
+.pokerLikeMobile {
+  background:url('grey_heartMobile.png') no-repeat;
+  width:100px;
+  height:100px;
+  margin-top: -40px;
+  margin-left:50px;
+  float:left;
+  
+}
+
+.pokerLikeMobile:hover {
+  background:url('red_heartMobile.png') no-repeat;
+  width: 100px;
+  height: 100px;
+  margin-top: -40px;
+  margin-left: 50px;
+  margin-left:50px;
+}
+
+.pokerLikedMobile {
+  background:url('red_heartMobile.png') no-repeat;
+  width: 100px;
+  height: 100px;
+  margin-top: -40px;
+  margin-left: 50px;
+  margin-left:50px;
+}
+
+.pokerLiked:hover {
+  background:url('red_heart.png') no-repeat;
+  width: 100px;
+  height: 100px;
+  margin-top: -40px;
+  margin-left: 50px;
+  margin-left:50px;
 }
 
 .done {

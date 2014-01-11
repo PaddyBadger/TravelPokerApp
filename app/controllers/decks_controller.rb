@@ -2,7 +2,7 @@ class DecksController < ApplicationController
   respond_to :html, :js
   
   def index
-    @decks = Deck.paginate(page: params[:page], per_page: 12)
+    @decks = Deck.paginate(page: params[:page], per_page: 24)
   end
 
   def show
@@ -45,7 +45,7 @@ class DecksController < ApplicationController
   def edit
     @deck = Deck.find(params[:id])
     authorize! :edit, Deck, message: "You must own a deck to edit it."
-    @cards = Card.all.select do |card|
+    @cards = Card.paginate(page: params[:page], per_page: 12) do |card|
       not @deck.cards.include?(card)
     end
   end
