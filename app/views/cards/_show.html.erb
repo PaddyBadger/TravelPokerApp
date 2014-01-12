@@ -14,8 +14,15 @@
           </div>
 
           <div class="tripInfoBackTwist">
-            <h4><%= card.title%>: <span class= 'location'><%= card.location%></span></h4>
+            <h4><%= link_to card.title, card %>: <%=link_to card.location, card%></h4>
           </div>
+
+          <div class="backInfo">
+            
+          <div class="tags">
+            <div class="category"><h4>Category</h4><%=image_tag card.category.image, title: card.category.title %></div>
+            <div class="season"><h4>Season</h4><%=image_tag card.season.image %></div>
+          </div> 
 
           <div class="cardComs">
             <div class=""><%= render partial: 'likes/like', locals: { likeable: card } %></div>
@@ -30,12 +37,6 @@
             <% end %>
           </div>
 
-          <div class="backInfo">
-            
-          <div class="tags">
-            <div class="category"><h4>Category</h4><%=image_tag card.category.image, title: card.category.title %></div>
-            <div class="season"><h4>Season</h4><%=image_tag card.season.image %></div>
-          </div> 
               <p><%= card.description%></p>
               <p><%= link_to card.url, card.url %></p>
               <h4>Decks this Card is Part of</h4>

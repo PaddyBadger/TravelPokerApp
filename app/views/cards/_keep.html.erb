@@ -1,7 +1,7 @@
 <% unless action_name == 'edit' %>
   <div class="dk_container dk_shown">
     <div class="keep">
-      <span class="dk_label">Keep</span>
+      <span class="dk_label">Add Card To A Deck</span>
     </div>
     <div class="keepOptions">
       <ul class="keepOptions_inner">
@@ -11,10 +11,12 @@
               <%= link_to "To: #{deck.title}", cards_decks_path(card_id: card.id, deck_id: deck.id), method: :post, method: :post, remote: true, data: { 'dk-dropdown-value' => 0 } %>
             </li>
           <% end %>
+          <li>
+            <a href="/decks/new">Create a Deck</a>
+          </li>
         <% else %>
-          <li><a href="/decks/new/" data-dk-dropdown-value="1">Log In | Register?</a></li>
+          <li><a href="/decks/new/" data-dk-dropdown-value="1">Log In To Save Card?</a></li>
         <% end %>
-        <li><div class="likes1"><%= render partial: 'likes/like', locals: { likeable: card } %></div></li>
       </ul>
     </div>
   </div>

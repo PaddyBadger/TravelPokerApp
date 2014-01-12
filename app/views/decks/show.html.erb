@@ -8,8 +8,10 @@
     <div class="tripInfoBack">
       <h3><%= @deck.title%></h3>
     </div>
-  
-  <div class="deckComs">
+
+</div>
+
+<div class="deckComs">
     <div class=""><%= render partial: 'likes/like', locals: { likeable: @deck } %></div>
     <%= render partial: 'decks/keep', locals: { deck: @deck } %>
     <%= render partial: 'decks/social', locals: { deck: @deck } %>
@@ -19,8 +21,6 @@
         <span> <%= link_to "Delete", @deck, method: :delete, class: "editDelete", confirm: 'Are you sure you want to delete this deck?' %></span>
       </div>
     <% end %>
-  </div>
-
 </div>
 
 <div class="deckDescription">
