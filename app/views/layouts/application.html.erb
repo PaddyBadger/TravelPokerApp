@@ -24,6 +24,16 @@
     <%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places" %>
     <%= csrf_meta_tags %>
 
+    <meta id="viewport" name='viewport'>
+    <script>
+        (function(doc) {
+            var viewport = document.getElementById('viewport');
+            if ( navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i)) {
+                doc.getElementById("viewport").setAttribute("content", "initial-scale=0.6");
+            }
+        }(document));
+    </script>
+
   </head>
   <body> 
     <%= render partial: 'layouts/panel' %>

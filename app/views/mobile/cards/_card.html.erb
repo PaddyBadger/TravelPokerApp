@@ -16,19 +16,19 @@
           <h3><%= card.title%><h3> 
           <h4><%= card.location%></h4>
 
-          <div class="backInfo">
-            
+          <div class="backInfoMobile">
+          
             <p><%= card.description%></p>
 
             <div class="categoryMobile"><h4>Category</h4><%=image_tag card.category.image, title: card.category.title %></div>
             <div class="seasonMobile"><h4>Season</h4><%=image_tag card.season.image %></div>
             
-            <p><%= link_to card.url, card.url %></p>
+            <!-- <p><%= link_to card.url, card.url %></p>
             <h4>Decks this Card is Part of</h4>
             <% card.decks.each do |deck| %>
               <%= link_to deck.title, deck %><br>
             <% end %>
-          </div> 
+          </div>  -->
 
           <div class="advert">
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

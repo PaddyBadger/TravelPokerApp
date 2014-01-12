@@ -153,7 +153,7 @@ background: url(bt_closeMobile.png) no-repeat left 0px;
   background:#2980B9;
   position: relative;
   color: #fff;
-  height: 100px;
+  height: 150px;
   top: -60px;
   width:100%;
 }
@@ -173,14 +173,15 @@ background: url(bt_closeMobile.png) no-repeat left 0px;
 
 .deckInfoMobile h2, .tripInfoMobile h2 {
   font-size:4em;
-  padding-left:20px;
+  padding: 0 20px;
+  margin:0;
   font-weight: normal;
 }
 
 .tripInfoMobile{
   background:#2980B9;
   color: #fff;
-  height: 100px;
+  height: 150px;
   margin-top: 560px;
   position:absolute;
   width:100%;
@@ -201,12 +202,12 @@ background: url(bt_closeMobile.png) no-repeat left 0px;
 
 .deckDescriptionMobile {
   width:97%;
-  padding: 650px 20px 20px 20px;
+  padding: 700px 20px 20px 20px;
   border-bottom: 1px solid #2980B9;
 }
 
 .deckDescriptionMobile p {
-  font-size:2em;
+  font-size:3em;
 }
 
 .allMobile .trip {
@@ -244,28 +245,27 @@ background: url(bt_closeMobile.png) no-repeat left 0px;
   -webkit-transform: rotate(360deg);
 }
 
-.cardInfoMobile h4 a {
-  font-size:4em;
+.cardInfoMobile h4 a  {
+  font-size:3em;
   padding-left: 10px;
   color:white;
   top:50px;
 }
 
+.cardInfoMobile p {
+  font-size:3em;
+  padding-left: 10px;
+  font-family: "Opal";
+}
+
 .twistCardMobile p, .twistCardMobile a {
-  font-size:0.8em;
+  font-size:1em;
   padding-left: 20px;
 }
 
 .allMobile .map {
   width: 750px;
   height: 400px;
-}
-
-.allMobile .catgory img, .allMobile .season img {
-  height:100px !important;
-  width: 100px !important;
-  margin-top: -50px;
-  margin-right:40px;
 }
 
 .twistCardMobile {
@@ -277,25 +277,13 @@ background: url(bt_closeMobile.png) no-repeat left 0px;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  height: 1050px;
+  height: 1055px;
   float:left;
   margin-top:-1090px;
   margin-left:980px;
   border-top: 1px solid #2980B9;
   border-bottom: 1px solid #2980B9;
 
-}
-
-.twistCardMobile h3 {
-  font-size:4em !important;
-  width:980px;
-  font-weight:normal;
-}
-
-.twistCardMobile h4 {
-  font-size: 3em;
-  padding-left: 10px;
-  max-width:850px;
 }
 
 .twistCardMobile {
@@ -322,32 +310,52 @@ background: url(bt_closeMobile.png) no-repeat left 0px;
    transform: translateX(-980px);
 }
 
-.allMobile .cardMobileBackTwist {
-  margin-top: 480px;
-  position:absolute;
-  background: #2980B9;
-  color: #fff;
-  height: 70px;
-  top: -25px;
-  width: 73%;
+.twistCardMobile h3 {
+  font-size:3em !important;
+  width:980px;
+  font-weight:normal;
 }
 
-.allMobile .cardMobileBackTwist:before {
-  content: "";
-  border-style: solid;
-  border-width: 0 40px 40px 40px;
-  border-color: transparent transparent #2980B9 transparent;
-  height: 0px;
-  position: absolute;
-  right: 20px;
-  top: -40px;
-  width: 0px;
-  -webkit-transform: rotate(360deg);
+.twistCardMobile h4 {
+  font-size: 2.2em;
+  padding-left: 10px;
+  max-width:850px;
 }
 
-.allMobile .backInfo p {
-  width: 950px;
+.allMobile .backInfoMobile p, .allMobile .backInfoMobile a {
+  width: 920px;
+  max-width:100%;
   margin-left:1%;
+  font-size:1em;
+  white-space: pre-wrap;
+}
+
+.categoryMobile, .seasonMobile {
+  width: 200px;
+  float:left;
+  font-size:1.1em;
+  text-align:center;
+}
+
+.allMobile .categoryMobile img, .allMobile .seasonMobile img {
+  height:100px !important;
+  width: 100px !important;
+  margin-top: -50px;
+}
+
+.allMobile .tripInfoBack h3 {
+  font-size:3em;
+}
+
+.allMobile .tripInfoBack {
+  height:120px;
+}
+
+.cardBackMobile p {
+  font-size:2em;
+  width:950px;
+  white-space: pre-wrap;
+  margin-top: -80px;
 }
 
 .footColMobile {
@@ -369,5 +377,13 @@ background: url(bt_closeMobile.png) no-repeat left 0px;
   -ms-transition: all 2s ease-in-out;
   -o-transition: all 2s ease-in-out;
   transition: all 2s ease-in-out;
+}
+
+.footerSocialMobile {
+  position: relative;
+  float: right;
+  width: 300px;
+  height: 40px;
+  margin-top: -15px;
 }
 
