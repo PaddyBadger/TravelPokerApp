@@ -4,21 +4,8 @@
        <%= gmaps4rails(@json) %>
        <%= image_tag @card.image%>
       <div class="tripInfoBack">
-        <h3><%= @card.title%>: <%= @card.location%></h3>
+        <h3><%= @card.title%></h3> 
       </div>
-
-      <div class="advert">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- tp backs -->
-        <ins class="adsbygoogle"
-             style="display:inline-block;width:728px;height:90px"
-             data-ad-client="ca-pub-1244420710031131"
-             data-ad-slot="9375366351"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </div>  
-           
 
      <!-- <div class="deckComs">
         <div class=""><%= render partial: 'likes/like', locals: { likeable: @card } %></div>
@@ -34,8 +21,19 @@
       </div>
      -->
       <div class="cardBackMobile">
+        <h4><%= @card.location%></h4>  
       
         <p><%= @card.description%></p>
+
+         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- tp backs -->
+          <ins class="adsbygoogle"
+               style="display:inline-block;width:728px;height:90px"
+               data-ad-client="ca-pub-1244420710031131"
+               data-ad-slot="9375366351"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
         <!-- <p><%= link_to @card.url%></p>
         <h3>Decks this Card is Part of</h3>
         <% @card.decks.each do |deck| %>
