@@ -1,4 +1,6 @@
 atom_feed :language => 'en-US' do |feed|
+  feed.title @title
+  feed.updated @updated
 
   @decks.each do |item|
 
