@@ -1,6 +1,6 @@
 
 # Selects all elements with same `card_#{n}` as container of matched elements
-$.fn.card = ->
+$.fn.cardid = ->
   c = $(this).closest('.card').attr('class').match(/card_\d+/)
   $('.' + c)
 
@@ -9,14 +9,14 @@ $.fn.card = ->
 showBack = ->
   $('.twistCardMobile').removeClass('animateBack')
   $('.trip').removeClass('animateFront')
-  $(this).card().find('.twistCardMobile').addClass('animateBack')
-  $(this).card().find('.trip').addClass('animateFront')
+  $(this).cardid().find('.twistCardMobile').addClass('animateBack')
+  $(this).cardid().find('.trip').addClass('animateFront')
 
 # Hide Card Back on click
 hideBack = ->
     $('.backMobile').removeClass('animateBack')
     $(this).find('.twistCardMobile').removeClass('animateBack')
-    $(this).card().find('.trip').removeClass('animateFront')
+    $(this).cardid().find('.trip').removeClass('animateFront')
   
 # Main
 $ ->

@@ -2,8 +2,8 @@
 //= require jquery_ujs
 //= require jquery.geocomplete.min.js
 //= require jquery.tinycarousel.min.js
-//= require slider.js.coffee
 //= require sliderMobile.js.coffee
+//= require slider.js.coffee
 //= require_tree .
 
 

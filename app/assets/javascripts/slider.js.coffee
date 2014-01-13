@@ -1,4 +1,3 @@
-
 # Evaluate to `f` if current selection is empty
 $.fn.orElse = (f) ->
   if $(this).length
@@ -48,7 +47,7 @@ hideBack = ->
 #Add Map to Card
 mapAdd = ->
   $(this).card().find('.location').geocomplete({map: $(this).card().find('.map'), location: $(this).card().find('.location').text()});; 
-  
+ 
 # Main
 $ ->
   $('.card.trip').click(showBack)
@@ -57,4 +56,4 @@ $ ->
   $('.next').click(mapAdd)
   $('.prev').click(showPrev)
   $('.prev').click(mapAdd)
-  $('.twistCardBack').click(hideBack) 
+  $('.twistCardBack').click(hideBack)

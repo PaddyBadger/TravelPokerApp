@@ -235,6 +235,13 @@ input{outline:0px ;margin-bottom:10px;}
   positioning:absolute;
   font-size: 13px;
   line-height:14px;
+  width: 235px!important;
+  white-space: nowrap;
+  float: left;
+  margin-top: -6px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .tripMeta li {
