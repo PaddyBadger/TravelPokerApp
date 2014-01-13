@@ -129,13 +129,15 @@ background: url(bt_closeMobile.png) no-repeat left 0px;
 
 .topColMobile p, .topColMobile label, .topColMobile a {
   font-size:30px;
-  margin-right:40px;
+  text-align:left;
 }
 
-.signInMetaMobile {
-  top: 12px;
-  margin-left: 150px;
-  position: absolute;
+.signInMobile {
+  margin-top:5px;
+}
+
+.signInMetaMobile img{
+  padding: 20px;
 }
 
 .deckMobile {
