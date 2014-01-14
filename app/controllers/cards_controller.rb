@@ -5,18 +5,6 @@ class CardsController < ApplicationController
     @cards = Card.order('created_at DESC').paginate(page: params[:page], per_page: 12)
   end
 
-  def search
-    
-    @cards = Card.search do
-      keywords params[:query]
-    end.results
-
-    respond_to do |format|
-      format.html { render :action => "index" }
-      format.xml  { render :xml => @cards }
-    end
-  end
-
   def show
     @card = Card.find(params[:id])
 

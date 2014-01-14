@@ -9,6 +9,9 @@ Travelpoker::Application.routes.draw do
   resource :cards_decks, only: [:create, :destroy]
 
   resources :decks do
+    collection do
+      get :search
+    end
     resources :likes, only: [:create, :destroy]
     member do
       post :copy
@@ -21,9 +24,6 @@ Travelpoker::Application.routes.draw do
       :defaults => { :format => 'atom' }
   
   resources :cards do 
-    collection do
-      get :search
-    end
     resources :likes, only: [:create, :destroy]
     resources :comments do
       match '/up-vote', to: 'votes#up_vote', as: :up_vote

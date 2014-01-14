@@ -1,5 +1,5 @@
 <div class="centerDiv topSlider fade">
-  <%= form_tag search_cards_path, :method => :get do %>
+  <%= form_tag search_decks_path, :method => :get do %>
     <div class="searchIn">
       <%= text_field_tag :query, params[:query], placeholder: "Where or what are you looking for?" %> 
       <%= button_tag "Deal", class: "button" %>

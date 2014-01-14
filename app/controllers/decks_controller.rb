@@ -11,6 +11,19 @@ class DecksController < ApplicationController
      @json = @deck.cards.to_gmaps4rails
   end
 
+  def search
+    
+    @decks = Deck.search do
+      keywords params[:query]
+    end.results
+
+    respond_to do |format|
+      format.html { render :action => "index" }
+      format.xml  { render :xml => @decks }
+    end
+  end
+
+
   def new
     @deck = Deck.new
     authorize! :create, Deck, message: "Please Register with TravelPoker to create your own decks."

@@ -62,7 +62,7 @@
             <li><a href="#" class="menuTop festival"></a></li>
           </ul>
         </div> -->
-        <%= form_tag search_cards_path, :method => :get do %>
+        <%= form_tag search_decks_path, :method => :get do %>
           <div class="searchHead">
             <%= text_field_tag :query, params[:query], placeholder: "Search" %> 
             <%= button_tag "Deal", class: "btnAll button btn" %>
