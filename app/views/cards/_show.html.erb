@@ -5,7 +5,8 @@
  
       <a class="prev" href="#"><img src="/assets/leftarrow.png"></a>
       <div class="twistCard"> 
-          <h3><%= card.title%>: <%= card.location%></h3>
+
+          <h3><%= card.title%>: <span class= 'location'><%= card.location%></span></h3>
           <h8><%= link_to card.user.name %> contributed <%= time_ago_in_words(card.created_at) %> ago</h8>
         
           <div class="image">
