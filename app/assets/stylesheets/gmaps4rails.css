@@ -26,11 +26,7 @@
   box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
 }
 
-.map .gmaps4rails_map {
-  float: left;
-  width: 450px;
-  height: 300px;
-}
+
 
 .bing_map {
    position: absolute;

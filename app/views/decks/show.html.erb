@@ -28,10 +28,6 @@
 </div>
 
 <div class="deckCards">
-    <div class="apple_pagination">
-      <%= will_paginate @cards %>
-    </div>
-
     <%= render @cards %>
       
     <%= render partial: 'cards/show', collection: @cards, as: :card %>

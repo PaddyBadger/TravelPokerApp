@@ -7,7 +7,7 @@ class DecksController < ApplicationController
 
   def show
      @deck = Deck.find(params[:id])
-     @cards = @deck.cards.includes(:user).paginate(page: params[:page], per_page: 12)
+     @cards = @deck.cards.includes(:user).order('created_at DESC')
      @json = @deck.cards.to_gmaps4rails
   end
 
