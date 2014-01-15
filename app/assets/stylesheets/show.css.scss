@@ -69,10 +69,13 @@
   white-space:pre-wrap;
 }
 
-.deckDescription p {
+.deckDescription {
   width: 900px;
-  padding:10px;
   margin:auto;
+}
+
+.deckDescription p {
+  padding:10px;
   white-space:pre-wrap;
 }
 
@@ -188,9 +191,6 @@
 
 .deckComs {
   width: 400px;
-  padding-left: 230px;
-  margin-right: 10px;
-  display: inline-block;
 }
 
 .cardComs {

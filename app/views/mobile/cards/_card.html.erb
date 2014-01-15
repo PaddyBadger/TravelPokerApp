@@ -5,52 +5,59 @@
       </div>
       <%= image_tag(card.image.mobile) %>
       <div class="cardInfoMobile">
-        <h4><%= link_to card.title, card %></h4>
-        <p><%= markdown (card.location)%></p>
+        <h3><%= card.title %></h3>
+
+          <% unless action_name == 'edit' %>
+            <p><%= markdown (card.location)%></p>
+          <% end %>
+
       </div> 
   </div>
 
-  <div class="card backMobile <%= dom_id(card) %>">
- 
-      <div class="twistCardMobile"> 
-          <h3><%= card.title%><h3> 
+  <% unless action_name == 'edit' %>
+
+    <div class="card backMobile <%= dom_id(card) %>">
+   
+        <div class="twistCardMobile"> 
+            <h2><%= card.title%><h2> 
+              
+            <h4><span class='location'><%= card.location%></h4></span>
+
+            <div class="backInfoMobile">
             
-          <h4><span class= 'location'><%= card.location%></h4></span>
+              <p><%= card.description%></p>
 
-          <div class="backInfoMobile">
-          
-            <p><%= card.description%></p>
+            <div class="mapDirections">
+              <a href="https://maps.google.com/maps?saddr=Current%20Location&daddr=<%= card.location%>"><div class="directions"><h4>Directions</h4><img src='/assets/directions.png'></div></a> 
+              <div class="requestMap"><h4>Map</h4><img src='/assets/bluePin.png'></div>
+            </div>
 
-          <div class="mapDirections">
-            <div class="directions"><h4>Directions</h4><img src='/assets/directions.png'></div>
-            <div class="requestMap"><h4>Map</h4><img src='/assets/bluePin.png'></div>
-          </div>
+           <!-- <div class="map"></div> -->
+              
+              <!-- <p><%= link_to card.url, card.url %></p>
+              <h4>Decks this Card is Part of</h4>
+              <% card.decks.each do |deck| %>
+                <%= link_to deck.title, deck %><br>
+              <% end %>
+            </div>  -->
 
-         <!-- <div class="map"></div> -->
-            
-            <!-- <p><%= link_to card.url, card.url %></p>
-            <h4>Decks this Card is Part of</h4>
-            <% card.decks.each do |deck| %>
-              <%= link_to deck.title, deck %><br>
-            <% end %>
-          </div>  -->
-
-           <div class="advert">
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- tp backs -->
-            <ins class="adsbygoogle"
-                 style="display:inline-block;width:728px;height:90px"
-                 data-ad-client="ca-pub-1244420710031131"
-                 data-ad-slot="9375366351"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-          </div>  
-
-          
-       
+             <div class="advert">
+              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <!-- tp backs -->
+              <ins class="adsbygoogle"
+                   style="display:inline-block;width:728px;height:90px"
+                   data-ad-client="ca-pub-1244420710031131"
+                   data-ad-slot="9375366351"></ins>
+              <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+            </div>  
+         
+        </div>
       </div>
-    </div>
+
+    <% end %>
+
 </div>
 
 

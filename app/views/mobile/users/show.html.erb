@@ -1,8 +1,8 @@
 <% if can? :read, @user %>
   <div class="userPanel">
-      <h3 id="userCards">Your Cards and Decks</h3>
-      <h3 id="userLike">Your Likes</h3>
-      <h3 id="userInfo">Your Information</h3>
+      <h3 id="userLike"><img src="/assets/mylikes.png">My Likes</h3>
+      <h3 id="userCards"><img src="/assets/mydecks.png">Decks & Cards</h3>
+      <h3 id="userInfo"><img src="/assets/mydone.png">Done</h3>
       
       <div class="userCards">
         <%= render @user.cards %>

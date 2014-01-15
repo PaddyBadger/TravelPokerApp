@@ -1,18 +1,17 @@
 <% unless action_name == 'edit' %>
   <div class="dk_container dk_shown">
     <a class="keep">
-      <span class="dk_label">Keep</span>
+      <span class="dk_label">Copy Deck</span>
     </a>
     <div class="keepOptions">
       <ul class="keepOptions_inner">
         <% if current_user %>
           <li class="">
-            <%= link_to "Keep Deck", copy_deck_path(deck), method: :post %>
+            <%= link_to "Make me a copy of this deck!", copy_deck_path(deck), method: :post %>
           </li>
         <% else %>
-          <li><a href="/decks/new/" data-dk-dropdown-value="1">Log In | Register?</a></li>
+          <li><a href="/decks/new/" data-dk-dropdown-value="1">Log In To Copy Deck?</a></li>
         <% end %>
-        <li><div class="likes1"><%= render partial: 'likes/like', locals: { likeable: deck } %></div></li>
       </ul>
     </div>
   </div>

@@ -1,16 +1,18 @@
 <% if can? :read, @user %>
   <div class="userPanel">
-      <h3 id="userCards">Your Cards and Decks</h3>
-      <h3 id="userLike">Your Likes</h3>
-      <h3 id="userInfo">Your Information</h3>
+      <h3 id="userLike"><img src="/assets/mylikes.png">My Likes</h3>
+      <h3 id="userCards"><img src="/assets/mydecks.png">Decks & Cards</h3>
+      <h3 id="userInfo"><img src="/assets/mydone.png">Password</h3>
       
       <div class="userCards">
         <%= render @user.cards %>
+        <%= render partial: 'cards/show', collection: @user.cards, as: :card %>
         <%= render @user.decks %>
       </div>
    
       <div class="userLike"> 
         <%= render @user.liked_cards %>
+        <%= render partial: 'cards/show', collection: @user.cards, as: :card %>
         <%= render @user.liked_decks %>
       </div>
    

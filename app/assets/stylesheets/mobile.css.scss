@@ -102,6 +102,19 @@ background: url(bt_closeMobile.png) no-repeat left 0px;
   margin-top: -2px;
 }
 
+.allMobile .formlabel {
+  font-size: 35px;
+  padding-top:10px;
+}
+
+.allMobile input {
+  font-size: 35px;
+}
+
+.allMobile .formLinks a{
+  font-size: 40px;
+}
+
 .allMobile .btn {
   height:60px;
   width: 130px;
@@ -202,6 +215,23 @@ background: url(bt_closeMobile.png) no-repeat left 0px;
   -webkit-transform: rotate(360deg);
 }
 
+.deckDescriptionMobile .deckComs {
+  width: 90%;
+  padding-top:20px;
+  margin:auto;
+  margin-left: 150px;
+}
+
+.deckDescriptionMobile .deckComs a {
+  font-size: 50px;
+}
+
+.keepOptions {
+  width:400px;
+  margin-top: 40px;
+  position: absolute;
+}
+
 .deckDescriptionMobile {
   width:97%;
   padding: 700px 20px 20px 20px;
@@ -248,16 +278,21 @@ background: url(bt_closeMobile.png) no-repeat left 0px;
   -webkit-transform: rotate(360deg);
 }
 
-.cardInfoMobile h4 a  {
-  font-size:3em;
+.cardInfoMobile h3  {
+  font-size:50px;
   color:white;
-  top:50px;
+  margin-top: 75px;
+  font-weight: normal;
+  padding-left: 20px;
 }
 
 .cardInfoMobile p {
-  font-size:3em;
+  font-size:40px!important;
   font-family: "Opal";
-  margin-top:-30px;
+  margin-top: -170px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .twistCardMobile p, .twistCardMobile a {
@@ -308,15 +343,15 @@ background: url(bt_closeMobile.png) no-repeat left 0px;
 }
 
 .twistCardMobile h3 {
-  font-size:3em !important;
-  width:980px;
+  width:95%;
   font-weight:normal;
+  font-size:30px;
 }
 
 .twistCardMobile h4 {
-  font-size: 2.2em;
+  font-size:25px!important;
   padding-left: 10px;
-  max-width:850px;
+  max-width:95%;
 }
 
 .allMobile .backInfoMobile p, .allMobile .backInfoMobile a {
@@ -334,21 +369,25 @@ background: url(bt_closeMobile.png) no-repeat left 0px;
 .directions, .requestMap {
   width: 200px;
   float:left;
-  font-size:1.6em;
   text-align:center;
   margin-left:15%;
+}
+
+.allMobile .mapDirections a, .allMobile .directions a, .allMobile .requestMap {
+  color:#0d0d0d;
+  font-size:60px;
 }
 
 .allMobile .directions img {
   height:250px !important;
   width: 250px !important;
-  margin-top: -120px;
+  margin-top: -80px;
 }
 
 .allMobile .requestMap img {
   height: 150px !important;
   width: 180px !important;
-  margin-top: -60px;
+  margin-top: -20px;
   margin-left: 55px
 }
 
@@ -361,13 +400,14 @@ background: url(bt_closeMobile.png) no-repeat left 0px;
 }
 
 .cardBackMobile p {
-  font-size:2em;
-  width:950px;
+  font-size:2.5em;
+  width:90%;
   white-space: pre-wrap;
 }
 
 .cardBackMobile h4 {
   font-size:3em;
+  width:90%;
 }
 
 .tagsMobile {
@@ -407,10 +447,52 @@ background: url(bt_closeMobile.png) no-repeat left 0px;
 
 .allMobile .advert {
   margin-top: 350px;
-  padding-left: 200px;
+  padding-left: 100px;
 }
 
 .allMobile .map {
   width: 700px;
   height: 400px;
+}
+
+.allMobile .tripBack {
+  margin-top: -28px;
+}
+
+.allMobile .deckEditCards .trip {
+  width:440px;
+  height: 525px;
+  border:none;
+  padding:none;
+  margin-right:10px!important;
+  display:inline-block;
+  margin-left:20px!important;
+}
+
+.allMobile .deckEditCards h3 {
+  font-size:40px;
+  padding-left:20px;
+}
+
+.allMobile .deckEditCards .trip img {
+  height:440px!important;
+  width: 100%!important;
+}
+
+.allMobile .deckEditCards .trip .cardInfoMobile {
+  width: 433px;
+  top:400px;
+  height:100px;
+}
+
+.allMobile .deckEditCards .trip .edit a {
+  font-size:50px;
+  margin:0px;
+  width:200px;
+  height:50px;
+}
+
+.allMobile .deckEditCards .trip h3 {
+  font-size:40px;
+  margin-top:1px!important;
 }
