@@ -14,54 +14,54 @@ user = User.create(email: "patriciaestridgedubai@gmail.com", name: 'Paddy', pass
 
 europe = user.decks.create(
   title: 'Eating in Europe', 
-  location: 'Europe', 
+  description: 'Europe', 
   remote_image_url: 'http://t0.gstatic.com/images?q=tbn:ANd9GcSNVsO5DNbbKJr4VWQIiQCCz40QhvjV4LBccVGo3gzSDdOLPfIOJQ'
   )
 
 world = user.decks.create(
   title: 'An Incredible Gap Year', 
-  location: 'The World', 
+  description: 'The World', 
   remote_image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1LpqxFgUSjPhU6SENa9kxHH7au1IM4Mz5lcewo4Zyuv9X7nUb'
   )
 
 nandsamerica = user.decks.create(
   title: 'Exploring the Americas', 
-  location: 'North and South America', 
+  description: 'North and South America', 
   remote_image_url: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR7uHfJpO2iKCKJwK-cj7spEy3IG-h11Pz6MP7QbJW4rnT0UdOo')
 
 europeandus = user.decks.create(
   title: 'Dream Trip to Europe and The US', 
-  location: 'Europe and US', 
+  description: 'Europe and US', 
   remote_image_url: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR25OHcqsjLO4swCXmLdSOzP3jQWnmb_LXqYoP7sdi9E6yY62MguQ'
   )
 
 londonweekend = user.decks.create(
   title: 'A Perfect Weekend in London', 
-  location: 'London', 
+  description: 'London', 
   remote_image_url: 'https://lh5.googleusercontent.com/-WLxh9I1KVZg/UoDoF624fgI/AAAAAAAABO0/vWPk7fg8vMU/w1399-h543-no/homepage1.png'
   )
 
 budapestdays = user.decks.create(
   title: 'Beautiful Budapest in Two Days', 
-  location: 'Budapest, Europe', 
+  description: 'Budapest, Europe', 
   remote_image_url: 'https://lh4.googleusercontent.com/-dGOafhgvMOE/UoDoFHDJZeI/AAAAAAAABOk/Nxh14NPwaHo/w1393-h544-no/homepage3.png'
   )
 
 fireandbrimstone = user.decks.create(
   title: 'Fire and Brimstone in the UK\'s South East', 
-  location: 'East Sussex and Kent, UK', 
+  description: 'East Sussex and Kent, UK', 
   remote_image_url: 'https://lh6.googleusercontent.com/-UBtQa93fKMY/UoDoD-q1dDI/AAAAAAAABOY/MYDveIbPzts/w1391-h545-no/homepage2.png'
   )
 
 alpstopten = user.decks.create(
   title: 'The Alps Top 10', 
-  location: 'The Alps, Europe', 
+  description: 'The Alps, Europe', 
   remote_image_url: 'https://lh5.googleusercontent.com/-5W4r57UBa8k/UoDoFsQjj-I/AAAAAAAABOw/JGneW5geh4c/w1393-h545-no/homepage4.png'
   )
 
 newyorkinfive = user.decks.create(
   title: 'Five Packed Days in New York', 
-  location: 'Manhattan, New York', 
+  description: 'Manhattan, New York', 
   remote_image_url: 'https://lh5.googleusercontent.com/-kwOw0t3BAWw/UkRdUQCi2aI/AAAAAAAABLM/JZcGywySvps/w1105-h829-no/20130926_165144.jpg'
   )
 

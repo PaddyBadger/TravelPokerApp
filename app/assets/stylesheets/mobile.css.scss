@@ -327,17 +327,29 @@ background: url(bt_closeMobile.png) no-repeat left 0px;
   white-space: pre-wrap;
 }
 
-.categoryMobile, .seasonMobile {
-  width: 200px;
-  float:left;
-  font-size:1.1em;
-  text-align:center;
+.mapDirections {
+  margin-top:20px;
 }
 
-.allMobile .categoryMobile img, .allMobile .seasonMobile img {
-  height:100px !important;
-  width: 100px !important;
-  margin-top: -50px;
+.directions, .requestMap {
+  width: 200px;
+  float:left;
+  font-size:1.6em;
+  text-align:center;
+  margin-left:15%;
+}
+
+.allMobile .directions img {
+  height:250px !important;
+  width: 250px !important;
+  margin-top: -120px;
+}
+
+.allMobile .requestMap img {
+  height: 150px !important;
+  width: 180px !important;
+  margin-top: -60px;
+  margin-left: 55px
 }
 
 .allMobile .tripInfoBack h3 {
@@ -356,6 +368,12 @@ background: url(bt_closeMobile.png) no-repeat left 0px;
 
 .cardBackMobile h4 {
   font-size:3em;
+}
+
+.tagsMobile {
+  height:300px;
+  float:left;
+  width:200px;
 }
 
 .footColMobile {
@@ -387,7 +405,12 @@ background: url(bt_closeMobile.png) no-repeat left 0px;
   margin-top: -15px;
 }
 
-.advertMoblie {
-  width:100%;
-  text-align:center;
+.allMobile .advert {
+  margin-top: 350px;
+  padding-left: 200px;
+}
+
+.allMobile .map {
+  width: 700px;
+  height: 400px;
 }
