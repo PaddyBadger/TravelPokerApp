@@ -2,9 +2,9 @@
   <div class='<%=dom_id(doable)%> done'>
     <% if current_user %>
       <% if doable.dones.where(user_id: current_user.id).first %>
-        <%= link_to "", [doable, doable.dones.where(user_id: current_user.id).first], class: "pokerDone", title: "Mark as Done!", method: :delete, remote: true %> 
+        <%= link_to "", [doable, doable.dones.where(user_id: current_user.id).first], class: "pokerDone", title: "You've Done this!", method: :delete, remote: true %> 
       <% else %>
-        <%= link_to "", [doable, Done.new], class: "pokerDo", method: :post, remote: true %>
+        <%= link_to "", [doable, Done.new], class: "pokerDo", title: "Mark as Done!", method: :post, remote: true %>
       <% end %>
       <div class="dones"><%= doable.dones.count %></div>
     <% else %>

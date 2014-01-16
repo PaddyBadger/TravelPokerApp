@@ -13,7 +13,7 @@ $(document).ready(function(){
   $(function(){$("#geocomplete").geocomplete();});
 
 $(document).ready(function(){
-  $('.categories, .tags, .category, .pokerLike, .pokerDo').tooltip({
+  $('.categories, .tags, .category, .pokerLike, .pokerDo, .pokerDone').tooltip({
     position: {
       my: "right center",
       at: "right bottom",
