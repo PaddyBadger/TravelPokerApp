@@ -1,56 +1,51 @@
-<div id="toppanel">
-  <div id="panel">
-  <div class="centerDiv">
-    <% if user_signed_in? %>
-      <div class="topCol1">
-        <%= link_to current_user do%>
-          <p>My Likes</p>
-          <img src="/assets/mylikes.png">
-        <% end %> 
-      </div>
-      <div class="topCol1">
-        <%= link_to current_user do%>
-          <p>My Decks and Cards</p>
-          <img src="/assets/mydecks.png">
-        <% end %> 
-      </div>
-      <div class="topCol1">
-        <%= link_to current_user do%>
-          <p>I've Done</p>
-          <img src="/assets/mydone.png">
-        <% end %> 
-      </div>
-      <div class="topCol1">
-        <%= button_to('Logout', destroy_user_session_path, class: 'btn topButton', method: :delete) %>
-        <a href="/decks/new" class="btn topButton">Create a Deck</a>
-  
-      </div>    
-    <% else %>
-      <div class="topColMobile">
-        <%= render partial: '/devise/sessions/new' %>
-       </div>
-    <% end %>
-  </div>  
-  </div> <!-- /login -->  
+<div class="allMobile">
+  <div id="toppanel">
+    <div id="panel">
+    <div class="centerDiv">
+      <% if user_signed_in? %>
+        <div class="topCol1">
+          <%= link_to current_user do%>
+            <h4>My Likes</h4>
+            <img src="/assets/mylikes.png">
+          <% end %> 
+        </div>
+        <div class="topCol1">
+          <%= link_to current_user do%>
+            <h4>My Decks & Cards</h4>
+            <img src="/assets/mydecks.png">
+          <% end %> 
+        </div>
+        <div class="topCol1">
+          <%= link_to current_user do%>
+            <h4>I've Done</h4>
+            <img src="/assets/mydone.png">
+          <% end %> 
+        </div>
+        <div class="topCol1">
+          <%= button_to('Logout', destroy_user_session_path, class: 'btn topButton', method: :delete) %>
+          <a href="/decks/new" class="btn topButton">Create a Deck</a>
+    
+        </div>    
+      <% else %>
+        <div class="topColMobile">
+          <%= render partial: '/devise/sessions/new' %>
+         </div>
+      <% end %>
+    </div>  
+    </div> <!-- /login -->  
 
-<!-- The tab on top --> 
-  <div class="mobile">
-    <div class="tab">
-      <ul class="login">
-        <li class="left">&nbsp;</li>
-        <li class="hello">Welcome <% if current_user %>
-          <%= link_to (current_user.name || current_user.email), current_user %>
-        <% end %></li>
-        <li id="toggle">
-          <% if user_signed_in? %> 
-            <a id="open" class="open" href="#">Log Out | Panel</a> 
-          <% else %>
-            <a id="open" class="open" href="#">Log In | Register</a>
-          <% end %>
-          <a id="close" style="display: none;" class="close" href="#">Close Panel</a>     
-        </li>
-        <li class="right">&nbsp;</li>
-      </ul> 
-    </div> <!-- / top -->
-  </div>
-</div> 
+  <!-- The tab on top --> 
+    <div class="mobile">
+      <div class="tab">
+          
+          <div id="toggle">
+  
+            <a id="open" class="open" href="#"><img src="/assets/plus.png"></a>
+         
+            <a id="close" style="display: none;" class="close" href="#"><img src="/assets/minus.png"></a> 
+
+        </div> 
+      </div> <!-- / top -->
+    </div>
+  </div> 
+</div>

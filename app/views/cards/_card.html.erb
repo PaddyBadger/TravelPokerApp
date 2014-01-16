@@ -9,8 +9,10 @@
     <p><%= markdown (card.location)%></p>
   </div> 
    <div class="tripMeta">
-    <%= render partial: 'likes/like', locals: { likeable: card } %>
+      <%= render partial: 'dones/done', locals: { doable: card } %>
+      <%= render partial: 'likes/like', locals: { likeable: card } %>
    </div>
+   
 </a>
 </div>
 

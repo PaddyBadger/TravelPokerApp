@@ -12,6 +12,9 @@ class User < ActiveRecord::Base
   has_many :likes, dependent: :destroy
   has_many :liked_cards, through: :likes, source: :likeable, source_type: 'Card'
   has_many :liked_decks, through: :likes, source: :likeable, source_type: 'Deck'
+  has_many :dones, dependent: :destroy
+  has_many :doned_cards, through: :dones, source: :doable, source_type: 'Card'
+  has_many :doned_decks, through: :dones, source: :doable, source_type: 'Deck'
   has_many :comments, dependent: :destroy
   has_many :votes, dependent: :destroy
 
@@ -44,6 +47,10 @@ class User < ActiveRecord::Base
     self.likes.where(likeable_id: likeable.id, likeable_type: likeable.class.to_s).first
   end
 
+   def doned(doable)
+    self.dones.where(doable_id: doable.id, doable_type: doable.class.to_s).first
+  end
+
   def voted(comment)
     self.votes.where(comment_id: comment.id).first
   end
@@ -54,14 +61,14 @@ class User < ActiveRecord::Base
     self.role = 'member'
   end
 
-  def self.top_rated
-    self.select('users.*'). # Select all attributes of the user
-        select('COUNT(DISTINCT comments.id) AS comments_count'). # Count the comments made by the user
-        select('COUNT(DISTINCT posts.id) AS posts_count'). # Count the posts made by the user
-        select('COUNT(DISTINCT comments.id) + COUNT(DISTINCT posts.id) AS rank'). # Add the comment count to the post count and label the sum as "rank"
-        joins(:posts). # Ties the posts table to the users table, via the user_id
-        joins(:comments). # Ties the comments table to the users table, via the user_id
-        group('users.id'). # Instructs the database to group the results so that each user will be returned in a distinct row
-        order('rank DESC') # Instructs the database to order the results in descending order, by the rank that we created in this query. (rank = comment count + post count)
-  end
+  # def self.top_rated
+  #   self.select('users.*'). # Select all attributes of the user
+  #       select('COUNT(DISTINCT comments.id) AS comments_count'). # Count the comments made by the user
+  #       select('COUNT(DISTINCT posts.id) AS posts_count'). # Count the posts made by the user
+  #       select('COUNT(DISTINCT comments.id) + COUNT(DISTINCT posts.id) AS rank'). # Add the comment count to the post count and label the sum as "rank"
+  #       joins(:posts). # Ties the posts table to the users table, via the user_id
+  #       joins(:comments). # Ties the comments table to the users table, via the user_id
+  #       group('users.id'). # Instructs the database to group the results so that each user will be returned in a distinct row
+  #       order('rank DESC') # Instructs the database to order the results in descending order, by the rank that we created in this query. (rank = comment count + post count)
+  # end
 end

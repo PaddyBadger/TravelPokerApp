@@ -25,6 +25,8 @@
   </div>
 
  <div class="cardComs">
+    
+    <div class=""><%= render partial: 'dones/done', locals: { doable: @card } %></div>
     <div class=""><%= render partial: 'likes/like', locals: { likeable: @card } %></div>
     <%= render partial: 'cards/social', locals: { card: @card } %>
     <%= render partial: 'cards/keep', locals: { card: @card } %>

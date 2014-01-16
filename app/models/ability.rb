@@ -13,6 +13,7 @@ class Ability
       can :manage, Comment, :user_id => user.id
       can :create, Vote
       can :create, Like
+      can :create, Done
     end
 
     if user.role? :admin

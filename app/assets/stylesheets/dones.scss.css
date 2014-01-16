@@ -1,0 +1,48 @@
+.done {
+  width:30px;
+  height:30px;
+  float:left;
+  }
+
+.dones {
+  position:absolute;
+  color:white;
+  font-weight:bold;
+  font-size:10px;
+  margin: 13px 0 0 10px;
+}
+
+.pokerDo {
+  background:url('grey_spade.png') no-repeat;
+  width:30px;
+  height:30px;
+  float:left;
+  margin-top:8px;
+}
+
+.pokerDo:hover {
+  background:url('blue_spade.png') no-repeat;
+  width:30px;
+  height:30px;
+  float:left;
+  margin-top:8px;
+}
+
+.pokerDone {
+  background:url('blue_spade.png') no-repeat;
+  width:30px;
+  height:30px;
+  float:left;
+  margin-top:8px;
+  padding: 0px;
+}
+
+.pokerDone:hover {
+  background:url('blue_spade.png') no-repeat;
+  width:30px;
+  height:30px;
+  float:left;
+  margin-top:8px;
+  padding: 0px;
+}
+

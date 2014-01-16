@@ -13,6 +13,7 @@ Travelpoker::Application.routes.draw do
       get :search
     end
     resources :likes, only: [:create, :destroy]
+    resources :dones, only: [:create, :destroy]
     member do
       post :copy
     end
@@ -25,6 +26,7 @@ Travelpoker::Application.routes.draw do
   
   resources :cards do 
     resources :likes, only: [:create, :destroy]
+    resources :dones, only: [:create, :destroy]
     resources :comments do
       match '/up-vote', to: 'votes#up_vote', as: :up_vote
       match '/down-vote', to: 'votes#down_vote', as: :down_vote

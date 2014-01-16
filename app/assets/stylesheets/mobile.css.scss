@@ -1,5 +1,6 @@
 .allMobile {
  max-width:100%;
+ width:100%;
  }
 
  .allMobile p,  .allMobile a {
@@ -54,36 +55,35 @@
   font-size:30px !important;
 }
 
-.mobile .tab {
-  top: 0;
+.allMobile #panel {
+  height:210px;
 }
 
-.mobile .tab ul.login {
-  line-height: 42px;
-  font-size: 200%;
+.allMobile #panel h4 {
+  font-size:30px;
+}
+
+.mobile .tab {
+  top: 0;
+  background:none;
+  padding:0px;
+}
+
+.mobile .tab img {
+  width:100px;
+}
+
+
+.mobile .tab .toggle {
+  width:100px;
+  background:none;
+  
 }
 
 .mobile .tab a.open, .mobile .tab a.close {
-  height:50px;
-  width: 260px;
-  color:white !important;
-  padding-left:70px !important;
-}
-
-.mobile .tab a:hover.open {
-  background: url(bt_openMobile.png) no-repeat left -48px;
-}
-
-.mobile .tab a.open {
-  background: url(bt_openMobile.png) no-repeat left 0px;
-}
-
-.mobile .tab a:hover.close {
-background: url(bt_closeMobile.png) no-repeat left -48px;
-}
-
-.mobile .tab a.close {
-background: url(bt_closeMobile.png) no-repeat left 0px;
+  width:100px;  
+  background:none!important;
+  float:right;
 }
 
 .topColMobile {
