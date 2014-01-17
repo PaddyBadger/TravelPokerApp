@@ -1,0 +1,15 @@
+<% unless action_name == 'edit' %>
+  <div class='<%=dom_id(doable)%> done'>
+    <% if current_user %>
+      <% if doable.dones.where(user_id: current_user.id).first %>
+        <%= link_to "", [doable, doable.dones.where(user_id: current_user.id).first], class: "pokerDoneMobile", title: "You've Done this!", method: :delete, remote: true %> 
+      <% else %>
+        <%= link_to "", [doable, Done.new], class: "pokerDoMobile", title: "Mark as Done!", method: :post, remote: true %>
+      <% end %>
+      <div class="donesMobile"><%= doable.dones.count %></div>
+    <% else %>
+      <div class="pokerDoMobile" title="Log in to mark as Done."></div>
+      <div class="donesMobile"><%= doable.dones.count %></div>
+    <% end %>
+  </div>
+<% end %>

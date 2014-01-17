@@ -29,17 +29,15 @@
 
             <div class="mapDirections">
               <a href="https://maps.google.com/maps?saddr=Current%20Location&daddr=<%= card.location%>"><div class="directions"><h4>Directions</h4><img src='/assets/directions.png'></div></a> 
-              <div class="requestMap"><h4>Map</h4><img src='/assets/bluePin.png'></div>
             </div>
 
-           <!-- <div class="map"></div> -->
+     
               
-              <!-- <p><%= link_to card.url, card.url %></p>
-              <h4>Decks this Card is Part of</h4>
-              <% card.decks.each do |deck| %>
-                <%= link_to deck.title, deck %><br>
-              <% end %>
-            </div>  -->
+            <!--  <div class="actionsMobile">
+              <%= render partial: 'dones/done', locals: { doable: card } %>
+              <%= render partial: 'likes/like', locals: { likeable: card } %>
+              <%= render partial: 'cards/keep', locals: { card: card } %>
+            </div> -->
 
              <div class="advert">
               <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

@@ -289,7 +289,8 @@
 .cardInfoMobile p {
   font-size:40px!important;
   font-family: "Opal";
-  margin-top: -170px;
+  top: -40px;
+  position: absolute;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -370,10 +371,10 @@
   width: 200px;
   float:left;
   text-align:center;
-  margin-left:15%;
+  margin-left:35%;
 }
 
-.allMobile .mapDirections a, .allMobile .directions a, .allMobile .requestMap {
+.allMobile .mapDirections a {
   color:#0d0d0d;
   font-size:60px;
 }
@@ -384,12 +385,6 @@
   margin-top: -80px;
 }
 
-.allMobile .requestMap img {
-  height: 150px !important;
-  width: 180px !important;
-  margin-top: -20px;
-  margin-left: 55px
-}
 
 .allMobile .tripInfoBack h3 {
   font-size:3em;
@@ -496,3 +491,18 @@
   font-size:40px;
   margin-top:1px!important;
 }
+
+.allMobile .userPanel h3 {
+  padding: 0;
+  margin-left:5px;
+}
+
+.allMobile #userLike, .allMobile #userCards, .allMobile #userDone, .allMobile #userInfo {
+  width:250px;
+  height:100px;
+}
+
+.allMobile #userLike img, .allMobile #userCards img, .allMobile #userDones img, .allMobile #userInfo img {
+  display:inline;
+}
+

@@ -90,27 +90,34 @@ $(document).ready(function() {
 
   // User Panel Tabs
   $(document).ready(function() {
-   $('.userLike, .userInfo').hide();
+   $('.userLike, .userInfo, .userDone').hide();
    $('.userCards').fadeIn();
    $('#userCards').addClass('focus');
   
   $('#userCards').click(function() {  
-    $('.userLike, .userInfo, .userCards').hide();
-    $('#userCards, #userLike, #userInfo').removeClass('focus');
+    $('.userLike, .userInfo, .userCards, .userDone').hide();
+    $('#userCards, #userLike, #userInfo, #userDone').removeClass('focus');
     $('#userCards').addClass('focus');
     $('.userCards').show();
   });
 
  $('#userLike').click(function() {
-   $('.userLike, .userInfo, .userCards').hide();
-   $('#userCards, #userLike, #userInfo').removeClass('focus');
+   $('.userLike, .userInfo, .userCards, .userDone').hide();
+   $('#userCards, #userLike, #userInfo, #userDone').removeClass('focus');
    $('#userLike').addClass('focus');
    $('.userLike').show();
  });
 
+ $('#userDone').click(function() {
+   $('.userCards, .userInfo, .userLike, .userDone').hide();
+   $('#userCards, #userLike, #userInfo, #userDone').removeClass('focus');
+    $('#userDone').addClass('focus');
+   $('.userDone').show();
+ });
+
  $('#userInfo').click(function() {
-   $('.userCards, .userInfo, .userLike').hide();
-   $('#userCards, #userLike, #userInfo').removeClass('focus');
+   $('.userCards, .userInfo, .userLike, .userDone').hide();
+   $('#userCards, #userLike, #userInfo, #userDone').removeClass('focus');
     $('#userInfo').addClass('focus');
    $('.userInfo').show();
  });

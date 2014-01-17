@@ -2,7 +2,8 @@
   <div class="userPanel">
       <h3 id="userLike"><img src="/assets/mylikes.png">My Likes</h3>
       <h3 id="userCards"><img src="/assets/mydecks.png">Decks & Cards</h3>
-      <h3 id="userInfo"><img src="/assets/mydone.png">Password</h3>
+      <h3 id="userDone"><img src="/assets/mydone.png">I've Done</h3>
+      <h3 id="userInfo"><img src="/assets/me.png"> Me!</h3>
       
       <div class="userCards">
         <%= render @user.cards %>
@@ -14,6 +15,11 @@
         <%= render @user.liked_cards %>
         <%= render partial: 'cards/show', collection: @user.cards, as: :card %>
         <%= render @user.liked_decks %>
+      </div>
+
+      <div class="userDone">
+        <%= render @user.done_cards %>
+        <%= render partial: 'cards/show', collection: @user.cards, as: :card %>
       </div>
    
       <div class="userInfo">

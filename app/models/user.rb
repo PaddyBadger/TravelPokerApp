@@ -13,8 +13,8 @@ class User < ActiveRecord::Base
   has_many :liked_cards, through: :likes, source: :likeable, source_type: 'Card'
   has_many :liked_decks, through: :likes, source: :likeable, source_type: 'Deck'
   has_many :dones, dependent: :destroy
-  has_many :doned_cards, through: :dones, source: :doable, source_type: 'Card'
-  has_many :doned_decks, through: :dones, source: :doable, source_type: 'Deck'
+  has_many :done_cards, through: :dones, source: :doable, source_type: 'Card'
+  has_many :done_decks, through: :dones, source: :doable, source_type: 'Deck'
   has_many :comments, dependent: :destroy
   has_many :votes, dependent: :destroy
 
@@ -47,7 +47,7 @@ class User < ActiveRecord::Base
     self.likes.where(likeable_id: likeable.id, likeable_type: likeable.class.to_s).first
   end
 
-   def doned(doable)
+   def done(doable)
     self.dones.where(doable_id: doable.id, doable_type: doable.class.to_s).first
   end
 
