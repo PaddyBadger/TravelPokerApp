@@ -47,6 +47,7 @@ Travelpoker::Application.routes.draw do
   match "privacy" => 'welcome#privacy', via: :get
   match "terms" => 'welcome#terms', via: :get
   match "contact" => 'welcome#contact', via: :get
+  match "sitemap" => 'welcome#sitemap', via: :get
 
   root :to => 'welcome#index'
 end
