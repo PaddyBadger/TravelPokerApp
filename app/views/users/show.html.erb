@@ -7,10 +7,9 @@
       
       <div class="userCards">
 
-        <h2>My Decks</h2>
+        
         <%= render @user.decks %>
 
-        <h2>My Cards</h2>
         <%= render @user.cards %>
         <%= render partial: 'cards/show', collection: @user.cards, as: :card %>
 
