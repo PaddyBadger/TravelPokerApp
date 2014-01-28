@@ -6,9 +6,14 @@
       <h3 id="userInfo"><img src="/assets/me.png"> Me!</h3>
       
       <div class="userCards">
+
+        <h2>My Decks</h2>
+        <%= render @user.decks %>
+
+        <h2>My Cards</h2>
         <%= render @user.cards %>
         <%= render partial: 'cards/show', collection: @user.cards, as: :card %>
-        <%= render @user.decks %>
+
       </div>
    
       <div class="userLike"> 
