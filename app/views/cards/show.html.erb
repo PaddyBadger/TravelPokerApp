@@ -1,4 +1,10 @@
 <div class="topDeck">
+  <%
+    meta :title => @card.title,
+         :description => @card.description,
+         :keywords => %w(Travel Inspired @card.location)
+  %>
+  
   <h3><%= @card.title%>: <%= @card.location %></h3>
 </div>
 

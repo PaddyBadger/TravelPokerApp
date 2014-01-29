@@ -88,6 +88,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metamagic (2.0.6)
+      rails (>= 3.0.0)
     mime-types (1.25)
     mini_magick (3.6.0)
       subexec (~> 0.2.1)
@@ -204,6 +206,7 @@ DEPENDENCIES
   gmaps4rails (< 2.0)
   haml
   jquery-rails
+  metamagic
   mini_magick
   newrelic_rpm
   omniauth

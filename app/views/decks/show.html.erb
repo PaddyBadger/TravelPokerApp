@@ -1,4 +1,9 @@
 <div class="topDeck">
+   <%
+    meta :title => @deck.title,
+         :description => @deck.description,
+         :keywords => %w(Travel Inspired @deck.location)
+  %>
   <h3><%= @deck.title %></h3>
 </div>
 
