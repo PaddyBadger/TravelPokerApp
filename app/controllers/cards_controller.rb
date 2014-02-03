@@ -17,6 +17,18 @@ class CardsController < ApplicationController
     end
   end
 
+  def search
+    
+    @cards = Card.search do
+      keywords params[:query]
+    end.results
+
+    respond_to do |format|
+      format.html { render :action => "index" }
+      format.xml  { render :xml => @cards }
+    end
+  end
+
   def new
     @card = Card.new
     authorize! :create, Card, message: "Please Register with TravelPoker to create your own cards."

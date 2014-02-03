@@ -6,24 +6,17 @@
       <h3 id="userInfo"><img src="/assets/me.png"> Me!</h3>
       
       <div class="userCards">
-
-        
         <%= render @user.decks %>
-
         <%= render @user.cards %>
-        <%= render partial: 'cards/show', collection: @user.cards, as: :card %>
-
       </div>
    
       <div class="userLike"> 
-        <%= render @user.liked_cards %>
-        <%= render partial: 'cards/show', collection: @user.cards, as: :card %>
         <%= render @user.liked_decks %>
+        <%= render @user.liked_cards %> 
       </div>
 
       <div class="userDone">
         <%= render @user.done_cards %>
-        <%= render partial: 'cards/show', collection: @user.cards, as: :card %>
       </div>
    
       <div class="userInfo">

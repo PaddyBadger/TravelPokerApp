@@ -25,6 +25,9 @@ Travelpoker::Application.routes.draw do
       :defaults => { :format => 'atom' }
   
   resources :cards do 
+    collection do
+      get :search
+    end
     resources :likes, only: [:create, :destroy]
     resources :dones, only: [:create, :destroy]
     resources :comments do
