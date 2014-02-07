@@ -1,16 +1,18 @@
-<div class="topDeck">
+<div class="topDeck" itemscope itemtype="http://data-vocabulary.org/Review">
   <%
-    meta :title => @card.title,
-         :description => @card.description,
-         :keywords => %w(Travel Inspired @card.location)
+    meta :keywords => %w(Travel Inspired @card.location @card.title)
   %>
   
-  <h3><%= @card.title%>: <%= @card.location %></h3>
+  <h3><span itemprop="itemreviewed"><%= @card.title%></span>: <span itemprop="address"><%= @card.location %></span></h3>
 </div>
 
 <div class="tripBack">
     <h8>
-      <%= link_to @card.user.name %> contributed <%= time_ago_in_words(@card.created_at) %> ago
+      <% if (@card.user.name != nil) %>
+        <span itemprop="reviewer"><%= link_to @card.user.name %></span> contributed <time itemprop="dtreviewed" datetime="(@card.created_at).to_date"><%= time_ago_in_words(@card.created_at) %></span> ago
+      <% else %>
+        <span itemprop="reviewer"><%= link_to @card.user.id %></span> contributed <time itemprop="dtreviewed" datetime="(@card.created_at).to_date"><%= time_ago_in_words(@card.created_at) %></span> ago
+      <% end %>
     </h8>
    <%= gmaps4rails(@json) %>
    <%= image_tag @card.image%>
@@ -52,7 +54,7 @@
        <div class="season"><h3>Season</h3><%=image_tag @card.season.image %></div>
      </div>
   
-    <p><%= @card.description%></p>
+    <p><span itemprop="description"><%= @card.description%></span></p>
     <p><%= link_to @card.url%></p>
     <h3>Decks this Card is Part of</h3>
     <% @card.decks.each do |deck| %>

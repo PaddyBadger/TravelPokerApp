@@ -1,17 +1,22 @@
-<div class="topDeck">
-   <%
-    meta :title => @deck.title,
-         :description => @deck.description,
-         :keywords => %w(Travel Inspired @deck.location)
+<div class="topDeck" itemscope itemtype="http://data-vocabulary.org/Review">
+  <%
+    meta :keywords => %w(Travel Inspired @deck.location @deck.title)
   %>
-  <h3><%= @deck.title %></h3>
+  <h3><span itemprop="itemreviewed"><%= @deck.title %></h3></span>
 </div>
 
 <div class="deckBack">
+    <h8>
+      <% if (@deck.user.name != nil) %>
+        <span itemprop="reviewer"><%= link_to @deck.user.name %></span> contributed <time itemprop="dtreviewed" datetime="(@deck.created_at).to_date"> <%= time_ago_in_words(@deck.created_at) %> ago</time>
+      <% else %>
+        <span itemprop="reviewer"><% link_to @deck.user.id %></span> contributed on <time itemprop="dtreviewed" datetime="(@deck.created_at).to_date"><%= time_ago_in_words(@deck.created_at) %> ago </time>
+      <% end %>
+    </h8>
     <%= gmaps4rails(@json) %>
     <%= image_tag @deck.image%>
     <div class="tripInfoBack">
-      <h3><%= @deck.title%></h3>
+      <h3><span itemprop="summary"><%= @deck.title%></h3></span>
     </div>
 
 </div>
@@ -29,7 +34,7 @@
     <% end %>
   </div>
 
-  <p><%= @deck.description%></p>
+  <p><span itemprop="description"><%= @deck.description%></p></span>
 </div>
 
 <div class="deckCards">
