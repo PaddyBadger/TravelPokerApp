@@ -14,7 +14,7 @@
       <% end %>
     </h8>
     <%= gmaps4rails(@json) %>
-    <%= image_tag @deck.image%>
+    <%= image_tag @deck.image, :alt => @deck.title%>
     <div class="tripInfoBack">
       <h3><span itemprop="summary"><%= @deck.title%></h3></span>
     </div>
