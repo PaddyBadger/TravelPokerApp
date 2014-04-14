@@ -1,5 +1,5 @@
 class CardsDecksController < ApplicationController
-  respond_to :html, :js
+  respond_to :html, :js, :xml, :json
 
   def create
     @card = Card.find(params[:card_id])

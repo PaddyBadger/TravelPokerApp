@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-  respond_to :html, :js
+  respond_to :html, :js, :xml, :json
   
   before_filter :load_likeable
 

@@ -1,5 +1,5 @@
 class CardsController < ApplicationController
-  respond_to :html, :js
+  respond_to :json, :html, :js, :xml
 
   def index
     @cards = Card.order('created_at DESC').paginate(page: params[:page], per_page: 12)
@@ -26,6 +26,7 @@ class CardsController < ApplicationController
     respond_to do |format|
       format.html { render :action => "index" }
       format.xml  { render :xml => @cards }
+      format.json { render :json => @cards}
     end
   end
 

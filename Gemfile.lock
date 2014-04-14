@@ -103,6 +103,11 @@ GEM
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     oauth (0.4.7)
+    oauth-plugin (0.4.1)
+      multi_json
+      oauth (~> 0.4.4)
+      oauth2 (>= 0.5.0)
+      rack
     oauth2 (0.8.1)
       faraday (~> 0.8)
       httpauth (~> 0.1)
@@ -127,6 +132,8 @@ GEM
     pg (0.17.0)
     polyglot (0.3.3)
     pr_geohash (1.0.0)
+    rabl (0.9.3)
+      activesupport (>= 2.3.14)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -209,10 +216,12 @@ DEPENDENCIES
   metamagic
   mini_magick
   newrelic_rpm
+  oauth-plugin (~> 0.4.0)
   omniauth
   omniauth-facebook
   omniauth-twitter
   pg
+  rabl
   rails (= 3.2.13)
   redcarpet
   sass-rails (~> 3.2.3)

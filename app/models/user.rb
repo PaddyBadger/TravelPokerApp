@@ -17,6 +17,8 @@ class User < ActiveRecord::Base
   has_many :done_decks, through: :dones, source: :doable, source_type: 'Deck'
   has_many :comments, dependent: :destroy
   has_many :votes, dependent: :destroy
+  has_many :client_applications
+  has_many :tokens, :class_name => "OauthToken", :order => "authorized_at desc", :include => [:client_application]
 
   before_create :set_member
   # attr_accessible :title, :body

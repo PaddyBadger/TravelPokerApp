@@ -1,5 +1,5 @@
 class VotesController < ApplicationController
-  respond_to :html, :js
+  respond_to :html, :js, :xml, :json
   
   before_filter :setup
 

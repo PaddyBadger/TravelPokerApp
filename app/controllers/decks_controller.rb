@@ -1,5 +1,5 @@
 class DecksController < ApplicationController
-  respond_to :html, :js
+  respond_to :html, :js, :xml, :json
   
   def index
     @decks = Deck.paginate(page: params[:page], per_page: 24)

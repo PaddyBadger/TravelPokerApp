@@ -48,6 +48,8 @@ gem 'sunspot_solr'
 gem "friendly_id", '< 5.0'
 gem 'metamagic'
 
+gem "oauth-plugin", "~> 0.4.0"
+gem 'rabl'
 
 
 # To use ActiveModel has_secure_password
